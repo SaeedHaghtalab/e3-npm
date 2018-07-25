@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <show_close_button>true</show_close_button>
+  <rules />
+  <wuid>7d907da:151672b2370:-7b8b</wuid>
+  <show_grid>true</show_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <scripts />
+  <height>800</height>
+  <macros>
+    <include_parent_macros>true</include_parent_macros>
+  </macros>
+  <boy_version>4.0.103.201506251634</boy_version>
+  <show_edit_range>true</show_edit_range>
+  <widget_type>Display</widget_type>
+  <auto_scale_widgets>
+    <auto_scale_widgets>false</auto_scale_widgets>
+    <min_width>-1</min_width>
+    <min_height>-1</min_height>
+  </auto_scale_widgets>
+  <background_color>
+    <color red="240" green="240" blue="240" />
+  </background_color>
+  <width>1280</width>
+  <x>0</x>
+  <name></name>
+  <grid_space>10</grid_space>
+  <show_ruler>true</show_ruler>
+  <y>0</y>
+  <snap_to_geometry>true</snap_to_geometry>
+  <foreground_color>
+    <color red="192" green="192" blue="192" />
+  </foreground_color>
+  <actions hook="false" hook_all="false" />
+  <widget typeId="org.csstudio.opibuilder.widgets.intensityGraph" version="1.0.0">
+    <vertial_profile_y_pv_value />
+    <y_axis_show_minor_ticks>false</y_axis_show_minor_ticks>
+    <alarm_pulsing>false</alarm_pulsing>
+    <tooltip>$(pv_name)</tooltip>
+    <x_axis_show_minor_ticks>false</x_axis_show_minor_ticks>
+    <roi_0_w_pv_value />
+    <roi_0_visible>true</roi_0_visible>
+    <horizon_profile_x_pv_name></horizon_profile_x_pv_name>
+    <height>664</height>
+    <border_width>0</border_width>
+    <graph_area_width>824</graph_area_width>
+    <y_axis_scale_font>
+      <opifont.name fontName="arial" height="10" style="0">IO Scale 1</opifont.name>
+    </y_axis_scale_font>
+    <roi_0_x_pv></roi_0_x_pv>
+    <border_color>
+      <color name="IO Border" red="215" green="215" blue="215" />
+    </border_color>
+    <x_axis_minimum>0.0</x_axis_minimum>
+    <y_axis_maximum>0.0</y_axis_maximum>
+    <pixel_info_pv_value />
+    <x_axis_maximum>3296.0</x_axis_maximum>
+    <vertial_profile_x_pv_value />
+    <roi_0_title>ROI</roi_0_title>
+    <actions hook="false" hook_all="false" />
+    <border_style>0</border_style>
+    <rgb_mode>false</rgb_mode>
+    <crop_left>0</crop_left>
+    <x_axis_scale_font>
+      <opifont.name fontName="arial" height="10" style="0">IO Scale 1</opifont.name>
+    </x_axis_scale_font>
+    <data_width>3296</data_width>
+    <enabled>true</enabled>
+    <wuid>-19d4453f:1556e0ebd88:-1b8e</wuid>
+    <y_axis_title_font>
+      <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+    </y_axis_title_font>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <graph_area_height>618</graph_area_height>
+    <x_axis_visible>true</x_axis_visible>
+    <roi_0_y_pv_value />
+    <vertical_profile_x_pv_name></vertical_profile_x_pv_name>
+    <pixel_info_pv_name></pixel_info_pv_name>
+    <roi_0_width_pv></roi_0_width_pv>
+    <x_axis_axis_color>
+      <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+    </x_axis_axis_color>
+    <roi_0_h_pv_value />
+    <background_color>
+      <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+    </background_color>
+    <x_axis_axis_title></x_axis_axis_title>
+    <width>889</width>
+    <x>0</x>
+    <y>0</y>
+    <maximum>16383.0</maximum>
+    <data_height>2472</data_height>
+    <minimum>0.0</minimum>
+    <crop_right>0</crop_right>
+    <crop_top>0</crop_top>
+    <roi_color>
+      <color name="IO InputPV Bg" red="255" green="255" blue="255" />
+    </roi_color>
+    <font>
+      <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+    </font>
+    <roi_0_y_pv></roi_0_y_pv>
+    <rules>
+      <rule name="setDataWidthRule" prop_id="data_width" out_exp="true">
+        <exp bool_exp="true">
+          <value>pvInt0</value>
+        </exp>
+        <pv trig="true">$(P):$(ORIENT)CAMOBSROI-ArraySizeX_RBV</pv>
+      </rule>
+      <rule name="setDataHeightRule" prop_id="data_height" out_exp="true">
+        <exp bool_exp="true">
+          <value>pvInt0</value>
+        </exp>
+        <pv trig="true">$(P):$(ORIENT)CAMOBSROI-ArraySizeY_RBV</pv>
+      </rule>
+      <rule name="setxAxisMaxRule" prop_id="x_axis_maximum" out_exp="true">
+        <exp bool_exp="true">
+          <value>pvInt0</value>
+        </exp>
+        <pv trig="true">$(P):$(ORIENT)CAM-SizeX_RBV</pv>
+      </rule>
+      <rule name="setyAxisMinRule" prop_id="y_axis_minimum" out_exp="true">
+        <exp bool_exp="true">
+          <value>pvInt0</value>
+        </exp>
+        <pv trig="true">$(P):$(ORIENT)CAM-SizeY_RBV</pv>
+      </rule>
+      <rule name="setROIXValRule" prop_id="roi_0_x_pv_value" out_exp="true">
+        <exp bool_exp="true">
+          <value>pvInt0/pvInt1</value>
+        </exp>
+        <pv trig="true">$(P):$(ORIENT)CAMROI-MinX_RBV</pv>
+        <pv trig="true">$(P):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
+      </rule>
+      <rule name="setROIYValRule" prop_id="roi_0_y_pv_value" out_exp="true">
+        <exp bool_exp="true">
+          <value>pvInt0/pvInt1</value>
+        </exp>
+        <pv trig="true">$(P):$(ORIENT)CAMROI-MinY_RBV</pv>
+        <pv trig="true">$(P):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
+      </rule>
+      <rule name="setROIWidthValRule" prop_id="roi_0_w_pv_value" out_exp="true">
+        <exp bool_exp="true">
+          <value>pvInt0/pvInt1</value>
+        </exp>
+        <pv trig="true">$(P):$(ORIENT)CAMROI-SizeX_RBV</pv>
+        <pv trig="true">$(P):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
+      </rule>
+      <rule name="setROIHeightValRule" prop_id="roi_0_h_pv_value" out_exp="true">
+        <exp bool_exp="true">
+          <value>pvInt0/pvInt1</value>
+        </exp>
+        <pv trig="true">$(P):$(ORIENT)CAMROI-SizeY_RBV</pv>
+        <pv trig="true">$(P):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
+      </rule>
+    </rules>
+    <horizon_profile_y_pv_value />
+    <roi_count>1</roi_count>
+    <pv_value />
+    <color_map>
+      <interpolate>true</interpolate>
+      <autoscale>true</autoscale>
+      <map>2</map>
+    </color_map>
+    <show_ramp>false</show_ramp>
+    <y_axis_axis_title></y_axis_axis_title>
+    <horizon_profile_y_pv_name></horizon_profile_y_pv_name>
+    <single_line_profiling>false</single_line_profiling>
+    <y_axis_minimum>2472.0</y_axis_minimum>
+    <visible>true</visible>
+    <vertical_profile_y_pv_name></vertical_profile_y_pv_name>
+    <x_axis_major_tick_step_hint>100</x_axis_major_tick_step_hint>
+    <pv_name>$(P):$(ORIENT)CAMOBSIMAGE-ArrayData</pv_name>
+    <roi_0_height_pv></roi_0_height_pv>
+    <widget_type>Intensity Graph</widget_type>
+    <name>image_graph_1</name>
+    <y_axis_axis_color>
+      <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+    </y_axis_axis_color>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <y_axis_major_tick_step_hint>100</y_axis_major_tick_step_hint>
+    <scripts />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>true</keep_wh_ratio>
+    </scale_options>
+    <x_axis_title_font>
+      <opifont.name fontName="arial" height="10" style="0">IO Normal</opifont.name>
+    </x_axis_title_font>
+    <crop_bottom>0</crop_bottom>
+    <y_axis_visible>true</y_axis_visible>
+    <backcolor_alarm_sensitive>true</backcolor_alarm_sensitive>
+    <horizon_profile_x_pv_value />
+    <roi_0_x_pv_value />
+    <foreground_color>
+      <color name="IO InputPV Fg" red="0" green="32" blue="92" />
+    </foreground_color>
+  </widget>
+</display>
