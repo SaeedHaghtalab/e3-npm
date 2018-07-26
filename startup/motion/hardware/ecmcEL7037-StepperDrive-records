@@ -1,6 +1,6 @@
 
-< ../hardware/ecmcEL7037-StepperDrive
-< ../general/slave
+< $(HW_TOP)/ecmcEL7037-StepperDrive
+< $(General_TOP)/slave
 
 # Drive
 ecmcAsynPortDriverAddParameter($(ECMC_ASYN_PORT),"ec$(ECMC_EC_MASTER_ID).s${ECMC_EC_SLAVE_NUM}.STM_STATUS","asynUInt32Digital",$(ECMC_ASYN_SKIP_CYCLES))

@@ -8,6 +8,6 @@
 #
 ############################################################
 
-< ../hardware/ecmcEK1100-EtherCatCoupler
-< ../general/slave
+< $(HW_TOP)/ecmcEK1100-EtherCatCoupler
+< $(Motion_TOP)/slave
 

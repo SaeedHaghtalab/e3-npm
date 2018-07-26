@@ -23,65 +23,65 @@ EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.EcSetMaster($(ECMC_EC_MASTER
 
 #Configure EK1100 coupler terminal
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "0")
-< ../hardware/ecmcEK1100-EtherCatCoupler$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEK1100-EtherCatCoupler$(ECMC_GEN_EC_RECORDS)
 
 # Configure EL1808 digital input terminal
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "1")
-< ../hardware/ecmcEL1808-digitalInput$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL1808-digitalInput$(ECMC_GEN_EC_RECORDS)
 
 # Configure EL1808 digital input terminal
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "2")
-< ../hardware/ecmcEL1808-digitalInput$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL1808-digitalInput$(ECMC_GEN_EC_RECORDS)
 
 # Configure EL2819 digital output terminal
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "3")
-< ../hardware/ecmcEL2819-digitalOutput$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL2819-digitalOutput$(ECMC_GEN_EC_RECORDS)
 
 
 # Configure EL5101 incremental encoder terminal, LEBT NPM1 vertical camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "4")
-< ../hardware/ecmcEL5101-IncEncoder$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL5101-IncEncoder$(ECMC_GEN_EC_RECORDS)
 
 # Configure EL5101 incremental encoder terminal, LEBT NPM1 horizontal camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "5")
-< ../hardware/ecmcEL5101-IncEncoder$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL5101-IncEncoder$(ECMC_GEN_EC_RECORDS)
 
 # Configure EL5101 incremental encoder terminal, LEBT NPM2 vertical camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "6")
-< ../hardware/ecmcEL5101-IncEncoder$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL5101-IncEncoder$(ECMC_GEN_EC_RECORDS)
 
 # Configure EL5101 incremental encoder terminal, LEBT NPM2 horizontal camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "7")
-< ../hardware/ecmcEL5101-IncEncoder$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL5101-IncEncoder$(ECMC_GEN_EC_RECORDS)
 
 
 # Configure EL7037 stepper drive terminal, LEBT NPM1 vertical camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "8")
-< ../hardware/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
 
 #Configure motor for EL7037
-< ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B
+< $(HW_TOP)/ecmcEL7037-Motor-Nanotec-2818M1006-B
 
 # Configure EL7037 stepper drive terminal, LEBT NPM1 horizontal camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "9")
-< ../hardware/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
 
 #Configure motor for EL7037
-< ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B
+< $(HW_TOP)/ecmcEL7037-Motor-Nanotec-2818M1006-B
 
 # Configure EL7037 stepper drive terminal, LEBT NPM2 vertical camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "10")
-< ../hardware/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
 
 #Configure motor for EL7037
-< ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B
+< $(HW_TOP)/ecmcEL7037-Motor-Nanotec-2818M1006-B
 
 # Configure EL7037 stepper drive terminal, LEBT NPM2 horizontal camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "11")
-< ../hardware/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
+< $(HW_TOP)/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
 
 #Configure motor for EL7037
-< ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B
+< $(HW_TOP)/ecmcEL7037-Motor-Nanotec-2818M1006-B
 
 # Apply hardware configuration
 EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.EcApplyConfig(1)"

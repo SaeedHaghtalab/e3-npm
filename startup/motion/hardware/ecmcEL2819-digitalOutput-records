@@ -1,6 +1,6 @@
 
-< ../hardware/ecmcEL2819-digitalOutput
-< ../general/slave
+< $(HW_TOP)/ecmcEL2819-digitalOutput
+< $(General_TOP)/slave
 
 ecmcAsynPortDriverAddParameter($(ECMC_ASYN_PORT),"ec$(ECMC_EC_MASTER_ID).s${ECMC_EC_SLAVE_NUM}.OUPIN_1","asynInt32",$(ECMC_ASYN_SKIP_CYCLES))
 ecmcAsynPortDriverAddParameter($(ECMC_ASYN_PORT),"ec$(ECMC_EC_MASTER_ID).s${ECMC_EC_SLAVE_NUM}.OUPIN_2","asynInt32",$(ECMC_ASYN_SKIP_CYCLES))
