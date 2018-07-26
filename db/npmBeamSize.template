@@ -1,0 +1,16 @@
+record(calc, "$(PREFIX):$(CAM)-BSZ")
+{
+    field(DESC, "Beam Size minimum value")
+    field(CALC, "A * B / 1000")
+    field(INPA, "$(SIGMA_PV) NPP")
+    field(INPB, "$(PREFIX):$(CAM)-SCALEFACT NPP")
+    field(EGU,  "mm")
+    field(PREC, "$(BSZ_PREC)")
+    field(FLNK, "$(PREFIX):$(CAM)-BSZ-FOUT")
+}
+
+record(fanout, "$(PREFIX):$(CAM)-BSZ-FOUT")
+{
+    field(LNK1, "$(FLNK1=)")
+    field(LNK2, "$(FLNK2=)")
+}

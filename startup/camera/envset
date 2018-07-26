@@ -1,0 +1,39 @@
+#User settable environmental variables
+epicsEnvSet("PREFIX",      "NPM")
+epicsEnvSet("VCAMID",      "$(VCAMID=180855)")
+epicsEnvSet("HCAMID",      "$(HCAMID=180854)")
+epicsEnvSet("VCAMIP",      "$(VCAMIP=192.6.96.96)")
+epicsEnvSet("HCAMIP",      "$(HCAMIP=192.6.95.95)")
+
+
+# User settable environmental variables that most likely won't be necessary to change
+epicsEnvSet("QSIZE",          "$(QSIZE=20)")
+epicsEnvSet("ROLLINGBUFSIZE", "100")
+epicsEnvSet("OFFREF",         "250")
+
+## Camera and lens variables, only change if we for some reason change to other prosilica camera or change lens. 
+# Sensor dimensions
+epicsEnvSet("XSIZE",          "3296")
+epicsEnvSet("YSIZE",          "2472")
+epicsEnvSet("NELEM",          "8147712")		# NELEM = XSIZE * YSIZE
+epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "40000000")	# More than NELEM * sizeof(Int32)
+epicsEnvSet("PIXELSIZE",      "5.5")			# Pixel size in micrometers
+epicsEnvSet("FOCLEN",         "50")			# Focal length lens in millimeters
+
+## Precision of variables from fitting plugin ##
+epicsEnvSet("AMP_PREC",       "1")
+epicsEnvSet("COM_PREC",       "2")
+epicsEnvSet("MU_PREC",        "1")
+epicsEnvSet("BSZ_PREC",       "2")
+epicsEnvSet("SIGMA_PREC",     "1")
+epicsEnvSet("BCKGRND_PREC",   "1")
+
+
+## Statistics Plugin
+epicsEnvSet("NCHANS",    "2048")
+epicsEnvSet("HISTSIZE",  "256")
+
+## Fits Plugin
+epicsEnvSet("NUM_PEAKS", "1")
+
+

@@ -1,0 +1,28 @@
+include "NDStdArrays.template"
+
+record(waveform, "$(P)$(R)ArrayData"){
+    field(FLNK, "$(P)$(R)ArrayNordDFan")
+}
+
+record(dfanout, "$(P)$(R)ArrayNordDFan"){
+    field(DESC, "Forward NORD in WF to N in comp")
+    field(DOL, "$(P)$(R)ArrayData.NORD")
+    field(OMSL, "closed_loop")
+    field(OUTA, "$(P)$(R)ArrayDataMax.N PP")
+    field(OUTB, "$(P)$(R)ArrayDataMin.N PP")
+}
+
+
+record(compress, "$(P)$(R)ArrayDataMax"){
+    field(DESC, "Max pixel value")
+    field(INP, "$(P)$(R)ArrayData NPP")
+    field(ALG, "N to 1 High Value")
+    field(NSAM, "1")
+}
+
+record(compress, "$(P)$(R)ArrayDataMin"){
+    field(DESC, "Min pixel value")
+    field(INP, "$(P)$(R)ArrayData NPP")
+    field(ALG, "N to 1 Low Value")
+    field(NSAM, "1")
+}

@@ -1,0 +1,19 @@
+record(bi, "$(PREFIX):$(CAM)-ScaleMode") 
+{
+	field(DESC, "Scale mode setting (Manual or Auto)")
+	field(VAL, 0)
+	field(ZNAM, "Auto")
+	field(ONAM, "Manual")
+}
+
+record(ai, "$(PREFIX):$(CAM)-ScaleMaxi") 
+{
+	field(DESC, "Maximum scale")
+	field(VAL, 0.0)
+}
+
+record(ao, "$(PREFIX):$(CAM)-ScaleMini") 
+{
+	field(DESC, "Minimum scale")
+	field(VAL, 0.0)
+}

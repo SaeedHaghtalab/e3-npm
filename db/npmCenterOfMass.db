@@ -1,0 +1,143 @@
+# Circular buffer of scalar pv chosen with $(PREFIX,undefined):$(CAM,undefined)-COM
+# Buffer serves as source for statistics calculations
+# Source scalar data is lcoated in $(PREFIX,undefined):$(CAM,undefined)-COM
+# This record also needs a forward link from $(PREFIX,undefined):$(CAM,undefined)-COM
+record(compress, "$(PREFIX,undefined):$(CAM,undefined)-COM-BUFFER")
+{
+    field(DESC, "Circular buffer of COM")
+    field(INP,  "$(PREFIX,undefined):$(CAM,undefined)-COM NPP")
+    field(ALG,  "Circular Buffer")
+    field(NSAM, "$(BUFSIZE,undefined)")
+    field(EGU,  "mm")
+    field(PREC, "$(COM_PREC,undefined)")
+    field(FLNK, "$(PREFIX,undefined):$(CAM,undefined)-COM-BUFFOUT")
+}
+
+# Fanout to trigger calculations of statistics
+record(fanout, "$(PREFIX,undefined):$(CAM,undefined)-COM-BUFFOUT")
+{
+    field(DESC, "Fanout to trigger calc of statistics")
+    field(LNK2, "$(PREFIX,undefined):$(CAM,undefined)-COM-MIN")
+    field(LNK3, "$(PREFIX,undefined):$(CAM,undefined)-COM-MAX")
+    field(LNK4, "$(PREFIX,undefined):$(CAM,undefined)-COM-AVG")
+}
+
+# Calculate minimum value in circular buffer
+record(compress, "$(PREFIX,undefined):$(CAM,undefined)-COM-MIN")
+{
+    field(DESC, "Minimum of Circular buffer of COM")
+    field(INP,  "$(PREFIX,undefined):$(CAM,undefined)-COM-BUFFER NPP")
+    field(ALG,  "N to 1 Low Value")
+    field(NSAM, "1")
+    field(N,    "$(BUFSIZE,undefined)")
+    field(EGU,  "mm")
+    field(PREC, "$(COM_PREC,undefined)")
+    field(FLNK, "")
+}
+
+# Calculate maximum value of circular buffer
+record(compress, "$(PREFIX,undefined):$(CAM,undefined)-COM-MAX")
+{
+    field(DESC, "Maximum of Circular buffer of COM")
+    field(INP,  "$(PREFIX,undefined):$(CAM,undefined)-COM-BUFFER NPP")
+    field(ALG,  "N to 1 High Value")
+    field(NSAM, "1")
+    field(N,    "$(BUFSIZE,undefined)")
+    field(EGU,  "mm")
+    field(PREC, "$(COM_PREC,undefined)")
+    field(FLNK, "")
+}
+
+# Calculate average value of circular buffer
+record(compress, "$(PREFIX,undefined):$(CAM,undefined)-COM-AVG")
+{
+    field(DESC, "Average of Circular buffer of COM")
+    field(INP,  "$(PREFIX,undefined):$(CAM,undefined)-COM-BUFFER NPP")
+    field(ALG,  "N to 1 Average")
+    field(NSAM, "1")
+    field(N,    "$(BUFSIZE,undefined)")
+    field(EGU,  "mm")
+    field(PREC, "$(COM_PREC,undefined)")
+    field(FLNK, "")
+}
+
+# Circular buffer of scalar pv chosen with $(MU_PV,undefined)
+# Buffer serves as source for statistics calculations
+# Source scalar data is lcoated in $(MU_PV,undefined)
+# This record also needs a forward link from $(MU_PV,undefined)
+record(compress, "$(PREFIX,undefined):$(CAM,undefined)-MU-BUFFER")
+{
+    field(DESC, "Circular buffer of MU")
+    field(INP,  "$(MU_PV,undefined) NPP")
+    field(ALG,  "Circular Buffer")
+    field(NSAM, "$(BUFSIZE,undefined)")
+    field(EGU,  "pixels")
+    field(PREC, "$(MU_PREC,undefined)")
+    field(FLNK, "$(PREFIX,undefined):$(CAM,undefined)-MU-BUFFOUT")
+}
+
+# Fanout to trigger calculations of statistics
+record(fanout, "$(PREFIX,undefined):$(CAM,undefined)-MU-BUFFOUT")
+{
+    field(DESC, "Fanout to trigger calc of statistics")
+    field(LNK2, "$(PREFIX,undefined):$(CAM,undefined)-MU-MIN")
+    field(LNK3, "$(PREFIX,undefined):$(CAM,undefined)-MU-MAX")
+    field(LNK4, "$(PREFIX,undefined):$(CAM,undefined)-MU-AVG")
+}
+
+# Calculate minimum value in circular buffer
+record(compress, "$(PREFIX,undefined):$(CAM,undefined)-MU-MIN")
+{
+    field(DESC, "Minimum of Circular buffer of MU")
+    field(INP,  "$(PREFIX,undefined):$(CAM,undefined)-MU-BUFFER NPP")
+    field(ALG,  "N to 1 Low Value")
+    field(NSAM, "1")
+    field(N,    "$(BUFSIZE,undefined)")
+    field(EGU,  "pixels")
+    field(PREC, "$(MU_PREC,undefined)")
+    field(FLNK, "")
+}
+
+# Calculate maximum value of circular buffer
+record(compress, "$(PREFIX,undefined):$(CAM,undefined)-MU-MAX")
+{
+    field(DESC, "Maximum of Circular buffer of MU")
+    field(INP,  "$(PREFIX,undefined):$(CAM,undefined)-MU-BUFFER NPP")
+    field(ALG,  "N to 1 High Value")
+    field(NSAM, "1")
+    field(N,    "$(BUFSIZE,undefined)")
+    field(EGU,  "pixels")
+    field(PREC, "$(MU_PREC,undefined)")
+    field(FLNK, "")
+}
+
+# Calculate average value of circular buffer
+record(compress, "$(PREFIX,undefined):$(CAM,undefined)-MU-AVG")
+{
+    field(DESC, "Average of Circular buffer of MU")
+    field(INP,  "$(PREFIX,undefined):$(CAM,undefined)-MU-BUFFER NPP")
+    field(ALG,  "N to 1 Average")
+    field(NSAM, "1")
+    field(N,    "$(BUFSIZE,undefined)")
+    field(EGU,  "pixels")
+    field(PREC, "$(MU_PREC,undefined)")
+    field(FLNK, "")
+}
+
+record(calc, "$(PREFIX,undefined):$(CAM,undefined)-COM")
+{
+    field(DESC, "Center of mass")
+    field(CALC, "(A * B - C) / 1000")
+    field(INPA, "$(MU_PV,undefined) NPP")
+    field(INPB, "$(PREFIX,undefined):$(CAM,undefined)-SCALEFACT NPP")
+    field(INPC, "$(PREFIX,undefined):$(CAM,undefined)-CENTOFF NPP")
+    field(EGU,  "mm")
+    field(PREC, "$(COM_PREC,undefined)")
+    field(FLNK, "$(PREFIX,undefined):$(CAM,undefined)-COM-FOUT")
+}
+
+record(fanout, "$(PREFIX,undefined):$(CAM,undefined)-COM-FOUT")
+{
+    field(LNK1, "$(PREFIX,undefined):$(CAM,undefined)-COM-BUFFER")
+    field(LNK2, "$(PREFIX,undefined):$(CAM,undefined)-MU-BUFFER")
+}

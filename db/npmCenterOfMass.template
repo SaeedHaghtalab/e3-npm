@@ -1,0 +1,17 @@
+record(calc, "$(PREFIX):$(CAM)-COM")
+{
+    field(DESC, "Center of mass")
+    field(CALC, "(A * B - C) / 1000")
+    field(INPA, "$(MU_PV) NPP")
+    field(INPB, "$(PREFIX):$(CAM)-SCALEFACT NPP")
+    field(INPC, "$(PREFIX):$(CAM)-CENTOFF NPP")
+    field(EGU,  "mm")
+    field(PREC, "$(COM_PREC)")
+    field(FLNK, "$(PREFIX):$(CAM)-COM-FOUT")
+}
+
+record(fanout, "$(PREFIX):$(CAM)-COM-FOUT")
+{
+    field(LNK1, "$(FLNK1=)")
+    field(LNK2, "$(FLNK2=)")
+}

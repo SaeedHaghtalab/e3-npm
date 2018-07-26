@@ -1,0 +1,134 @@
+record(ai, "$(PREFIX):$(CAM)-REALPIXELSIZE"){
+    field(DESC, "Pixel size")
+    field(VAL,  "$(PIXELSIZE)")
+    field(EGU,  "µm")
+    field(PREC, "3")
+    field(FLNK, "$(PREFIX):$(CAM)-PIXELSIZEFO")
+}
+
+record(fanout, "$(PREFIX):$(CAM)-PIXELSIZEFO"){
+    field(LNKA, "$(PREFIX):$(CAM)-VIRTPIXELSIZEX")
+    field(LNKB, "$(PREFIX):$(CAM)-VIRTPIXELSIZEY")
+}
+
+record(calc, "$(PREFIX):$(CAM)-VIRTPIXELSIZEX"){
+    field(DESC, "Virtual Pixel size in X")
+    field(CALC, "A * B * C")
+    field(INPA, "$(PREFIX):$(CAM)-REALPIXELSIZE NPP")
+    field(INPB, "$(PREFIX):$(CAM)-BinX_RBV CP")
+    field(INPC, "$(PREFIX):$(CAM)ROI-BinX_RBV CP")
+    field(EGU, "µm")
+    field(PREC, "3")
+    field(FLNK, "$(PREFIX):$(CAM)-SCALEFACT")
+}
+
+record(calc, "$(PREFIX):$(CAM)-VIRTPIXELSIZEY"){
+    field(DESC, "Virtual Pixel size in Y")
+    field(CALC, "A * B * C")
+    field(INPA, "$(PREFIX):$(CAM)-REALPIXELSIZE NPP")
+    field(INPB, "$(PREFIX):$(CAM)-BinY_RBV CP")
+    field(INPC, "$(PREFIX):$(CAM)ROI-BinY_RBV CP")
+    field(EGU, "µm")
+    field(PREC, "3")
+    field(FLNK, "$(PREFIX):$(CAM)-SCALEFACT")
+}
+
+record(ai, "$(PREFIX):$(CAM)-OFFLENS")
+{
+    field(DESC, "Lens Offset")
+    field(VAL,  "$(OFFLENS_VAL)")
+    field(PREC, "$(PREC=3)")
+    field(EGU,  "mm")
+    field(FLNK, "$(PREFIX):$(CAM)-SP")
+}
+
+record(ai, "$(PREFIX):$(CAM)-FOCLEN")
+{
+    field(DESC, "Focal Length")
+    field(VAL,  "$(FOCLEN_VAL)")
+    field(PREC, "$(PREC=3)")
+    field(EGU,  "mm")
+    field(FLNK, "$(PREFIX):$(CAM)-SP")
+}
+
+record(ai, "$(PREFIX):$(CAM)-OFFREF")
+{
+    field(DESC, "Reference offset to general coord system")
+    field(VAL,  "$(OFFREF_VAL)")
+    field(PREC, "$(PREC=3)")
+    field(EGU,  "mm")
+    field(FLNK, "$(PREFIX):$(CAM)-POS")
+}
+
+record(calc, "$(PREFIX):$(CAM)-SP")
+{
+    field(DESC, "Distance of image to image focal plane")
+    field(SCAN, "1 second")
+    field(CALC, "A + B + C")
+    field(INPA, "$(LENSPOS_PV) CP")
+    field(INPB, "$(PREFIX):$(CAM)-OFFLENS NPP")
+    field(INPC, "$(PREFIX):$(CAM)-FOCLEN NPP")
+    field(PREC, "3")
+    field(EGU,  "mm")
+    field(FLNK, "$(PREFIX):$(CAM)-MAGN")
+}
+
+record(calc, "$(PREFIX):$(CAM)-MAGN")
+{
+    field(DESC, "Magnification")
+    field(CALC, "(A + B) / C")
+    field(INPA, "$(LENSPOS_PV)")
+    field(INPB, "$(PREFIX):$(CAM)-OFFLENS NPP")
+    field(INPC, "$(PREFIX):$(CAM)-FOCLEN NPP")
+    field(PREC, "$(PREC=3)")
+    field(EGU,  "x")
+    field(FLNK, "$(PREFIX):$(CAM)-POS")
+}
+
+record(calc, "$(PREFIX):$(CAM)-POS")
+{
+    field(DESC, "Position of obj in general coord system")
+	#Fix ICSSW-1
+	field(CALC, "A * (1 + 1 / B)")
+    field(INPA, "$(PREFIX):$(CAM)-FOCLEN NPP")
+    field(INPB, "$(PREFIX):$(CAM)-MAGN NPP")    
+    field(PREC, "$(PREC=3)")
+    field(EGU,  "mm")
+    field(FLNK, "$(PREFIX):$(CAM)-SCALEFACT")
+}
+
+record(calc, "$(PREFIX):$(CAM)-SCALEFACT")
+{
+    field(DESC, "Scale factor from pixel to real dim")
+    field(CALC, "A = 1 ? D / B : C / B")
+    field(INPA, "$(PREFIX):$(CAM)-SCALEDIM NPP")
+    field(INPB, "$(PREFIX):$(CAM)-MAGN NPP")
+    field(INPC, "$(PREFIX):$(CAM)-VIRTPIXELSIZEX NPP")
+    field(INPD, "$(PREFIX):$(CAM)-VIRTPIXELSIZEY NPP")
+    field(PREC, "3")
+    field(EGU, "µm/pixel")
+    field(FLNK, "$(PREFIX):$(CAM)-CENTOFF")
+}
+
+record(mbbi, "$(PREFIX):$(CAM)-SCALEDIM")
+{
+	field(PINI, "YES")
+    field(VAL,  "$(DIM)")
+	field(ZRST, "X")
+	field(ONST, "Y")
+	field(FLNK, "$(PREFIX):$(CAM)-SCALEFACT")
+}
+
+
+record(calc, "$(PREFIX):$(CAM)-CENTOFF")
+{
+    field(DESC, "Center offset")
+    field(CALC, "C=1 ? (E*A)/(2*B): (D*A)/(2*B)")
+    field(INPA, "$(PREFIX):$(CAM)-REALPIXELSIZE NPP")
+    field(INPB, "$(PREFIX):$(CAM)-MAGN NPP")
+    field(INPC, "$(PREFIX):$(CAM)-SCALEDIM NPP")
+    field(INPD, "$(PREFIX):$(CAM)-MaxSizeX_RBV NPP")
+    field(INPE, "$(PREFIX):$(CAM)-MaxSizeY_RBV NPP")
+    field(PREC, "3")
+    field(EGU, "µm")
+}

@@ -1,0 +1,63 @@
+# Circular buffer of scalar pv chosen with $(PARAM_PV)
+# Buffer serves as source for statistics calculations
+# Source scalar data is lcoated in $(PARAM_PV)
+# This record also needs a forward link from $(PARAM_PV)
+record(compress, "$(PREFIX):$(CAM)-$(PARAM)-BUFFER")
+{
+    field(DESC, "Circular buffer of $(PARAM)")
+    field(INP,  "$(PARAM_PV) NPP")
+    field(ALG,  "Circular Buffer")
+    field(NSAM, "$(BUFSIZE)")
+    field(EGU,  "$(EGU=)")
+    field(PREC, "$(PREC=)")
+    field(FLNK, "$(PREFIX):$(CAM)-$(PARAM)-BUFFOUT")
+}
+
+# Fanout to trigger calculations of statistics
+record(fanout, "$(PREFIX):$(CAM)-$(PARAM)-BUFFOUT")
+{
+    field(DESC, "Fanout to trigger calc of statistics")
+    field(LNK2, "$(PREFIX):$(CAM)-$(PARAM)-MIN")
+    field(LNK3, "$(PREFIX):$(CAM)-$(PARAM)-MAX")
+    field(LNK4, "$(PREFIX):$(CAM)-$(PARAM)-AVG")
+}
+
+# Calculate minimum value in circular buffer
+record(compress, "$(PREFIX):$(CAM)-$(PARAM)-MIN")
+{
+    field(DESC, "Minimum of Circular buffer of $(PARAM)")
+    field(INP,  "$(PREFIX):$(CAM)-$(PARAM)-BUFFER NPP")
+    field(ALG,  "N to 1 Low Value")
+    field(NSAM, "1")
+    field(N,    "$(BUFSIZE)")
+    field(EGU,  "$(EGU=)")
+    field(PREC, "$(PREC=)")
+    field(FLNK, "$(FLNK_MIN=)")
+}
+
+# Calculate maximum value of circular buffer
+record(compress, "$(PREFIX):$(CAM)-$(PARAM)-MAX")
+{
+    field(DESC, "Maximum of Circular buffer of $(PARAM)")
+    field(INP,  "$(PREFIX):$(CAM)-$(PARAM)-BUFFER NPP")
+    field(ALG,  "N to 1 High Value")
+    field(NSAM, "1")
+    field(N,    "$(BUFSIZE)")
+    field(EGU,  "$(EGU=)")
+    field(PREC, "$(PREC=)")
+    field(FLNK, "$(FLNK_MAX=)")
+}
+
+# Calculate average value of circular buffer
+record(compress, "$(PREFIX):$(CAM)-$(PARAM)-AVG")
+{
+    field(DESC, "Average of Circular buffer of $(PARAM)")
+    field(INP,  "$(PREFIX):$(CAM)-$(PARAM)-BUFFER NPP")
+    field(ALG,  "N to 1 Average")
+    field(NSAM, "1")
+    field(N,    "$(BUFSIZE)")
+    field(EGU,  "$(EGU=)")
+    field(PREC, "$(PREC=)")
+    field(FLNK, "$(FLNK_AVG=)")
+}
+
