@@ -106,6 +106,7 @@ epicsEnvSet("STREAM_PROTOCOL_PATH", "/home/mtcauser/e3/e3-ecmctraining/ecmctrain
 
 # Custom settings for LEBT NPM1 vertical camera actuator
 
+#< $(ST_TOP)/NPMA_001_openloop_mm
 < $(ST_TOP)/NPMA_001
 
 # Apply configurations to ECMC
