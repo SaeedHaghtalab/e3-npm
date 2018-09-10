@@ -1,0 +1,24 @@
+[Unit]
+Description=NPM IOC: %I
+After=network-online.target
+
+
+# Only execute IOC if st.cmd exists
+AssertPathExists=/home/npmuser/e3-npm/startup
+
+[Service]
+User=npmuser
+ExecStartPre=/bin/mkdir -p /var/log/procServ/npm
+ExecStartPre=/bin/chown -R npmuser:npmuser /var/log/procServ/npm
+ExecStartPre=/bin/mkdir -p /var/run/procServ/npm
+ExecStartPre=/bin/chown -R npmuser:npmuser /var/run/procServ/npm
+
+# Execute StartPre with root permissions
+PermissionsStartOnly=true
+
+# Run procServ with user iocuser
+ExecStart=/usr/bin/bash /home/npmuser/e3-npm/misc/start_bg_npm_camera_ioc.sh
+
+[Install]
+WantedBy=multi-user.target
+
