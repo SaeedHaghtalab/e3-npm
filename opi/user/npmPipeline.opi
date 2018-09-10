@@ -134,7 +134,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -168,19 +168,19 @@ $(pv_value)</tooltip>
       <rotation_angle>0.0</rotation_angle>
       <rules>
         <rule name="Color" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==0 || pv1==0 || pvStr2==&quot;VCAMOBSROI&quot;">
+          <exp bool_exp="pv0==0 || pv1==0 || pvStr2.substring(1)==&quot;CAMOBSROI&quot;">
             <value>
               <color name="IO Focus Entry" red="198" green="217" blue="241" />
             </value>
           </exp>
-          <exp bool_exp="pv0==1 &amp;&amp; pv1==1 &amp;&amp; pvStr2==&quot;VCAMPROC&quot;">
+          <exp bool_exp="pv0==1 &amp;&amp; pv1==1 &amp;&amp; pvStr2.substring(1)==&quot;CAMPROC&quot;">
             <value>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSIMAGE-NDArrayPort_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-NDArrayPort_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -208,7 +208,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -242,20 +242,20 @@ $(pv_value)</tooltip>
       <rotation_angle>0.0</rotation_angle>
       <rules>
         <rule name="Color" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==0 || pv1==0 || pv2==0 || pvStr3==&quot;VCAMPROC&quot;">
+          <exp bool_exp="pv0==0 || pv1==0 || pv2==0 || pvStr3.substring(1)==&quot;CAMPROC&quot;">
             <value>
               <color name="IO Focus Entry" red="198" green="217" blue="241" />
             </value>
           </exp>
-          <exp bool_exp="pv0==1 &amp;&amp; pv1==1 &amp;&amp; pv2==1 &amp;&amp; pvStr3==&quot;VCAMOBSROI&quot;">
+          <exp bool_exp="pv0==1 &amp;&amp; pv1==1 &amp;&amp; pv2==1 &amp;&amp; pvStr3.substring(1)==&quot;CAMOBSROI&quot;">
             <value>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-EnableCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSIMAGE-NDArrayPort_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-NDArrayPort_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -283,7 +283,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -328,8 +328,8 @@ $(pv_value)</tooltip>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -357,7 +357,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -392,20 +392,20 @@ $(pv_value)</tooltip>
       <rotation_angle>0.0</rotation_angle>
       <rules>
         <rule name="Color" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pv0==0 || pv1==0 || pv2==0 || pvStr3==&quot;VCAMPROC&quot;">
+          <exp bool_exp="pv0==0 || pv1==0 || pv2==0 || pvStr3.substring(1)==&quot;CAMPROC&quot;">
             <value>
               <color name="IO Focus Entry" red="198" green="217" blue="241" />
             </value>
           </exp>
-          <exp bool_exp="pv0==1 &amp;&amp; pv1==1 &amp;&amp; pv2==1 &amp;&amp; pvStr3==&quot;VCAMOBSROI&quot;">
+          <exp bool_exp="pv0==1 &amp;&amp; pv1==1 &amp;&amp; pv2==1 &amp;&amp; pvStr3.substring(1)==&quot;CAMOBSROI&quot;">
             <value>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-EnableCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSIMAGE-NDArrayPort_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-NDArrayPort_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -433,7 +433,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -478,8 +478,8 @@ $(pv_value)</tooltip>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -507,7 +507,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -552,8 +552,8 @@ $(pv_value)</tooltip>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -581,7 +581,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -625,10 +625,10 @@ $(pv_value)</tooltip>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-EnableCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSIMAGE-NDArrayPort_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-NDArrayPort_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -886,7 +886,7 @@ $(pv_value)</tooltip>
         <on_label>ON</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules />
@@ -938,7 +938,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -990,7 +990,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1042,7 +1042,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1076,7 +1076,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -1121,7 +1121,7 @@ $(pv_value)</tooltip>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -1379,7 +1379,7 @@ $(pv_value)</tooltip>
         <on_label>ON</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCallbacks</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCallbacks</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules />
@@ -1441,7 +1441,7 @@ $(pv_value)</tooltip>
         <on_label>ON</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)Acquire</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)Acquire</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules />
@@ -1533,7 +1533,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)Acquire_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)Acquire_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1585,7 +1585,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1637,7 +1637,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCallbacks_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCallbacks_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1689,7 +1689,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_3</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1723,7 +1723,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -1768,9 +1768,9 @@ $(pv_value)</tooltip>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-EnableCallbacks_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -1988,7 +1988,7 @@ $(pv_value)</tooltip>
         <on_label>ON</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules />
@@ -2080,7 +2080,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2132,7 +2132,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2184,7 +2184,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2448,7 +2448,7 @@ $(pv_value)</tooltip>
         <on_label>ON</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules />
@@ -2500,7 +2500,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2552,7 +2552,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2604,7 +2604,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2868,7 +2868,7 @@ $(pv_value)</tooltip>
         <on_label>ON</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules />
@@ -2920,7 +2920,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2972,7 +2972,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3024,7 +3024,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3058,7 +3058,7 @@ $(pv_value)</tooltip>
       <arrows>0</arrows>
       <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
       <background_color>
-        <color name="IO Focus Entry" red="198" green="217" blue="241" />
+        <color name="Invalid" red="255" green="0" blue="255" />
       </background_color>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <border_color>
@@ -3103,9 +3103,9 @@ $(pv_value)</tooltip>
               <color name="IO Helium (80-100 K)" red="49" green="140" blue="231" />
             </value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArrayCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableCallbacks_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-EnableCallbacks_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -3363,7 +3363,7 @@ $(pv_value)</tooltip>
         <on_label>ON</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules />
@@ -3415,7 +3415,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3467,7 +3467,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3519,7 +3519,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3783,7 +3783,7 @@ $(pv_value)</tooltip>
         <on_label>ON</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules />
@@ -3835,7 +3835,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3887,7 +3887,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3939,7 +3939,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -4203,7 +4203,7 @@ $(pv_value)</tooltip>
         <on_label>ON</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules />
@@ -4255,7 +4255,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)ArrayCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -4307,7 +4307,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)EnableCallbacks_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -4359,7 +4359,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_2</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM$(R)PortName_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -4428,14 +4428,14 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
       <actions hook="false" hook_all="false">
         <action type="WRITE_PV">
-          <pv_name>$(PREFIX):$(ORIENT)CAMOBSIMAGE-NDArrayPort</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-NDArrayPort</pv_name>
           <value>$(ORIENT)CAMOBSROI</value>
           <timeout>10</timeout>
           <confirm_message></confirm_message>
           <description></description>
         </action>
         <action type="WRITE_PV">
-          <pv_name>$(PREFIX):$(ORIENT)CAMOBSIMAGE-NDArrayPort</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-NDArrayPort</pv_name>
           <value>$(ORIENT)CAMPROC</value>
           <timeout>10</timeout>
           <confirm_message></confirm_message>

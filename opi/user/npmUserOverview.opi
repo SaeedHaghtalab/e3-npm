@@ -15,7 +15,7 @@
     <color red="192" green="192" blue="192" />
   </foreground_color>
   <grid_space>6</grid_space>
-  <height>900</height>
+  <height>940</height>
   <macros>
     <include_parent_macros>true</include_parent_macros>
   </macros>
@@ -28,7 +28,7 @@
   <show_ruler>true</show_ruler>
   <snap_to_geometry>false</snap_to_geometry>
   <widget_type>Display</widget_type>
-  <width>852</width>
+  <width>1580</width>
   <wuid>57e3dd63:153899ef176:-7ee8</wuid>
   <x>-1</x>
   <y>-1</y>
@@ -55,6 +55,7 @@
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <ORIENT>V</ORIENT>
+      <disdevid>PBI-NPM-002</disdevid>
     </macros>
     <name>Grouping Container_3</name>
     <rules />
@@ -223,7 +224,7 @@
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-DetectorState_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-DetectorState_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -316,7 +317,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-ArrayRate_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-ArrayRate_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -409,7 +410,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-PSFramesDropped_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-PSFramesDropped_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -502,7 +503,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-PSBadFrameCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-PSBadFrameCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -595,7 +596,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-PSFramesCompleted_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-PSFramesCompleted_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -688,7 +689,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-TemperatureActual</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-TemperatureActual</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -781,7 +782,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-PSMainboardTemp</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-PSMainboardTemp</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -956,7 +957,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-POS</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-POS</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1049,7 +1050,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-MAGN</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-MAGN</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1126,7 +1127,7 @@ $(pv_value)</tooltip>
       <name>image_graph_1</name>
       <pixel_info_pv_name></pixel_info_pv_name>
       <pixel_info_pv_value />
-      <pv_name>$(PREFIX):$(ORIENT)CAMOBSIMAGE-ArrayData</pv_name>
+      <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-ArrayData</pv_name>
       <pv_value />
       <rgb_mode>false</rgb_mode>
       <roi_0_h_pv_value />
@@ -1148,53 +1149,53 @@ $(pv_value)</tooltip>
           <exp bool_exp="true">
             <value>pvInt0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-ArraySizeX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-ArraySizeX_RBV</pv>
         </rule>
         <rule name="setDataHeightRule" prop_id="data_height" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-ArraySizeY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-ArraySizeY_RBV</pv>
         </rule>
         <rule name="setxAxisMaxRule" prop_id="x_axis_maximum" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArraySizeX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArraySizeX_RBV</pv>
         </rule>
         <rule name="setyAxisMinRule" prop_id="y_axis_minimum" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArraySizeY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArraySizeY_RBV</pv>
         </rule>
         <rule name="setROIXValRule" prop_id="roi_0_x_pv_value" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0/pvInt1</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-MinX_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-MinX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
         </rule>
         <rule name="setROIYValRule" prop_id="roi_0_y_pv_value" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0/pvInt1</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-MinY_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-MinY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
         </rule>
         <rule name="setROIWidthValRule" prop_id="roi_0_w_pv_value" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0/pvInt1</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-SizeX_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-SizeX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
         </rule>
         <rule name="setROIHeightValRule" prop_id="roi_0_h_pv_value" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0/pvInt1</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-SizeY_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-SizeY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -1204,11 +1205,11 @@ $(pv_value)</tooltip>
       </scale_options>
       <scripts>
         <path pathString="scripts/image_limits.js" checkConnect="true" sfe="false" seoe="false">
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSIMAGE-ArrayDataMin</pv>
-          <pv trig="false">$(PREFIX):$(ORIENT)CAMOBSIMAGE-ArrayDataMax</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ScaleMode</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ScaleMini</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ScaleMaxi</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-ArrayDataMin</pv>
+          <pv trig="false">$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-ArrayDataMax</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMode</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMini</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMaxi</pv>
         </path>
       </scripts>
       <show_ramp>true</show_ramp>
@@ -1332,19 +1333,19 @@ $(pv_value)</tooltip>
           <exp bool_exp="true">
             <value>pv0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMFITS-Points_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMFITS-Points_RBV</pv>
         </rule>
         <rule name="buffer_size" prop_id="trace_0_buffer_size" out_exp="true">
           <exp bool_exp="true">
             <value>pv0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMFITS-Points_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMFITS-Points_RBV</pv>
         </rule>
         <rule name="buffer_size" prop_id="trace_1_buffer_size" out_exp="true">
           <exp bool_exp="true">
             <value>pv0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMFITS-Points_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMFITS-Points_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -1381,7 +1382,7 @@ $(trace_0_y_pv_value)</tooltip>
       <trace_0_x_pv></trace_0_x_pv>
       <trace_0_x_pv_value />
       <trace_0_y_axis_index>1</trace_0_y_axis_index>
-      <trace_0_y_pv>$(PREFIX):$(ORIENT)CAMFITS-Y_RBV</trace_0_y_pv>
+      <trace_0_y_pv>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Y_RBV</trace_0_y_pv>
       <trace_0_y_pv_value />
       <trace_1_anti_alias>true</trace_1_anti_alias>
       <trace_1_buffer_size>100</trace_1_buffer_size>
@@ -1402,7 +1403,7 @@ $(trace_0_y_pv_value)</tooltip>
       <trace_1_x_pv></trace_1_x_pv>
       <trace_1_x_pv_value />
       <trace_1_y_axis_index>1</trace_1_y_axis_index>
-      <trace_1_y_pv>$(PREFIX):$(ORIENT)CAMFITS-Fit_RBV</trace_1_y_pv>
+      <trace_1_y_pv>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Fit_RBV</trace_1_y_pv>
       <trace_1_y_pv_value />
       <trace_count>2</trace_count>
       <transparent>false</transparent>
@@ -1656,9 +1657,6 @@ $(pv_value)</tooltip>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <ORIENTATION>Vertical</ORIENTATION>
-              <P>LEBT-010:</P>
-              <M>PBI-NPM-002</M>
-              <R>PBI-NPM-002-</R>
             </macros>
             <mode>8</mode>
             <description></description>
@@ -2195,7 +2193,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>3</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-COM</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-COM</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2288,7 +2286,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>3</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-BSZ</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-BSZ</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2381,7 +2379,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>4</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakAmplitude_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakAmplitude_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2474,7 +2472,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>4</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Background_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Background_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2567,7 +2565,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>4</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakMu_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakMu_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2660,7 +2658,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>4</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakSigma_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakSigma_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2794,7 +2792,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Status_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Status_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2887,7 +2885,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Points_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Points_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2939,7 +2937,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-SCALEDIM</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-SCALEDIM</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3151,7 +3149,7 @@ $(pv_value)</tooltip>
         <height>34</height>
         <items_from_pv>true</items_from_pv>
         <name>Combo_53</name>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-ScaleMode</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMode</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -3243,7 +3241,7 @@ $(pv_value)</tooltip>
         <name>Text Input_ScaleMax</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-ScaleMini</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMini</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3341,7 +3339,7 @@ $(pv_value)</tooltip>
         <name>Text Input_ScaleMinii</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-ScaleMaxi</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMaxi</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -3390,6 +3388,7 @@ $(pv_value)</tooltip>
     <macros>
       <include_parent_macros>true</include_parent_macros>
       <ORIENT>H</ORIENT>
+      <disdevid>PBI-NPM-001</disdevid>
     </macros>
     <name>Grouping Container_3</name>
     <rules />
@@ -3460,7 +3459,7 @@ $(pv_value)</tooltip>
       <name>image_graph_1</name>
       <pixel_info_pv_name></pixel_info_pv_name>
       <pixel_info_pv_value />
-      <pv_name>$(PREFIX):$(ORIENT)CAMOBSIMAGE-ArrayData</pv_name>
+      <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-ArrayData</pv_name>
       <pv_value />
       <rgb_mode>false</rgb_mode>
       <roi_0_h_pv_value />
@@ -3482,53 +3481,53 @@ $(pv_value)</tooltip>
           <exp bool_exp="true">
             <value>pvInt0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-ArraySizeX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-ArraySizeX_RBV</pv>
         </rule>
         <rule name="setDataHeightRule" prop_id="data_height" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-ArraySizeY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-ArraySizeY_RBV</pv>
         </rule>
         <rule name="setxAxisMaxRule" prop_id="x_axis_maximum" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArraySizeX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArraySizeX_RBV</pv>
         </rule>
         <rule name="setyAxisMinRule" prop_id="y_axis_minimum" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ArraySizeY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ArraySizeY_RBV</pv>
         </rule>
         <rule name="setROIXValRule" prop_id="roi_0_x_pv_value" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0/pvInt1</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-MinX_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-MinX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
         </rule>
         <rule name="setROIYValRule" prop_id="roi_0_y_pv_value" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0/pvInt1</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-MinY_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-MinY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
         </rule>
         <rule name="setROIWidthValRule" prop_id="roi_0_w_pv_value" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0/pvInt1</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-SizeX_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-SizeX_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-BinX_RBV</pv>
         </rule>
         <rule name="setROIHeightValRule" prop_id="roi_0_h_pv_value" out_exp="true">
           <exp bool_exp="true">
             <value>pvInt0/pvInt1</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMROI-SizeY_RBV</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMROI-SizeY_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSROI-BinY_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -3538,11 +3537,11 @@ $(pv_value)</tooltip>
       </scale_options>
       <scripts>
         <path pathString="scripts/image_limits.js" checkConnect="true" sfe="false" seoe="false">
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMOBSIMAGE-ArrayDataMin</pv>
-          <pv trig="false">$(PREFIX):$(ORIENT)CAMOBSIMAGE-ArrayDataMax</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ScaleMode</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ScaleMini</pv>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAM-ScaleMaxi</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-ArrayDataMin</pv>
+          <pv trig="false">$(secsub):$(disdevid):$(ORIENT)CAMOBSIMAGE-ArrayDataMax</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMode</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMini</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMaxi</pv>
         </path>
       </scripts>
       <show_ramp>true</show_ramp>
@@ -3666,19 +3665,19 @@ $(pv_value)</tooltip>
           <exp bool_exp="true">
             <value>pv0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMFITS-Points_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMFITS-Points_RBV</pv>
         </rule>
         <rule name="buffer_size" prop_id="trace_0_buffer_size" out_exp="true">
           <exp bool_exp="true">
             <value>pv0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMFITS-Points_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMFITS-Points_RBV</pv>
         </rule>
         <rule name="buffer_size" prop_id="trace_1_buffer_size" out_exp="true">
           <exp bool_exp="true">
             <value>pv0</value>
           </exp>
-          <pv trig="true">$(PREFIX):$(ORIENT)CAMFITS-Points_RBV</pv>
+          <pv trig="true">$(secsub):$(disdevid):$(ORIENT)CAMFITS-Points_RBV</pv>
         </rule>
       </rules>
       <scale_options>
@@ -3715,7 +3714,7 @@ $(trace_0_y_pv_value)</tooltip>
       <trace_0_x_pv></trace_0_x_pv>
       <trace_0_x_pv_value />
       <trace_0_y_axis_index>1</trace_0_y_axis_index>
-      <trace_0_y_pv>$(PREFIX):$(ORIENT)CAMFITS-Y_RBV</trace_0_y_pv>
+      <trace_0_y_pv>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Y_RBV</trace_0_y_pv>
       <trace_0_y_pv_value />
       <trace_1_anti_alias>true</trace_1_anti_alias>
       <trace_1_buffer_size>100</trace_1_buffer_size>
@@ -3736,7 +3735,7 @@ $(trace_0_y_pv_value)</tooltip>
       <trace_1_x_pv></trace_1_x_pv>
       <trace_1_x_pv_value />
       <trace_1_y_axis_index>1</trace_1_y_axis_index>
-      <trace_1_y_pv>$(PREFIX):$(ORIENT)CAMFITS-Fit_RBV</trace_1_y_pv>
+      <trace_1_y_pv>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Fit_RBV</trace_1_y_pv>
       <trace_1_y_pv_value />
       <trace_count>2</trace_count>
       <transparent>false</transparent>
@@ -3990,9 +3989,6 @@ $(pv_value)</tooltip>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <ORIENTATION>Horizontal</ORIENTATION>
-              <P>LEBT-010:</P>
-              <M>PBI-NPM-001</M>
-              <R>PBI-NPM-001-</R>
             </macros>
             <mode>8</mode>
             <description></description>
@@ -4529,7 +4525,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-DetectorState_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-DetectorState_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -4622,7 +4618,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-ArrayRate_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-ArrayRate_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -4715,7 +4711,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-PSFramesDropped_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-PSFramesDropped_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -4808,7 +4804,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-PSBadFrameCounter_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-PSBadFrameCounter_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -4901,7 +4897,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-PSFramesCompleted_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-PSFramesCompleted_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -4994,7 +4990,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-TemperatureActual</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-TemperatureActual</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -5087,7 +5083,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-PSMainboardTemp</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-PSMainboardTemp</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -5262,7 +5258,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-POS</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-POS</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -5355,7 +5351,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-MAGN</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-MAGN</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -5530,7 +5526,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>3</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-COM</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-COM</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -5623,7 +5619,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>3</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-BSZ</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-BSZ</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -5716,7 +5712,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>4</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakAmplitude_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakAmplitude_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -5809,7 +5805,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>4</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Background_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Background_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -5902,7 +5898,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>4</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakMu_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakMu_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -5995,7 +5991,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>4</precision>
         <precision_from_pv>false</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakSigma_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakSigma_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -6129,7 +6125,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Status_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Status_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -6222,7 +6218,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Points_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Points_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -6274,7 +6270,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-SCALEDIM</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-SCALEDIM</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -6486,7 +6482,7 @@ $(pv_value)</tooltip>
         <height>34</height>
         <items_from_pv>true</items_from_pv>
         <name>Combo_53</name>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-ScaleMode</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMode</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -6578,7 +6574,7 @@ $(pv_value)</tooltip>
         <name>Text Input_ScaleMax</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-ScaleMini</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMini</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -6676,7 +6672,7 @@ $(pv_value)</tooltip>
         <name>Text Input_ScaleMinii</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-ScaleMaxi</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-ScaleMaxi</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />

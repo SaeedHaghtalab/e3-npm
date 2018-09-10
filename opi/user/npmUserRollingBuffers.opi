@@ -295,7 +295,7 @@
           <name>Text Update Template_27</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-COM-MIN</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-COM-MIN</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -388,7 +388,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_28</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-COM-AVG</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-COM-AVG</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -481,7 +481,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_35</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-COM-MAX</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-COM-MAX</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -859,7 +859,7 @@ $(trace_0_y_pv_value)</tooltip>
         <trace_0_x_pv></trace_0_x_pv>
         <trace_0_x_pv_value />
         <trace_0_y_axis_index>1</trace_0_y_axis_index>
-        <trace_0_y_pv>$(PREFIX):$(ORIENT)CAM-COM-BUFFER</trace_0_y_pv>
+        <trace_0_y_pv>$(secsub):$(disdevid):$(ORIENT)CAM-COM-BUFFER</trace_0_y_pv>
         <trace_0_y_pv_value />
         <trace_1_anti_alias>true</trace_1_anti_alias>
         <trace_1_buffer_size>100</trace_1_buffer_size>
@@ -880,7 +880,7 @@ $(trace_0_y_pv_value)</tooltip>
         <trace_1_x_pv></trace_1_x_pv>
         <trace_1_x_pv_value />
         <trace_1_y_axis_index>2</trace_1_y_axis_index>
-        <trace_1_y_pv>$(PREFIX):$(ORIENT)CAM-BSZ-BUFFER</trace_1_y_pv>
+        <trace_1_y_pv>$(secsub):$(disdevid):$(ORIENT)CAM-BSZ-BUFFER</trace_1_y_pv>
         <trace_1_y_pv_value />
         <trace_count>2</trace_count>
         <transparent>false</transparent>
@@ -1043,7 +1043,7 @@ $(trace_0_y_pv_value)</tooltip>
           <name>Text Update Template_27</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-BSZ-MIN</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-BSZ-MIN</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -1136,7 +1136,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_28</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-BSZ-AVG</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-BSZ-AVG</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -1229,7 +1229,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_35</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-BSZ-MAX</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-BSZ-MAX</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -1641,7 +1641,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_27</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-AMP-MIN</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-AMP-MIN</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -1734,7 +1734,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_28</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-AMP-AVG</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-AMP-AVG</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -1827,7 +1827,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_35</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-AMP-MAX</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-AMP-MAX</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -2205,7 +2205,7 @@ $(trace_0_y_pv_value)</tooltip>
         <trace_0_x_pv></trace_0_x_pv>
         <trace_0_x_pv_value />
         <trace_0_y_axis_index>1</trace_0_y_axis_index>
-        <trace_0_y_pv>$(PREFIX):$(ORIENT)CAM-AMP-BUFFER</trace_0_y_pv>
+        <trace_0_y_pv>$(secsub):$(disdevid):$(ORIENT)CAM-AMP-BUFFER</trace_0_y_pv>
         <trace_0_y_pv_value />
         <trace_1_anti_alias>true</trace_1_anti_alias>
         <trace_1_buffer_size>100</trace_1_buffer_size>
@@ -2226,7 +2226,7 @@ $(trace_0_y_pv_value)</tooltip>
         <trace_1_x_pv></trace_1_x_pv>
         <trace_1_x_pv_value />
         <trace_1_y_axis_index>2</trace_1_y_axis_index>
-        <trace_1_y_pv>$(PREFIX):$(ORIENT)CAM-BCKGRND-BUFFER</trace_1_y_pv>
+        <trace_1_y_pv>$(secsub):$(disdevid):$(ORIENT)CAM-BCKGRND-BUFFER</trace_1_y_pv>
         <trace_1_y_pv_value />
         <trace_count>2</trace_count>
         <transparent>false</transparent>
@@ -2389,7 +2389,7 @@ $(trace_0_y_pv_value)</tooltip>
           <name>Text Update Template_27</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-BCKGRND-MIN</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-BCKGRND-MIN</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -2482,7 +2482,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_28</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-BCKGRND-AVG</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-BCKGRND-AVG</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -2575,7 +2575,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_35</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-BCKGRND-MAX</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-BCKGRND-MAX</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -2987,7 +2987,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_27</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-MU-MIN</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-MU-MIN</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -3080,7 +3080,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_28</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-MU-AVG</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-MU-AVG</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -3173,7 +3173,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_35</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-MU-MAX</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-MU-MAX</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -3551,7 +3551,7 @@ $(trace_0_y_pv_value)</tooltip>
         <trace_0_x_pv></trace_0_x_pv>
         <trace_0_x_pv_value />
         <trace_0_y_axis_index>1</trace_0_y_axis_index>
-        <trace_0_y_pv>$(PREFIX):$(ORIENT)CAM-MU-BUFFER</trace_0_y_pv>
+        <trace_0_y_pv>$(secsub):$(disdevid):$(ORIENT)CAM-MU-BUFFER</trace_0_y_pv>
         <trace_0_y_pv_value />
         <trace_1_anti_alias>true</trace_1_anti_alias>
         <trace_1_buffer_size>100</trace_1_buffer_size>
@@ -3572,7 +3572,7 @@ $(trace_0_y_pv_value)</tooltip>
         <trace_1_x_pv></trace_1_x_pv>
         <trace_1_x_pv_value />
         <trace_1_y_axis_index>2</trace_1_y_axis_index>
-        <trace_1_y_pv>$(PREFIX):$(ORIENT)CAM-SIGMA-BUFFER</trace_1_y_pv>
+        <trace_1_y_pv>$(secsub):$(disdevid):$(ORIENT)CAM-SIGMA-BUFFER</trace_1_y_pv>
         <trace_1_y_pv_value />
         <trace_count>2</trace_count>
         <transparent>false</transparent>
@@ -3735,7 +3735,7 @@ $(trace_0_y_pv_value)</tooltip>
           <name>Text Update Template_27</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-SIGMA-MIN</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-SIGMA-MIN</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -3828,7 +3828,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_28</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-SIGMA-AVG</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-SIGMA-AVG</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />
@@ -3921,7 +3921,7 @@ $(pv_value)</tooltip>
           <name>Text Update Template_35</name>
           <precision>3</precision>
           <precision_from_pv>false</precision_from_pv>
-          <pv_name>$(PREFIX):$(ORIENT)CAM-SIGMA-MAX</pv_name>
+          <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-SIGMA-MAX</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
           <rules />

@@ -263,7 +263,7 @@
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Background_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Background_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -356,7 +356,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakAmplitude_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakAmplitude_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -449,7 +449,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakMu_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakMu_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -542,7 +542,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakSigma_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakSigma_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -640,7 +640,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Background</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Background</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -697,7 +697,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakAmplitude</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakAmplitude</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -754,7 +754,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakMu</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakMu</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -811,7 +811,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakSigma</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakSigma</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -909,7 +909,7 @@ $(pv_value)</tooltip>
         <image></image>
         <name>Action Button</name>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Background</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Background</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -963,7 +963,7 @@ $(pv_value)</tooltip>
         <image></image>
         <name>Action Button</name>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakAmplitude</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakAmplitude</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -1017,7 +1017,7 @@ $(pv_value)</tooltip>
         <image></image>
         <name>Action Button</name>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakMu</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakMu</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -1071,7 +1071,7 @@ $(pv_value)</tooltip>
         <image></image>
         <name>Action Button</name>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-PeakSigma</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-PeakSigma</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -1284,7 +1284,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Outcome_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Outcome_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1377,7 +1377,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-NrIterations_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-NrIterations_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1470,7 +1470,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-ResidVectorNorm_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-ResidVectorNorm_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1563,7 +1563,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Status_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Status_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1656,7 +1656,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-OutcomeStr_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-OutcomeStr_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1749,7 +1749,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-OutcomeStrLong_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-OutcomeStrLong_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1924,7 +1924,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Ftol_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Ftol_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2140,7 +2140,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-StepBound_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-StepBound_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2197,7 +2197,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Xtol</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Xtol</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2254,7 +2254,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Epsilon</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Epsilon</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2306,7 +2306,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Gtol_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Gtol_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2404,7 +2404,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Patience</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Patience</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2461,7 +2461,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Ftol</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Ftol</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2513,7 +2513,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Xtol_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Xtol_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2570,7 +2570,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Gtol</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Gtol</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2622,7 +2622,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Epsilon_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Epsilon_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2679,7 +2679,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-StepBound</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-StepBound</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2731,7 +2731,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>5</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-Patience_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-Patience_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2824,7 +2824,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-ScaleDiag_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-ScaleDiag_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -2872,7 +2872,7 @@ $(pv_value)</tooltip>
         <height>25</height>
         <items_from_pv>true</items_from_pv>
         <name>Combo</name>
-        <pv_name>$(PREFIX):$(ORIENT)CAMFITS-ScaleDiag</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMFITS-ScaleDiag</pv_name>
         <pv_value />
         <rules />
         <scale_options>

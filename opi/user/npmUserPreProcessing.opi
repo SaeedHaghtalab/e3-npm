@@ -304,7 +304,7 @@
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMPROC-EnableBackground_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableBackground_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -361,7 +361,7 @@ $(pv_value)</tooltip>
         <image></image>
         <name>Action Button Template_2</name>
         <push_action_index>0</push_action_index>
-        <pv_name>$(PREFIX):$(ORIENT)CAMPROC-SaveBackground</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMPROC-SaveBackground</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -406,7 +406,7 @@ $(pv_value)</tooltip>
         <height>29</height>
         <items_from_pv>true</items_from_pv>
         <name>Combo</name>
-        <pv_name>$(PREFIX):$(ORIENT)CAMPROC-EnableBackground</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableBackground</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -452,7 +452,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMPROC-SaveBackground</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMPROC-SaveBackground</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -627,7 +627,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-MaxSizeY_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-MaxSizeY_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -720,7 +720,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-BinX_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-BinX_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -895,7 +895,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-MinY_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-MinY_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -952,7 +952,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-BinX</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-BinX</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1009,7 +1009,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-MinX</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-MinX</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1066,7 +1066,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-MinY</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-MinY</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1200,7 +1200,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-MaxSizeX_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-MaxSizeX_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1257,7 +1257,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-BinY</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-BinY</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1309,7 +1309,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-BinY_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-BinY_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1361,7 +1361,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-MinX_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-MinX_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1495,7 +1495,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-SizeY_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-SizeY_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1552,7 +1552,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-SizeX</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-SizeX</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1609,7 +1609,7 @@ $(pv_value)</tooltip>
         <name>Text Input_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-SizeY</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-SizeY</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1661,7 +1661,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-SizeX_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-SizeX_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1754,7 +1754,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_36</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-ArraySizeY_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-ArraySizeY_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1806,7 +1806,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAMROI-ArraySizeX_RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMROI-ArraySizeX_RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />

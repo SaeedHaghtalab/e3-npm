@@ -263,7 +263,7 @@
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-MAGN</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-MAGN</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -397,7 +397,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-SP</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-SP</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -449,7 +449,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-POS</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-POS</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -501,7 +501,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-VIRTPIXELSIZEX</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-VIRTPIXELSIZEX</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -635,7 +635,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_1</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-VIRTPIXELSIZEY</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-VIRTPIXELSIZEY</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -728,7 +728,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_28</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-CENTOFF</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-CENTOFF</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -821,7 +821,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_35</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-SCALEFACT</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-SCALEFACT</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1083,7 +1083,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-OFFLENS</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-OFFLENS</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1140,7 +1140,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-FOCLEN</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-FOCLEN</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1197,7 +1197,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-OFFREF</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-OFFREF</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1245,7 +1245,7 @@ $(pv_value)</tooltip>
         <height>23</height>
         <items_from_pv>true</items_from_pv>
         <name>Combo</name>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-SCALEDIM</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-SCALEDIM</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -1378,7 +1378,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(PREFIX):$(ORIENT)CAM-REALPIXELSIZE</pv_name>
+        <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-REALPIXELSIZE</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
