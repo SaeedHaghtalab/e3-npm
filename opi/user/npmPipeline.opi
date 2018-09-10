@@ -4428,15 +4428,15 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
       <actions hook="false" hook_all="false">
         <action type="WRITE_PV">
-          <pv_name>NPM:VCAMOBSIMAGE-NDArrayPort</pv_name>
-          <value>VCAMOBSROI</value>
+          <pv_name>$(PREFIX):$(ORIENT)CAMOBSIMAGE-NDArrayPort</pv_name>
+          <value>$(ORIENT)CAMOBSROI</value>
           <timeout>10</timeout>
           <confirm_message></confirm_message>
           <description></description>
         </action>
         <action type="WRITE_PV">
-          <pv_name>NPM:VCAMOBSIMAGE-NDArrayPort</pv_name>
-          <value>VCAMPROC</value>
+          <pv_name>$(PREFIX):$(ORIENT)CAMOBSIMAGE-NDArrayPort</pv_name>
+          <value>$(ORIENT)CAMPROC</value>
           <timeout>10</timeout>
           <confirm_message></confirm_message>
           <description></description>

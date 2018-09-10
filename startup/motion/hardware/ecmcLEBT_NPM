@@ -1,6 +1,5 @@
 ############################################################
-############# LEBT:
-
+############# LEBT NPM camera Motion COntrol HW
 
 # 0  0:0   PREOP  +  EK1100 EtherCAT Coupler (2A E-Bus)
 # 1  0:1   PREOP  +  EL1808 8K. Dig. Eingang 24V, 3ms
@@ -10,10 +9,11 @@
 # 5  0:5   PREOP  +  EL5101 1K. Inc. Encoder 5V
 # 6  0:6   PREOP  +  EL5101 1K. Inc. Encoder 5V
 # 7  0:7   PREOP  +  EL5101 1K. Inc. Encoder 5V
-# 8  0:8   PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
+# 8  0:8   PREOP  +  EL9410 E-Bus Netzteilklemme (Diagnose)
 # 9  0:9   PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
 #10  0:10  PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
 #11  0:11  PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
+#12  0:12  PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
 
 
 epicsEnvSet("ECMC_EC_MASTER_ID"          "0")
@@ -54,30 +54,33 @@ epicsEnvSet("ECMC_EC_SLAVE_NUM",              "6")
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "7")
 < $(HW_TOP)/ecmcEL5101-IncEncoder$(ECMC_GEN_EC_RECORDS)
 
+# Configure EL9410 power supply EBus terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "8")
+< $(HW_TOP)/ecmcEL9410-powerSupplyEBus
 
 # Configure EL7037 stepper drive terminal, LEBT NPM1 vertical camera actuator
-epicsEnvSet("ECMC_EC_SLAVE_NUM",              "8")
-< $(HW_TOP)/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
-
-#Configure motor for EL7037
-< $(HW_TOP)/ecmcEL7037-Motor-Nanotec-2818M1006-B
-
-# Configure EL7037 stepper drive terminal, LEBT NPM1 horizontal camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "9")
 < $(HW_TOP)/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
 
 #Configure motor for EL7037
 < $(HW_TOP)/ecmcEL7037-Motor-Nanotec-2818M1006-B
 
-# Configure EL7037 stepper drive terminal, LEBT NPM2 vertical camera actuator
+# Configure EL7037 stepper drive terminal, LEBT NPM1 horizontal camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "10")
 < $(HW_TOP)/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
 
 #Configure motor for EL7037
 < $(HW_TOP)/ecmcEL7037-Motor-Nanotec-2818M1006-B
 
-# Configure EL7037 stepper drive terminal, LEBT NPM2 horizontal camera actuator
+# Configure EL7037 stepper drive terminal, LEBT NPM2 vertical camera actuator
 epicsEnvSet("ECMC_EC_SLAVE_NUM",              "11")
+< $(HW_TOP)/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
+
+#Configure motor for EL7037
+< $(HW_TOP)/ecmcEL7037-Motor-Nanotec-2818M1006-B
+
+# Configure EL7037 stepper drive terminal, LEBT NPM2 horizontal camera actuator
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "12")
 < $(HW_TOP)/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
 
 #Configure motor for EL7037

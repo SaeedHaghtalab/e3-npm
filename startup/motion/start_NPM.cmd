@@ -40,7 +40,7 @@ epicsEnvSet("ST_TOP", "$(TOP)/startup/motion/")
 
 epicsEnvSet("ECMC_MOTOR_PORT",    "$(SM_MOTOR_PORT=MCU1)")
 epicsEnvSet("ECMC_ASYN_PORT",     "$(SM_ASYN_PORT=MC_CPU1)")
-epicsEnvSet("ECMC_PREFIX",        "$(SM_PREFIX=NPM:)")
+epicsEnvSet("ECMC_PREFIX",        "$(SM_PREFIX=LEBT-010:)")
 
 ecmcAsynPortDriverConfigure($(ECMC_ASYN_PORT),1000,0,0)
 
@@ -102,11 +102,11 @@ EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,13,1)"
 ##############################################################################
 ############# Configuration of doppler:
 
-epicsEnvSet("STREAM_PROTOCOL_PATH", "/home/mtcauser/e3/e3-ecmctraining/ecmctraining/protocol")
+epicsEnvSet("STREAM_PROTOCOL_PATH", "$(TOP)/startup/motion/protocol")
 
 # Custom settings for LEBT NPM1 vertical camera actuator
 
-#< $(ST_TOP)/NPMA_001_openloop_mm
+#< $(ST_TOP)/NPMA_001_openloop
 < $(ST_TOP)/NPMA_001
 
 # Apply configurations to ECMC

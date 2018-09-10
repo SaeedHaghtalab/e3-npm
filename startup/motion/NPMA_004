@@ -1,12 +1,12 @@
 
 #General
-epicsEnvSet("ECMC_MOTOR_NAME",            "VMTR")
-epicsEnvSet("ECMC_R",                     "VMTR-")
+epicsEnvSet("ECMC_MOTOR_NAME",            "PBI-NPM-004")
+epicsEnvSet("ECMC_R",                     "PBI-NPM-004-")
 epicsEnvSet("ECMC_AXIS_NO",               "4")
-epicsEnvSet("ECMC_DESC",                  "LEBT NPM2 horizontal camera actuator")
+epicsEnvSet("ECMC_DESC",                  "LEBT NPM2 vertical Lens Motor")
 
 #Encoder
-epicsEnvSet("ECMC_ENC_SCALE_NUM"          "-6.724")			# Numerator of encoder scaling 6.724 mm/turn)
+epicsEnvSet("ECMC_ENC_SCALE_NUM"          "6.724")			# Numerator of encoder scaling 6.724 mm/turn)
 epicsEnvSet("ECMC_ENC_SCALE_DENOM"        "8000")			# Number of encoder counts to achieve the scale numerator.micro steps (2000x4)	
 epicsEnvSet("ECMC_ENC_BITS"               "16")				# Resolution of encoder in EtherCAt process image
 # Type: 0=Incremental, 1=Absolute
@@ -16,9 +16,9 @@ epicsEnvSet("ECMC_EC_ALIAS_ENC_POS",      "POSITION")			# alias for encoder posi
 
 #Drive
 epicsEnvSet("ECMC_DRV_TYPE"               "0")                          # Stepper: 0. DS402: 1 (DS402 = servos and advanced stepper drives)
-epicsEnvSet("ECMC_DRV_SCALE_NUM"          "67.24")			# Fastest speed in engineering units (67.24 mm/s)
+epicsEnvSet("ECMC_DRV_SCALE_NUM"          "-67.24")			# Fastest speed in engineering units (67.24 mm/s)
 epicsEnvSet("ECMC_DRV_SCALE_DENOM"        "32768.0")			# I/O range for ECMC_EC_ALIAS_DRV_VELO_SET
-epicsEnvSet("ECMC_EC_SLAVE_NUM_DRV",      "11")				# EtherCAT bus position for slave 
+epicsEnvSet("ECMC_EC_SLAVE_NUM_DRV",      "12")				# EtherCAT bus position for slave 
 epicsEnvSet("ECMC_EC_ALIAS_DRV_CNTRL_WD", "STM_CONTROL")		# Stepper: Entry for drive enable bit. DS402: Entry for control word
 epicsEnvSet("ECMC_EC_BIT_DRV_CNTRL_WD",   "0")                          # Stepper: Bit index for drive enable bit. DS402: Set to -1 (use entire control word)
 epicsEnvSet("ECMC_EC_ALIAS_DRV_STAT_WD",  "STM_STATUS")			# Stepper: Entry for drive enabled bit. DS402: Entry for status word
@@ -47,7 +47,7 @@ epicsEnvSet("ECMC_HOME_ACC",              "$(SM_HOMEACC=1)")		# Acceleration
 epicsEnvSet("ECMC_HOME_DEC",              "$(SM_HOMEDEC=1)")		# Deceleration
 
 #Controller
-epicsEnvSet("ECMC_CNTRL_KP",              "1.0")			# Position control loop proportional gain
+epicsEnvSet("ECMC_CNTRL_KP",              "0.80")			# Position control loop proportional gain
 epicsEnvSet("ECMC_CNTRL_KI",              "0.0")			# Position control loop integral gain
 epicsEnvSet("ECMC_CNTRL_KD",              "0.0")			# Position control loop differentia gain
 epicsEnvSet("ECMC_CNTRL_KFF",             "1.0")			# Velocity feed forward gain
@@ -61,20 +61,20 @@ epicsEnvSet("ECMC_SOFT_HIGH_LIM",         "$(SM_DHLM=0)")		# Soft high limit pos
 # If the difference between the actual position and the trajectory position setpoint is larger than ECMC_MON_LAG_MON_TOL for a period longer than ECM_MON_LAG_MON_TIME the motion will be stoped
 
 epicsEnvSet("ECMC_MON_LAG_MON_TOL",       "0.5")			# Position lag tolerance.
-epicsEnvSet("ECMC_MON_LAG_MON_TIME",      "10")				# Position lag monitoring filter time (ms)
+epicsEnvSet("ECMC_MON_LAG_MON_TIME",      "5")				# Position lag monitoring filter time (ms)
 epicsEnvSet("ECMC_MON_LAG_MON_ENA",       "1")				# Enable position lag monitoring
 
 # at target; 
 # If the difference between the actual position and the target setpoint is within than ECMC_MON_AT_TARGET_TOL for a period longer than ECMC_AT_TARGET_MON_TIME the axis is considered to have reached target.
 
 epicsEnvSet("ECMC_MON_AT_TARGET_TOL",     "0.05")			# At target tolerance.
-epicsEnvSet("ECMC_MON_AT_TARGET_TIME",     "20")				# At target monitoring filter time
+epicsEnvSet("ECMC_MON_AT_TARGET_TIME",     "5")				# At target monitoring filter time
 epicsEnvSet("ECMC_MON_AT_TARGET_ENA",     "1")				# Enable at target monitoring
 
 # velocity
 # If actual or setpoint velocity is higher than ECMC_MON_VELO_MAX for a period longer than ECM_MON_VELO_MAX_TRAJ_TIME the motion will be stopped or if longer than ECMC_MON_VELO_MAX_DRV_TIME the enable command to the drive will go down (amplifier disable)
 
-epicsEnvSet("ECMC_MON_VELO_MAX",          "0.1")			# Maximun allowed speed of axis
+epicsEnvSet("ECMC_MON_VELO_MAX",          "1")			# Maximun allowed speed of axis
 epicsEnvSet("ECMC_MON_VELO_MAX_TRAJ_TIME","10")			# Max velocity filter time. Initiates a controller ramp down of velocity to stop (ms)
 epicsEnvSet("ECMC_MON_VELO_MAX_DRV_TIME", "20")			# Max velocity filter time. Disables amplifier. Normally ECMC_MON_VELO_MAX_DRV_TIME > ECMC_MON_VELO_MAX_TRAJ_TIME (ms)
 epicsEnvSet("ECMC_MON_VELO_MAX_ENA",      "1")				# Enable maximun velocity monitoring

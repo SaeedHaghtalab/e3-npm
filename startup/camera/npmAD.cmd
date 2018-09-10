@@ -46,7 +46,7 @@ dbLoadRecords("NDPva.template", "P=$(PREFIX), R=:$(OBSPVAIMAGE)-, PORT=$(OBSPVAI
 
 
 ###### Custom Databases
-dbLoadRecords("$(DB_TOP)/npmObjPosParams.template", "PREFIX=$(PREFIX), CAM=$(CAM), OFFLENS_VAL=$(OFFLENS_VAL), FOCLEN_VAL=$(FOCLEN), OFFREF_VAL=$(OFFREF), LENSPOS_PV=$(LENSPOS_PV= ), EGU=$(MOTOR_EGU=mm), PIXELSIZE=$(PIXELSIZE), DIM=$(DIM)")
+dbLoadRecords("$(DB_TOP)/npmObjPosParams.template", "PREFIX=$(PREFIX), CAM=$(CAM), OFFLENS_VAL=$(OFFLENS_VAL), FOCLEN_VAL=$(FOCLEN), OFFREF_VAL=$(OFFREF), LENSPOS_PV=$(PREFIX).RBV, EGU=$(MOTOR_EGU=mm), PIXELSIZE=$(PIXELSIZE), DIM=$(DIM)")
 
 dbLoadRecords("$(DB_TOP)/npmRollingBuffer.template", "PREFIX=$(PREFIX), CAM=$(CAM), BUFSIZE=$(ROLLINGBUFSIZE), PARAM=AMP, PARAM_PV=$(PREFIX):$(CAM)FITS-PeakAmplitude_RBV, PREC=$(AMP_PREC)")
 

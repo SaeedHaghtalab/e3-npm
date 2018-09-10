@@ -10,7 +10,7 @@
   <background_color>
     <color red="240" green="240" blue="240" />
   </background_color>
-  <boy_version>5.1.0.201701251229</boy_version>
+  <boy_version>5.1.0</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -44,7 +44,7 @@
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="192" green="192" blue="192" />
@@ -95,26 +95,26 @@
     <widget_type>Linking Container</widget_type>
     <width>1163</width>
     <wuid>57e3dd63:153899ef176:-7edb</wuid>
-    <x>0</x>
-    <y>40</y>
+    <x>18</x>
+    <y>34</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
     <actions hook="false" hook_all="false" />
     <auto_size>false</auto_size>
     <background_color>
-      <color name="IO OutputPV Bg" red="121" green="123" blue="126" />
+      <color name="IO OutputPV Bg" red="255" green="255" blue="255" />
     </background_color>
     <border_color>
-      <color name="IO Border" red="215" green="215" blue="215" />
+      <color name="IO Border" red="0" green="0" blue="0" />
     </border_color>
     <border_style>0</border_style>
     <border_width>1</border_width>
     <enabled>false</enabled>
     <font>
-      <opifont.name fontName="Sans" height="18" style="1" pixels="false">Header 1</opifont.name>
+      <opifont.name fontName="Cantarell" height="19" style="1" pixels="false">Header 1</opifont.name>
     </font>
     <foreground_color>
-      <color name="IO OutputPV Fg" red="255" green="255" blue="255" />
+      <color name="IO OutputPV Fg" red="0" green="0" blue="0" />
     </foreground_color>
     <height>40</height>
     <horizontal_alignment>0</horizontal_alignment>
@@ -143,23 +143,23 @@
     <alarm_pulsing>false</alarm_pulsing>
     <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
     <background_color>
-      <color name="IO OutputPV Bg" red="121" green="123" blue="126" />
+      <color name="IO OutputPV Bg" red="255" green="255" blue="255" />
     </background_color>
     <border_alarm_sensitive>true</border_alarm_sensitive>
     <border_color>
-      <color name="IO Border" red="215" green="215" blue="215" />
+      <color name="IO Border" red="0" green="0" blue="0" />
     </border_color>
     <border_style>0</border_style>
     <border_width>0</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="arial" height="10" style="1" pixels="false">IO Input 1</opifont.name>
+      <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Input 1</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
       <color red="0" green="0" blue="0" />
     </foreground_color>
-    <height>27</height>
+    <height>36</height>
     <items>
       <s>LNS-LEBT-010:PBI-NPM-01</s>
     </items>
@@ -193,14 +193,14 @@ $(pv_value)</tooltip>
     </background_color>
     <border_alarm_sensitive>true</border_alarm_sensitive>
     <border_color>
-      <color name="IO Border" red="215" green="215" blue="215" />
+      <color name="IO Border" red="0" green="0" blue="0" />
     </border_color>
     <border_style>4</border_style>
     <border_width>2</border_width>
     <confirm_message></confirm_message>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="arial" height="10" style="0" pixels="false">IO Normal</opifont.name>
+      <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Normal</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -244,23 +244,23 @@ $(pv_value)</tooltip>
     <alarm_pulsing>false</alarm_pulsing>
     <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
     <background_color>
-      <color name="IO OutputPV Bg" red="121" green="123" blue="126" />
+      <color name="IO OutputPV Bg" red="255" green="255" blue="255" />
     </background_color>
     <border_alarm_sensitive>true</border_alarm_sensitive>
     <border_color>
-      <color name="IO Border" red="215" green="215" blue="215" />
+      <color name="IO Border" red="0" green="0" blue="0" />
     </border_color>
     <border_style>0</border_style>
     <border_width>0</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="arial" height="10" style="1" pixels="false">IO Input 1</opifont.name>
+      <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Input 1</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
       <color red="0" green="0" blue="0" />
     </foreground_color>
-    <height>27</height>
+    <height>36</height>
     <items>
       <s>V</s>
       <s>H</s>
@@ -295,14 +295,14 @@ $(pv_value)</tooltip>
     </background_color>
     <border_alarm_sensitive>true</border_alarm_sensitive>
     <border_color>
-      <color name="IO Border" red="215" green="215" blue="215" />
+      <color name="IO Border" red="0" green="0" blue="0" />
     </border_color>
     <border_style>4</border_style>
     <border_width>2</border_width>
     <confirm_message></confirm_message>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="arial" height="10" style="0" pixels="false">IO Normal</opifont.name>
+      <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Normal</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -345,19 +345,19 @@ $(pv_value)</tooltip>
     <actions hook="false" hook_all="false" />
     <auto_size>false</auto_size>
     <background_color>
-      <color name="IO Background" red="255" green="255" blue="205" />
+      <color name="IO Background" red="235" green="235" blue="235" />
     </background_color>
     <border_color>
-      <color name="IO Border" red="215" green="215" blue="215" />
+      <color name="IO Border" red="0" green="0" blue="0" />
     </border_color>
     <border_style>0</border_style>
     <border_width>2</border_width>
     <enabled>false</enabled>
     <font>
-      <opifont.name fontName="Sans" height="12" style="1" pixels="false">Header 3</opifont.name>
+      <opifont.name fontName="Cantarell" height="13" style="1" pixels="false">Header 3</opifont.name>
     </font>
     <foreground_color>
-      <color name="IO OutputPV Fg" red="255" green="255" blue="255" />
+      <color name="IO OutputPV Fg" red="0" green="0" blue="0" />
     </foreground_color>
     <height>30</height>
     <horizontal_alignment>1</horizontal_alignment>
@@ -386,19 +386,19 @@ $(pv_value)</tooltip>
     <actions hook="false" hook_all="false" />
     <auto_size>false</auto_size>
     <background_color>
-      <color name="IO Background" red="255" green="255" blue="205" />
+      <color name="IO Background" red="235" green="235" blue="235" />
     </background_color>
     <border_color>
-      <color name="IO Border" red="215" green="215" blue="215" />
+      <color name="IO Border" red="0" green="0" blue="0" />
     </border_color>
     <border_style>0</border_style>
     <border_width>2</border_width>
     <enabled>false</enabled>
     <font>
-      <opifont.name fontName="Sans" height="12" style="1" pixels="false">Header 3</opifont.name>
+      <opifont.name fontName="Cantarell" height="13" style="1" pixels="false">Header 3</opifont.name>
     </font>
     <foreground_color>
-      <color name="IO OutputPV Fg" red="255" green="255" blue="255" />
+      <color name="IO OutputPV Fg" red="0" green="0" blue="0" />
     </foreground_color>
     <height>30</height>
     <horizontal_alignment>1</horizontal_alignment>
