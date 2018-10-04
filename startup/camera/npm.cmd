@@ -13,8 +13,8 @@ epicsEnvSet("ST_TOP",  "$(TOP)/startup/camera")
 ##############################################################################
 ### Vertical Orientation
 
-epicsEnvSet("PREFIX",           "$(SECSUB):PBI-NPM-002")
-epicsEnvSet("CAM",              "VCAM")
+epicsEnvSet("PREFIX",           "$(VPREF)")
+epicsEnvSet("CAM",              "$(VCAM)")
 epicsEnvSet("CAMIP",            "$(VCAMIP)")
 epicsEnvSet("OFFLENS_VAL",      "5.45")
 epicsEnvSet("DIM",              "0")
@@ -25,17 +25,28 @@ epicsEnvSet("DIM",              "0")
 ##############################################################################
 ### Horizontal Orientation
 
-epicsEnvSet("PREFIX",           "$(SECSUB):PBI-NPM-001")
-epicsEnvSet("CAM",              "HCAM")
+epicsEnvSet("PREFIX",           "$(HPREF)")
+epicsEnvSet("CAM",              "$(HCAM)")
 epicsEnvSet("CAMIP",            "$(HCAMIP)")
 epicsEnvSet("OFFLENS_VAL",      "5.50")
 epicsEnvSet("DIM",              "1")
 
 < $(ST_TOP)/npmAD.cmd
 
+##############################################################################
+
+
+< $(ST_TOP)/npmEVR.cmd
 
 startPVAServer
 iocInit
 
-dbpf $(PREFIX):$(OBSROI)-BinX 4
-dbpf $(PREFIX):$(OBSROI)-BinY 4
+
+
+epicsEnvSet("PREF",             "$(VPREF)")
+epicsEnvSet("CAM",              "$(VCAM)")
+< $(ST_TOP)/post_init.cmd
+
+epicsEnvSet("PREF",             "$(HPREF)")
+epicsEnvSet("CAM",              "$(HCAM)")
+< $(ST_TOP)/post_init.cmd

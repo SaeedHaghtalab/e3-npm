@@ -18,9 +18,9 @@
 
 require ecmc,5.0.1
 require ecmctraining,0906da5
-require EthercatMC,2.0.1
-require stream, 2.7.11
-require iocStats,1856ef5
+require EthercatMC,2.1.0
+require stream, 2.7.14p
+require iocStats,ae5d083
 
 
 #require ecmc,4.3.0

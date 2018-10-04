@@ -10,7 +10,7 @@
   <background_color>
     <color red="220" green="220" blue="220" />
   </background_color>
-  <boy_version>5.1.0.201703221304</boy_version>
+  <boy_version>5.1.0</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -198,10 +198,10 @@
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -239,10 +239,10 @@
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -397,13 +397,13 @@ $(pv_value)</tooltip>
         <border_width>0</border_width>
         <enabled>true</enabled>
         <font>
-          <fontdata fontName="Sans" height="6" style="0" pixels="true" />
+          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>29</height>
+        <height>32</height>
         <items_from_pv>true</items_from_pv>
         <name>Combo</name>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMPROC-EnableBackground</pv_name>
@@ -562,10 +562,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -655,10 +655,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -748,10 +748,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -789,10 +789,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -830,10 +830,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -1094,10 +1094,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -1135,10 +1135,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -1389,10 +1389,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -1430,10 +1430,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
@@ -1689,10 +1689,10 @@ $(pv_value)</tooltip>
         <actions hook="false" hook_all="false" />
         <auto_size>false</auto_size>
         <background_color>
-          <color name="IO Background" red="255" green="255" blue="205" />
+          <color name="IO Background" red="235" green="235" blue="235" />
         </background_color>
         <border_color>
-          <color name="IO Border" red="215" green="215" blue="215" />
+          <color name="IO Border" red="0" green="0" blue="0" />
         </border_color>
         <border_style>0</border_style>
         <border_width>2</border_width>
