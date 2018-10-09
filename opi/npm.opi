@@ -49,7 +49,7 @@
     <border_width>1</border_width>
     <enabled>false</enabled>
     <font>
-      <fontdata fontName="Titillium" height="25" style="0" pixels="false" />
+      <opifont.name fontName="Source Sans Pro" height="36" style="1" pixels="false">HUGE-SANS-BOLD</opifont.name>
     </font>
     <foreground_color>
       <color name="IO OutputPV Fg" red="0" green="0" blue="0" />
@@ -97,7 +97,7 @@
     <foreground_color>
       <color red="0" green="0" blue="0" />
     </foreground_color>
-    <height>36</height>
+    <height>32</height>
     <items>
       <s>LEBT-010</s>
       <s>LEBT-020</s>
@@ -191,7 +191,7 @@ $(pv_value)</tooltip>
     <border_width>2</border_width>
     <enabled>false</enabled>
     <font>
-      <fontdata fontName="Titillium" height="20" style="0" pixels="false" />
+      <opifont.name fontName="Source Sans Pro" height="18" style="0" pixels="false">MEDIUM-SANS-PLAIN</opifont.name>
     </font>
     <foreground_color>
       <color name="IO OutputPV Fg" red="0" green="0" blue="0" />
@@ -231,13 +231,13 @@ $(pv_value)</tooltip>
     <border_width>0</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <group_name></group_name>
-    <height>1</height>
+    <height>937</height>
     <macros>
       <include_parent_macros>true</include_parent_macros>
     </macros>
@@ -277,7 +277,7 @@ $(pv_value)</tooltip>
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Linking Container</widget_type>
-    <width>1</width>
+    <width>1579</width>
     <wuid>168fa846:159db2879d4:-70e3</wuid>
     <x>0</x>
     <y>41</y>
