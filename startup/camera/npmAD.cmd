@@ -58,3 +58,6 @@ dbLoadRecords("$(DB_TOP)/npmRollingBuffer.template", "PREFIX=$(PREFIX), CAM=$(CA
 
 #WLA - Calling database for Scale settings
 dbLoadRecords("$(DB_TOP)/npmScaleSettings.template", "PREFIX=$(PREFIX), CAM=$(CAM)")
+
+< $(ST_TOP)/post_init.cmd
+

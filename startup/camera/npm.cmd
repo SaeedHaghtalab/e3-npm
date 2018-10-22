@@ -10,6 +10,8 @@ epicsEnvSet("ST_TOP",  "$(TOP)/startup/camera")
 
 < $(ST_TOP)/envset
 
+< $(ST_TOP)/npmEVR.cmd
+
 ##############################################################################
 ### Vertical Orientation
 
@@ -35,18 +37,5 @@ epicsEnvSet("DIM",              "1")
 
 ##############################################################################
 
-
-< $(ST_TOP)/npmEVR.cmd
-
 startPVAServer
-iocInit
 
-
-
-epicsEnvSet("PREF",             "$(VPREF)")
-epicsEnvSet("CAM",              "$(VCAM)")
-< $(ST_TOP)/post_init.cmd
-
-epicsEnvSet("PREF",             "$(HPREF)")
-epicsEnvSet("CAM",              "$(HCAM)")
-< $(ST_TOP)/post_init.cmd

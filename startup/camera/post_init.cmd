@@ -1,19 +1,16 @@
-dbpf $(SYS)-$(DEV):DC-Tgt-SP 70
-
-dbpf $(PREF):$(CAM)OBSROI-BinX 4
-dbpf $(PREF):$(CAM)OBSROI-BinY 4
-
-dbpf $(PREF):$(CAM)-DataType "UInt16"
-
+afterInit("dbpf $(PREFIX):$(CAM)-TriggerMode 1")
+afterInit("dbpf $(PREFIX):$(CAM)-BinX 4")
+afterInit("dbpf $(PREFIX):$(CAM)-BinY 4")
+afterInit("dbpf $(PREFIX):$(CAM)-DataType "UInt16"")
 
 # TimeStamps
-dbpf $(PREF):$(CAM)-COM.TSEL 			$(SYS)-$(DEV):Time-I
-dbpf $(PREF):$(CAM)-BSZ.TSEL 			$(SYS)-$(DEV):Time-I
-dbpf $(PREF):$(CAM)FITS-Background_RBV.TSEL 	$(SYS)-$(DEV):Time-I
-dbpf $(PREF):$(CAM)FITS-PeakAmplitude_RBV.TSEL 	$(SYS)-$(DEV):Time-I
-dbpf $(PREF):$(CAM)FITS-PeakMu_RBV.TSEL 	$(SYS)-$(DEV):Time-I
-dbpf $(PREF):$(CAM)FITS-PeakSigma_RBV.TSEL 	$(SYS)-$(DEV):Time-I
-dbpf $(PREF):$(CAM)OBSIMAGE-ArrayData.TSEL 	$(SYS)-$(DEV):Time-I
-dbpf $(PREF):$(CAM)FITS-Fit_RBV.TSEL 		$(SYS)-$(DEV):Time-I
-dbpf $(PREF):$(CAM)FITS-Y_RBV.TSEL 		$(SYS)-$(DEV):Time-I
+afterInit("dbpf $(PREFIX):$(CAM)-COM.TSEL 			 $(SYS)-$(DEV):Time-I.TIME")
+afterInit("dbpf $(PREFIX):$(CAM)-BSZ.TSEL 			 $(SYS)-$(DEV):Time-I.TIME")
+afterInit("dbpf $(PREFIX):$(CAM)FITS-Background_RBV.TSEL 	 $(SYS)-$(DEV):Time-I.TIME")
+afterInit("dbpf $(PREFIX):$(CAM)FITS-PeakAmplitude_RBV.TSEL $(SYS)-$(DEV):Time-I.TIME")
+afterInit("dbpf $(PREFIX):$(CAM)FITS-PeakMu_RBV.TSEL 	 $(SYS)-$(DEV):Time-I.TIME")
+afterInit("dbpf $(PREFIX):$(CAM)FITS-PeakSigma_RBV.TSEL 	 $(SYS)-$(DEV):Time-I.TIME")
+afterInit("dbpf $(PREFIX):$(CAM)OBSIMAGE-ArrayData.TSEL 	 $(SYS)-$(DEV):Time-I.TIME")
+afterInit("dbpf $(PREFIX):$(CAM)FITS-Fit_RBV.TSEL 		 $(SYS)-$(DEV):Time-I.TIME")
+afterInit("dbpf $(PREFIX):$(CAM)FITS-Y_RBV.TSEL 		 $(SYS)-$(DEV):Time-I.TIME")
 
