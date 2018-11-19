@@ -2,7 +2,7 @@ record(calc, "$(PREFIX):$(CAM)-BSZ")
 {
     field(DESC, "Beam Size minimum value")
     field(CALC, "A * B / 1000")
-    field(INPA, "$(SIGMA_PV) NPP")
+    field(INPA, "$(SIGMA_PV) CPP")
     field(INPB, "$(PREFIX):$(CAM)-SCALEFACT NPP")
     field(EGU,  "mm")
     field(PREC, "$(BSZ_PREC)")

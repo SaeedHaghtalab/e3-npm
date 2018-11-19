@@ -27,8 +27,8 @@ dbLoadRecords("NDStats.template", "P=$(PREFIX), R=:$(STATS)-, PORT=$(STATS), ADD
 NDFitsConfigure("$(FITS)", $(QSIZE), 0, "$(ROI)", 0, $(NUM_PEAKS), 0, 0, 0)
 # Link data path from RBV of Background, Mu, Sigma and Amplitude to setpoint PVs
 # and set macros on the setpoints PVs FLNKs to allow further data processing
-dbLoadRecords("NDFits.db", "P=$(PREFIX),R=:$(FITS)-, PORT=$(FITS), ADDR=0,TIMEOUT=1, XSIZE=$(XSIZE), YSIZE=$(YSIZE), NDARRAY_PORT=$(ROI), ENABLED=1, BACKGROUND_RBV_FLNK=$(PREFIX):$(CAM)-BCKGRND-BUFFER")
-dbLoadRecords("NDFitsN.db", "P=$(PREFIX),R=:$(FITS)-, PORT=$(FITS), ADDR=0, TIMEOUT=1, AMPLITUDE_RBV_FLNK=$(PREFIX):$(CAM)-AMP-BUFFER, MU_RBV_FLNK=$(PREFIX):$(CAM)-COM, SIGMA_RBV_FLNK=$(PREFIX):$(CAM)-BSZ")
+dbLoadRecords("NDFits.db", "P=$(PREFIX),R=:$(FITS)-, PORT=$(FITS), ADDR=0,TIMEOUT=1, XSIZE=$(XSIZE), YSIZE=$(YSIZE), NDARRAY_PORT=$(ROI), ENABLED=1, BACKGROUND_ACTUAL_FLNK=$(PREFIX):$(CAM)-BCKGRND-BUFFER")
+dbLoadRecords("NDFitsN.db", "P=$(PREFIX),R=:$(FITS)-, PORT=$(FITS), ADDR=0, TIMEOUT=1, AMPLITUDE_ACTUAL_FLNK=$(PREFIX):$(CAM)-AMP-BUFFER, MU_ACTUAL_FLNK=$(PREFIX):$(CAM)-COM, SIGMA_ACTUAL_FLNK=$(PREFIX):$(CAM)-BSZ")
 
 ## Region of interest plugin initialization and loading records, set UInt16 on datatype and UInt32 datatypoeout, set binx and biny to 4
 NDROIConfigure("$(OBSROI)", $(QSIZE), 0, "$(PROC)", 0, 0, 0)
@@ -48,13 +48,13 @@ dbLoadRecords("NDPva.template", "P=$(PREFIX), R=:$(OBSPVAIMAGE)-, PORT=$(OBSPVAI
 ###### Custom Databases
 dbLoadRecords("$(DB_TOP)/npmObjPosParams.template", "PREFIX=$(PREFIX), CAM=$(CAM), OFFLENS_VAL=$(OFFLENS_VAL), FOCLEN_VAL=$(FOCLEN), OFFREF_VAL=$(OFFREF), LENSPOS_PV=$(PREFIX).RBV, EGU=$(MOTOR_EGU=mm), PIXELSIZE=$(PIXELSIZE), DIM=$(DIM)")
 
-dbLoadRecords("$(DB_TOP)/npmRollingBuffer.template", "PREFIX=$(PREFIX), CAM=$(CAM), BUFSIZE=$(ROLLINGBUFSIZE), PARAM=AMP, PARAM_PV=$(PREFIX):$(CAM)FITS-PeakAmplitude_RBV, PREC=$(AMP_PREC)")
+dbLoadRecords("$(DB_TOP)/npmRollingBuffer.template", "PREFIX=$(PREFIX), CAM=$(CAM), BUFSIZE=$(ROLLINGBUFSIZE), PARAM=AMP, PARAM_PV=$(PREFIX):$(FITS)-PeakAmplitudeActual, PREC=$(AMP_PREC)")
 
-dbLoadRecords("$(DB_TOP)/npmCenterOfMass.db", "PREFIX=$(PREFIX), CAM=$(CAM), BUFSIZE=$(ROLLINGBUFSIZE), MU_PV=$(PREFIX):$(CAM)FITS-PeakMu_RBV, COM_PREC=$(COM_PREC), MU_PREC=$(MU_PREC)")
+dbLoadRecords("$(DB_TOP)/npmCenterOfMass.template", "PREFIX=$(PREFIX), CAM=$(CAM), BUFSIZE=$(ROLLINGBUFSIZE), MU_PV=$(PREFIX):$(FITS)-PeakMuActual, COM_PREC=$(COM_PREC), MU_PREC=$(MU_PREC)")
 
-dbLoadRecords("$(DB_TOP)/npmBeamSize.db", "PREFIX=$(PREFIX), CAM=$(CAM), BUFSIZE=$(ROLLINGBUFSIZE), SIGMA_PV=$(PREFIX):$(CAM)FITS-PeakSigma_RBV, BSZ_PREC=$(BSZ_PREC), SIGMA_PREC=$(SIGMA_PREC)")
+dbLoadRecords("$(DB_TOP)/npmBeamSize.db", "PREFIX=$(PREFIX), CAM=$(CAM), BUFSIZE=$(ROLLINGBUFSIZE), SIGMA_PV=$(PREFIX):$(FITS)-PeakSigmaActual, BSZ_PREC=$(BSZ_PREC), SIGMA_PREC=$(SIGMA_PREC)")
 
-dbLoadRecords("$(DB_TOP)/npmRollingBuffer.template", "PREFIX=$(PREFIX), CAM=$(CAM), BUFSIZE=$(ROLLINGBUFSIZE), PARAM=BCKGRND, PARAM_PV=$(PREFIX):$(CAM)FITS-Background_RBV, PREC=$(BCKGRND_PREC)")
+dbLoadRecords("$(DB_TOP)/npmRollingBuffer.template", "PREFIX=$(PREFIX), CAM=$(CAM), BUFSIZE=$(ROLLINGBUFSIZE), PARAM=BCKGRND, PARAM_PV=$(PREFIX):$(FITS)-BackgroundActual, PREC=$(BCKGRND_PREC)")
 
 #WLA - Calling database for Scale settings
 dbLoadRecords("$(DB_TOP)/npmScaleSettings.template", "PREFIX=$(PREFIX), CAM=$(CAM)")

@@ -5,7 +5,7 @@
 record(compress, "$(PREFIX):$(CAM)-$(PARAM)-BUFFER")
 {
     field(DESC, "Circular buffer of $(PARAM)")
-    field(INP,  "$(PARAM_PV) NPP")
+    field(INP,  "$(PARAM_PV) CPP")
     field(ALG,  "Circular Buffer")
     field(NSAM, "$(BUFSIZE)")
     field(EGU,  "$(EGU=)")

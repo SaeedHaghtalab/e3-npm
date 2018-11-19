@@ -2,7 +2,7 @@ record(calc, "$(PREFIX):$(CAM)-COM")
 {
     field(DESC, "Center of mass")
     field(CALC, "(A * B - C) / 1000")
-    field(INPA, "$(MU_PV) NPP")
+    field(INPA, "$(MU_PV) CPP")
     field(INPB, "$(PREFIX):$(CAM)-SCALEFACT NPP")
     field(INPC, "$(PREFIX):$(CAM)-CENTOFF NPP")
     field(EGU,  "mm")
