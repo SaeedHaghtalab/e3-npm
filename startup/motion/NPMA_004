@@ -1,7 +1,7 @@
 
 #General
-epicsEnvSet("ECMC_MOTOR_NAME",            "PBI-NPM-004")
-epicsEnvSet("ECMC_R",                     "PBI-NPM-004-")
+epicsEnvSet("ECMC_MOTOR_NAME",            "PBI-NPM-004:Mtr")
+epicsEnvSet("ECMC_R",                     "PBI-NPM-004:Mtr-")
 epicsEnvSet("ECMC_AXIS_NO",               "4")
 epicsEnvSet("ECMC_DESC",                  "LEBT NPM2 vertical Lens Motor")
 

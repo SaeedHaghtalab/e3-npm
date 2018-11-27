@@ -232,7 +232,7 @@
           <color red="0" green="255" blue="0" />
         </on_color>
         <on_label>AMP</on_label>
-        <pv_name>$(secsub):$(disdevid).MSTA</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.MSTA</pv_name>
         <pv_value />
         <rules>
           <rule name="BorderRule" prop_id="border_style" out_exp="false">
@@ -297,7 +297,7 @@ $(pv_value)</tooltip>
         <on_label>ErrRst</on_label>
         <password></password>
         <push_action_index>1</push_action_index>
-        <pv_name>$(secsub):$(disdevid)-ErrRst</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr-ErrRst</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules>
@@ -404,7 +404,7 @@ $(pv_value)</tooltip>
         <name>Text Input Template_30</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(secsub):$(disdevid)-MsgTxt</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr-MsgTxt</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules>
@@ -514,7 +514,7 @@ $(pv_value)</tooltip>
         <on_label>CNEN</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(secsub):$(disdevid).CNEN</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.CNEN</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules>
@@ -824,7 +824,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(secsub):$(disdevid).VAL</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.VAL</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -876,7 +876,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(secsub):$(disdevid).RBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.RBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -933,7 +933,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(secsub):$(disdevid).TWV</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.TWV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -990,7 +990,7 @@ $(pv_value)</tooltip>
         <image></image>
         <name>Action Button Template</name>
         <push_action_index>0</push_action_index>
-        <pv_name>$(secsub):$(disdevid).TWR</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.TWR</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -1044,7 +1044,7 @@ $(pv_value)</tooltip>
         <image></image>
         <name>Action Button Template_1</name>
         <push_action_index>0</push_action_index>
-        <pv_name>$(secsub):$(disdevid).TWF</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.TWF</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -1221,7 +1221,7 @@ $(pv_value)</tooltip>
         <image></image>
         <name>Action Button Template_2</name>
         <push_action_index>0</push_action_index>
-        <pv_name>$(secsub):$(disdevid).STOP</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.STOP</pv_name>
         <pv_value />
         <rules />
         <scale_options>
@@ -1280,7 +1280,7 @@ $(pv_value)</tooltip>
           <color name="IO onGoing" red="255" green="255" blue="0" />
         </on_color>
         <on_label>MOVN</on_label>
-        <pv_name>$(secsub):$(disdevid).MOVN</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.MOVN</pv_name>
         <pv_value />
         <rules>
           <rule name="BorderRule" prop_id="border_style" out_exp="false">
@@ -1345,7 +1345,7 @@ $(pv_value)</tooltip>
           <color name="IO OK" red="0" green="255" blue="0" />
         </on_color>
         <on_label>DMOV</on_label>
-        <pv_name>$(secsub):$(disdevid).DMOV</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.DMOV</pv_name>
         <pv_value />
         <rules>
           <rule name="BorderRule" prop_id="border_style" out_exp="false">
@@ -1410,7 +1410,7 @@ $(pv_value)</tooltip>
           <color name="Major" red="250" green="12" blue="14" />
         </on_color>
         <on_label>LLS</on_label>
-        <pv_name>$(secsub):$(disdevid).LLS</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.LLS</pv_name>
         <pv_value />
         <rules>
           <rule name="BorderRule" prop_id="border_style" out_exp="false">
@@ -1475,7 +1475,7 @@ $(pv_value)</tooltip>
           <color name="Major" red="250" green="12" blue="14" />
         </on_color>
         <on_label>HLS</on_label>
-        <pv_name>$(secsub):$(disdevid).HLS</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.HLS</pv_name>
         <pv_value />
         <rules>
           <rule name="BorderRule" prop_id="border_style" out_exp="false">
@@ -1694,7 +1694,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(secsub):$(disdevid).RRBV</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.RRBV</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1751,7 +1751,7 @@ $(pv_value)</tooltip>
         <name>Text Input</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(secsub):$(disdevid).MRES</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.MRES</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1803,7 +1803,7 @@ $(pv_value)</tooltip>
         <name>Text Update Template_27</name>
         <precision>0</precision>
         <precision_from_pv>true</precision_from_pv>
-        <pv_name>$(secsub):$(disdevid).MRES</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.MRES</pv_name>
         <pv_value />
         <rotation_angle>0.0</rotation_angle>
         <rules />
@@ -1861,7 +1861,7 @@ $(pv_value)</tooltip>
       <password_input>false</password_input>
       <precision>0</precision>
       <precision_from_pv>true</precision_from_pv>
-      <pv_name>$(secsub):$(disdevid).DESC</pv_name>
+      <pv_name>$(secsub):$(disdevid):Mtr.DESC</pv_name>
       <pv_value />
       <read_only>false</read_only>
       <rules>
@@ -2051,7 +2051,7 @@ $(pv_value)</tooltip>
         <on_label>HOMF</on_label>
         <password></password>
         <push_action_index>0</push_action_index>
-        <pv_name>$(secsub):$(disdevid).HOMF</pv_name>
+        <pv_name>$(secsub):$(disdevid):Mtr.HOMF</pv_name>
         <pv_value />
         <released_action_index>0</released_action_index>
         <rules>

@@ -32,6 +32,8 @@ epicsEnvSet("General_TOP",  "$(TOP)/startup/motion/general")
 epicsEnvSet("HW_TOP", "$(TOP)/startup/motion/hardware")
 epicsEnvSet("Motion_TOP", "$(TOP)/startup/motion/motion")
 epicsEnvSet("ST_TOP", "$(TOP)/startup/motion/")
+epicsEnvSet("DB_TOP", "$(TOP)/db")
+
 
 < $(General_TOP)/init
 
@@ -147,6 +149,11 @@ EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.SetDiagAxisEnable(0)"
 ############# Load general controller level records:
 
 < $(General_TOP)/general
+
+#< $(DB_TOP)/dbLoadRecords("npmMotAlias.template")
+#< $(DB_TOP)/dbLoadTemplate("npmMotAlias.template")
+dbLoadRecords("$(DB_TOP)/npmMotAlias.template")
+
 
 ##############################################################################
 ############# Go to runtime:
