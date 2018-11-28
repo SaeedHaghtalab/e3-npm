@@ -1645,7 +1645,7 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color red="192" green="192" blue="192" />
         </foreground_color>
-        <height>41</height>
+        <height>27</height>
         <name>LED</name>
         <off_color>
           <color red="0" green="255" blue="0" />
@@ -1670,39 +1670,28 @@ $(pv_value)</tooltip>
 $(pv_value)</tooltip>
         <visible>true</visible>
         <widget_type>LED</widget_type>
-        <width>41</width>
+        <width>27</width>
         <wuid>11f6f584:1672ccdf274:-71ff</wuid>
-        <x>282</x>
-        <y>24</y>
+        <x>240</x>
+        <y>30</y>
       </widget>
-      <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
-        <actions hook="false" hook_all="false">
-          <action type="WRITE_PV">
-            <pv_name>$(pv_name)</pv_name>
-            <value>1</value>
-            <timeout>10</timeout>
-            <confirm_message></confirm_message>
-            <description>Turn ON camara</description>
-          </action>
-          <action type="WRITE_PV">
-            <pv_name>$(pv_name)</pv_name>
-            <value>0</value>
-            <timeout>10</timeout>
-            <confirm_message></confirm_message>
-            <description>Turn OFF camara</description>
-          </action>
-        </actions>
+      <widget typeId="org.csstudio.opibuilder.widgets.BoolButton" version="1.0.0">
+        <actions hook="false" hook_all="false" />
         <alarm_pulsing>false</alarm_pulsing>
         <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
         <background_color>
-          <color red="240" green="240" blue="240" />
+          <color red="200" green="200" blue="200" />
         </background_color>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <bit>-1</bit>
+        <border_alarm_sensitive>true</border_alarm_sensitive>
         <border_color>
           <color red="0" green="128" blue="255" />
         </border_color>
         <border_style>0</border_style>
         <border_width>1</border_width>
+        <confirm_message>Are you sure you want to do this?</confirm_message>
+        <data_type>0</data_type>
+        <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
           <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
@@ -1711,31 +1700,42 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>19</height>
-        <image></image>
-        <name>Action Button</name>
+        <height>27</height>
+        <labels_from_pv>false</labels_from_pv>
+        <name>Boolean Button</name>
+        <off_color>
+          <color red="0" green="100" blue="0" />
+        </off_color>
+        <off_label>ON</off_label>
+        <on_color>
+          <color red="0" green="255" blue="0" />
+        </on_color>
+        <on_label>OFF</on_label>
+        <password></password>
         <push_action_index>0</push_action_index>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAM-Pwr</pv_name>
         <pv_value />
-        <release_action_index>1</release_action_index>
+        <released_action_index>0</released_action_index>
         <rules />
         <scale_options>
           <width_scalable>true</width_scalable>
           <height_scalable>true</height_scalable>
-          <keep_wh_ratio>false</keep_wh_ratio>
+          <keep_wh_ratio>true</keep_wh_ratio>
         </scale_options>
         <scripts />
-        <style>0</style>
-        <text>Write</text>
+        <show_boolean_label>true</show_boolean_label>
+        <show_confirm_dialog>0</show_confirm_dialog>
+        <show_led>false</show_led>
+        <square_button>true</square_button>
         <toggle_button>true</toggle_button>
         <tooltip>$(pv_name)
 $(pv_value)</tooltip>
         <visible>true</visible>
-        <widget_type>Action Button</widget_type>
-        <width>91</width>
-        <wuid>11f6f584:1672ccdf274:-6ac7</wuid>
+        <widget_type>Boolean Button</widget_type>
+        <width>90</width>
+        <wuid>7989e406:16756edfe90:-751f</wuid>
         <x>150</x>
-        <y>36</y>
+        <y>30</y>
       </widget>
     </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
