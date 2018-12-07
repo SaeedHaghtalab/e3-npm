@@ -89,9 +89,10 @@ record(calc, "$(PREFIX):$(CAM)-POS")
 {
     field(DESC, "Position of obj in general coord system")
 	#Fix ICSSW-1
-	field(CALC, "A * (1 + 1 / B)")
+	field(CALC, "A * (1 + 1 / B) + C")
     field(INPA, "$(PREFIX):$(CAM)-FOCLEN NPP")
-    field(INPB, "$(PREFIX):$(CAM)-MAGN NPP")    
+    field(INPB, "$(PREFIX):$(CAM)-MAGN NPP")
+    field(INPC, "$(PREFIX):$(CAM)-OFFREF NPP")
     field(PREC, "$(PREC=3)")
     field(EGU,  "mm")
     field(FLNK, "$(PREFIX):$(CAM)-SCALEFACT")
