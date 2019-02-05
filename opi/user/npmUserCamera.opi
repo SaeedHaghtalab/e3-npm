@@ -3188,7 +3188,7 @@ $(pv_value)</tooltip>
     <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
       <actions hook="false" hook_all="false">
         <action type="OPEN_DISPLAY">
-          <path>../ess-opi-common/modules/mrf/ess/stable/evr-pcie-300dc.opi</path>
+          <path>../ess-opi-common/modules/mrf/ess/0.2.0.0/evr-pcie-300dc.opi</path>
           <macros>
             <include_parent_macros>true</include_parent_macros>
             <SYS>FEB-030Row:PBI</SYS>

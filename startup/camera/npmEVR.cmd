@@ -1,10 +1,10 @@
-require mrfioc2, 2.2.0-rc2
+require mrfioc2, 2.2.0-rc5
 
 epicsEnvSet("SYS"             "FEB-030Row:PBI")
 epicsEnvSet("DEV"             "EVR-009")
 epicsEnvSet("ESSEvtClockRate" "88.0525")
 
-mrmEvrSetupPCI($(DEV), "05:00.0")
+mrmEvrSetupPCI($(DEV), "02:00.0")
 # Enable daisy chaining the optics cable between multiple EVRs
 #mrmEvrLoopback($(EVR), 1, 0)
 

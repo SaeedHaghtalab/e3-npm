@@ -1,16 +1,18 @@
 #User settable environmental variables
-epicsEnvSet("SECSUB",      "LEBT-010")
+#epicsEnvSet("SECSUB",      "LEBT-010")
+epicsEnvSet("SECSUB",      "LEBT-020")
 epicsEnvSet("VCAM",        "$(VCAM=VCAM)")
 epicsEnvSet("HCAM",        "$(HCAM=HCAM)")
 epicsEnvSet("VPREF",       "$(VPREF=$(SECSUB):PBI-NPM-002)")
 epicsEnvSet("HPREF",       "$(HPREF=$(SECSUB):PBI-NPM-001)")
 
-epicsEnvSet("VCAMID",      "$(VCAMID=180855)")
-epicsEnvSet("HCAMID",      "$(HCAMID=180854)")
-epicsEnvSet("VCAMIP",      "$(VCAMIP=192.6.96.96)")
-epicsEnvSet("HCAMIP",      "$(HCAMIP=192.6.95.95)")
+#epicsEnvSet("VCAMID",      "$(VCAMID=180855)")
+#epicsEnvSet("HCAMID",      "$(HCAMID=180854)")
 
-
+#epicsEnvSet("VCAMIP",      "$(VCAMIP=192.6.96.96)")
+#epicsEnvSet("HCAMIP",      "$(HCAMIP=192.6.95.95)")
+epicsEnvSet("VCAMIP",      "$(VCAMIP=192.5.96.96)")
+epicsEnvSet("HCAMIP",      "$(HCAMIP=192.5.95.95)")
 
 # User settable environmental variables that most likely won't be necessary to change
 epicsEnvSet("QSIZE",          "$(QSIZE=20)")

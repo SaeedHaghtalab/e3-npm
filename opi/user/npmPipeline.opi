@@ -50,7 +50,7 @@
     <enabled>true</enabled>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -98,7 +98,7 @@ $(pv_value)</tooltip>
     <enabled>true</enabled>
     <fc>false</fc>
     <font>
-      <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="192" green="192" blue="192" />
@@ -107,7 +107,7 @@ $(pv_value)</tooltip>
     <lock_children>false</lock_children>
     <macros>
       <include_parent_macros>true</include_parent_macros>
-      <AD_OPI_LOC>../../ess-opi-common/modules/AD/</AD_OPI_LOC>
+      <AD_OPI_LOC>../ess-opi-common/modules/AD/</AD_OPI_LOC>
     </macros>
     <name>Grouping Container_8</name>
     <rules />
@@ -147,7 +147,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -221,7 +221,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -296,7 +296,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -370,7 +370,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -446,7 +446,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -520,7 +520,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -594,7 +594,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -661,7 +661,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <fc>false</fc>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <foreground_color>
         <color red="192" green="192" blue="192" />
@@ -702,12 +702,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="1" pixels="false">Default Bold</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="1" pixels="false">Default Bold</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label</name>
         <rules />
@@ -723,7 +723,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>46</width>
+        <width>39</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-6f73</wuid>
         <x>120</x>
@@ -742,12 +742,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_4</name>
         <rules />
@@ -763,7 +763,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>92</width>
+        <width>77</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e25</wuid>
         <x>14</x>
@@ -782,12 +782,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_1</name>
         <rules />
@@ -803,7 +803,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>30</width>
+        <width>25</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e24</wuid>
         <x>78</x>
@@ -822,12 +822,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_3</name>
         <rules />
@@ -843,7 +843,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>47</width>
+        <width>38</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e23</wuid>
         <x>63</x>
@@ -868,7 +868,7 @@ $(pv_value)</tooltip>
         <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -1093,7 +1093,7 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -1146,7 +1146,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -1211,7 +1211,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <fc>false</fc>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <foreground_color>
         <color red="192" green="192" blue="192" />
@@ -1252,12 +1252,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_4</name>
         <rules />
@@ -1273,7 +1273,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>92</width>
+        <width>77</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-75c7</wuid>
         <x>14</x>
@@ -1292,12 +1292,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_2</name>
         <rules />
@@ -1313,7 +1313,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>52</width>
+        <width>44</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-76e2</wuid>
         <x>56</x>
@@ -1332,12 +1332,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_1</name>
         <rules />
@@ -1353,7 +1353,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>30</width>
+        <width>25</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-76ec</wuid>
         <x>78</x>
@@ -1372,12 +1372,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_3</name>
         <rules />
@@ -1393,7 +1393,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>97</width>
+        <width>81</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-75fc</wuid>
         <x>7</x>
@@ -1418,7 +1418,7 @@ $(pv_value)</tooltip>
         <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -1480,7 +1480,7 @@ $(pv_value)</tooltip>
         <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -1536,12 +1536,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="1" pixels="false">Default Bold</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="1" pixels="false">Default Bold</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label</name>
         <rules />
@@ -1557,7 +1557,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>77</width>
+        <width>62</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-76f0</wuid>
         <x>102</x>
@@ -1796,7 +1796,7 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -1849,7 +1849,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -1916,7 +1916,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <fc>false</fc>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <foreground_color>
         <color red="192" green="192" blue="192" />
@@ -1957,12 +1957,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_4</name>
         <rules />
@@ -1978,7 +1978,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>92</width>
+        <width>77</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-70fb</wuid>
         <x>14</x>
@@ -1997,12 +1997,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_1</name>
         <rules />
@@ -2018,7 +2018,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>30</width>
+        <width>25</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-70f9</wuid>
         <x>78</x>
@@ -2037,12 +2037,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_3</name>
         <rules />
@@ -2058,7 +2058,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>47</width>
+        <width>38</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-70f7</wuid>
         <x>63</x>
@@ -2083,7 +2083,7 @@ $(pv_value)</tooltip>
         <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -2139,12 +2139,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="1" pixels="false">Default Bold</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="1" pixels="false">Default Bold</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label</name>
         <rules />
@@ -2160,7 +2160,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>74</width>
+        <width>60</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-70f2</wuid>
         <x>102</x>
@@ -2348,7 +2348,7 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -2393,7 +2393,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <fc>false</fc>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <foreground_color>
         <color red="192" green="192" blue="192" />
@@ -2434,12 +2434,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="1" pixels="false">Default Bold</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="1" pixels="false">Default Bold</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label</name>
         <rules />
@@ -2455,7 +2455,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>46</width>
+        <width>39</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-7065</wuid>
         <x>120</x>
@@ -2474,12 +2474,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_4</name>
         <rules />
@@ -2495,7 +2495,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>92</width>
+        <width>77</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6ee1</wuid>
         <x>14</x>
@@ -2514,12 +2514,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_1</name>
         <rules />
@@ -2535,7 +2535,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>30</width>
+        <width>25</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6ee0</wuid>
         <x>78</x>
@@ -2554,12 +2554,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_3</name>
         <rules />
@@ -2575,7 +2575,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>47</width>
+        <width>38</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6edf</wuid>
         <x>63</x>
@@ -2600,7 +2600,7 @@ $(pv_value)</tooltip>
         <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -2825,7 +2825,7 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -2870,7 +2870,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <fc>false</fc>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <foreground_color>
         <color red="192" green="192" blue="192" />
@@ -2911,12 +2911,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="1" pixels="false">Default Bold</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="1" pixels="false">Default Bold</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label</name>
         <rules />
@@ -2932,7 +2932,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>45</width>
+        <width>38</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-6f37</wuid>
         <x>120</x>
@@ -2951,12 +2951,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_4</name>
         <rules />
@@ -2972,7 +2972,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>92</width>
+        <width>77</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e35</wuid>
         <x>14</x>
@@ -2991,12 +2991,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_1</name>
         <rules />
@@ -3012,7 +3012,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>30</width>
+        <width>25</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e34</wuid>
         <x>78</x>
@@ -3031,12 +3031,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_3</name>
         <rules />
@@ -3052,7 +3052,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>47</width>
+        <width>38</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e33</wuid>
         <x>63</x>
@@ -3077,7 +3077,7 @@ $(pv_value)</tooltip>
         <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -3302,7 +3302,7 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -3355,7 +3355,7 @@ $(pv_value)</tooltip>
       <fill_arrow>true</fill_arrow>
       <fill_level>0.0</fill_level>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
@@ -3422,7 +3422,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <fc>false</fc>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <foreground_color>
         <color red="192" green="192" blue="192" />
@@ -3463,12 +3463,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="1" pixels="false">Default Bold</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="1" pixels="false">Default Bold</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label</name>
         <rules />
@@ -3484,7 +3484,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>83</width>
+        <width>67</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-6f87</wuid>
         <x>102</x>
@@ -3503,12 +3503,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_4</name>
         <rules />
@@ -3524,7 +3524,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>92</width>
+        <width>77</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e45</wuid>
         <x>14</x>
@@ -3543,12 +3543,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_1</name>
         <rules />
@@ -3564,7 +3564,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>30</width>
+        <width>25</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e44</wuid>
         <x>78</x>
@@ -3583,12 +3583,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_3</name>
         <rules />
@@ -3604,7 +3604,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>47</width>
+        <width>38</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e43</wuid>
         <x>63</x>
@@ -3629,7 +3629,7 @@ $(pv_value)</tooltip>
         <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -3854,7 +3854,7 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -3899,7 +3899,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <fc>false</fc>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <foreground_color>
         <color red="192" green="192" blue="192" />
@@ -3940,12 +3940,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="1" pixels="false">Default Bold</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="1" pixels="false">Default Bold</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label</name>
         <rules />
@@ -3961,7 +3961,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>57</width>
+        <width>46</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-6fd7</wuid>
         <x>111</x>
@@ -3980,12 +3980,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_4</name>
         <rules />
@@ -4001,7 +4001,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>92</width>
+        <width>77</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e65</wuid>
         <x>14</x>
@@ -4020,12 +4020,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_1</name>
         <rules />
@@ -4041,7 +4041,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>30</width>
+        <width>25</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e64</wuid>
         <x>78</x>
@@ -4060,12 +4060,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_3</name>
         <rules />
@@ -4081,7 +4081,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>47</width>
+        <width>38</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e63</wuid>
         <x>63</x>
@@ -4106,7 +4106,7 @@ $(pv_value)</tooltip>
         <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -4331,7 +4331,7 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -4376,7 +4376,7 @@ $(pv_value)</tooltip>
       <enabled>true</enabled>
       <fc>false</fc>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <foreground_color>
         <color red="192" green="192" blue="192" />
@@ -4417,12 +4417,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="1" pixels="false">Default Bold</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="1" pixels="false">Default Bold</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label</name>
         <rules />
@@ -4438,7 +4438,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>47</width>
+        <width>37</width>
         <wrap_words>false</wrap_words>
         <wuid>-819d6f3:164c73118c5:-6faf</wuid>
         <x>120</x>
@@ -4457,12 +4457,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_4</name>
         <rules />
@@ -4478,7 +4478,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>92</width>
+        <width>77</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e55</wuid>
         <x>14</x>
@@ -4497,12 +4497,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_1</name>
         <rules />
@@ -4518,7 +4518,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>30</width>
+        <width>25</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e54</wuid>
         <x>78</x>
@@ -4537,12 +4537,12 @@ $(pv_value)</tooltip>
         <border_width>1</border_width>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <foreground_color>
           <color red="0" green="0" blue="0" />
         </foreground_color>
-        <height>20</height>
+        <height>15</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Label_3</name>
         <rules />
@@ -4558,7 +4558,7 @@ $(pv_value)</tooltip>
         <vertical_alignment>1</vertical_alignment>
         <visible>true</visible>
         <widget_type>Label</widget_type>
-        <width>47</width>
+        <width>38</width>
         <wrap_words>false</wrap_words>
         <wuid>6be98e43:164cb50327e:-6e53</wuid>
         <x>63</x>
@@ -4583,7 +4583,7 @@ $(pv_value)</tooltip>
         <effect_3d>true</effect_3d>
         <enabled>true</enabled>
         <font>
-          <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+          <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
         </font>
         <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
         <foreground_color>
@@ -4796,7 +4796,7 @@ $(pv_value)</tooltip>
       <border_width>1</border_width>
       <enabled>true</enabled>
       <font>
-        <fontdata fontName="Titillium" height="20" style="0" pixels="false" />
+        <opifont.name fontName="Source Sans Pro" height="16" style="0" pixels="false">NORMAL-SANS-PLAIN</opifont.name>
       </font>
       <foreground_color>
         <color name="IO Label" red="0" green="0" blue="0" />
@@ -4854,7 +4854,7 @@ $(pv_value)</tooltip>
       <border_width>1</border_width>
       <enabled>true</enabled>
       <font>
-        <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
       </font>
       <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
       <foreground_color>
