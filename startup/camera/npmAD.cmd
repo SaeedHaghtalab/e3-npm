@@ -51,7 +51,7 @@ dbLoadRecords("NDProcess.template","P=$(PREFIX),R=:$(SLOWPROC)-,PORT=$(SLOWPROC)
 
 ## Slow image initialization and loading records
 NDStdArraysConfigure("$(SLOWIMG)", $(QSIZE), 0, "$(SLOWPROC)", 0, 0)
-dbLoadRecords("NDStdArrays.template","P=$(PREFIX),R=:$(SLOWIMG)-,PORT=$(SLOWIMG),ADDR=0,TIMEOUT=1,TYPE=Int32,FTVL=LONG,NELEMENTS=$(NELEM),NDARRAY_PORT=$(SLOWPROC),NDARRAY_ADDR=0")
+dbLoadRecords("NDStdArrays.template","P=$(PREFIX),R=:$(SLOWIMG)-,PORT=$(SLOWIMG),ADDR=0,TIMEOUT=1,TYPE=Int32,FTVL=LONG,NELEMENTS=509232,NDARRAY_PORT=$(SLOWPROC),NDARRAY_ADDR=0")
 
 
 
