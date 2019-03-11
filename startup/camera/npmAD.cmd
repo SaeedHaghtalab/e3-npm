@@ -2,12 +2,12 @@
 epicsEnvSet("PROC",        "$(CAM)PROC")	 # PROCESS PLUGIN
 epicsEnvSet("ROI",         "$(CAM)ROI")		 # ROI plugin
 epicsEnvSet("STATS",       "$(CAM)STATS")	 # STATS PLUGIN
-epicsEnvSet("FITS",	       "$(CAM)FITS")     # Fits Plugin
+epicsEnvSet("FITS",        "$(CAM)FITS")         # Fits Plugin
 epicsEnvSet("OBSROI",      "$(CAM)OBSROI")	 # Observer ROI plugin
 epicsEnvSet("OBSIMAGE",    "$(CAM)OBSIMAGE")	 # Observer StdArrays plugin
 epicsEnvSet("OBSPVAIMAGE", "$(CAM)OBSPVAIMG")	 # Observer PVa plugin
-epicsEnvSet("SLOWPROC",    "$(CAMERA)SLOWPROC")  # Slow observer processing plugin
-epicsEnvSet("SLOWIMG",     "$(CAMERA)SLOWIMG")   # Slow observer StdArrays plugin
+epicsEnvSet("SLOWPROC",    "$(CAM)SLOWPROC")     # Slow observer processing plugin
+epicsEnvSet("SLOWIMG",     "$(CAM)SLOWIMG")      # Slow observer StdArrays plugin
 
 
 ## Camera initialization and loading records, by default enable array callbacks and set UInt16 datatype

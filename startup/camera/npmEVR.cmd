@@ -1,7 +1,8 @@
 require mrfioc2, 2.2.0-rc5
 
 epicsEnvSet("SYS"             "FEB-030Row:PBI")
-epicsEnvSet("DEV"             "EVR-009")
+epicsEnvSet("DEV"             "EVR-009")    # npm-ipc-01
+#epicsEnvSet("DEV"             "EVR-013")   # npm-ipc-02
 epicsEnvSet("ESSEvtClockRate" "88.0525")
 
 mrmEvrSetupPCI($(DEV), "02:00.0")
