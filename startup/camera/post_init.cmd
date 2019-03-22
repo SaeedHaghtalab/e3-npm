@@ -2,6 +2,10 @@ afterInit("dbpf $(PREFIX):$(CAM)-TriggerMode 1")
 afterInit("dbpf $(PREFIX):$(CAM)-BinX 4")
 afterInit("dbpf $(PREFIX):$(CAM)-BinY 4")
 afterInit("dbpf $(PREFIX):$(CAM)-DataType "UInt16"")
+afterInit("dbpf $(PREFIX):$(CAM)SLOWROI-EnableCallbacks 1")
+afterInit("dbpf $(PREFIX):$(CAM)SLOWPROC-EnableCallbacks 1")
+afterInit("dbpf $(PREFIX):$(CAM)SLOWIMG-EnableCallbacks 1")
+
 
 # TimeStamps
 afterInit("dbpf $(PREFIX):$(CAM)-COM.TSEL 			 $(SYS)-$(DEV):Time-I.TIME")

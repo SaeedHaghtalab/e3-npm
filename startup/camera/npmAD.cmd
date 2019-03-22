@@ -8,6 +8,7 @@ epicsEnvSet("OBSIMAGE",    "$(CAM)OBSIMAGE")	 # Observer StdArrays plugin
 epicsEnvSet("OBSPVAIMAGE", "$(CAM)OBSPVAIMG")	 # Observer PVa plugin
 epicsEnvSet("SLOWPROC",    "$(CAM)SLOWPROC")     # Slow observer processing plugin
 epicsEnvSet("SLOWIMG",     "$(CAM)SLOWIMG")      # Slow observer StdArrays plugin
+epicsEnvSet("SLOWROI",     "$(CAM)SLOWROI")      # Slow observer ROI plugin
 
 
 ## Camera initialization and loading records, by default enable array callbacks and set UInt16 datatype
@@ -45,14 +46,18 @@ dbLoadRecords("$(DB_TOP)/npmNDStdArrays.template", "P=$(PREFIX),R=:$(OBSIMAGE)-,
 NDPvaConfigure("$(OBSPVAIMAGE)", $(QSIZE), 0, "$(OBSROI)", 0, "$(PREFIX):$(OBSPVAIMAGE)", 0)
 dbLoadRecords("NDPva.template", "P=$(PREFIX), R=:$(OBSPVAIMAGE)-, PORT=$(OBSPVAIMAGE), ADDR=0, TIMEOUT=1, NDARRAY_PORT=$(OBSROI)")
 
+
+## Region of interest plugin for slow monitoring (reduce image size to couple of hundred pixels in both dimension)
+NDROIConfigure("$(SLOWROI)", $(QSIZE), 0, "$(PROC)", 0, 0, 0)
+dbLoadRecords("NDROI.template", "P=$(PREFIX), R=:$(SLOWROI)-, PORT=$(SLOWROI), ADDR=0, TIMEOUT=1, NDARRAY_PORT=$(PROC), ENABLED=1, BINX=4, BINY=4, DATATYPEOUT=5")
+
 ## Processing plugin to reduce image rate (enabled filter with averaging to produce 1Hz rate)
-NDProcessConfigure("$(SLOWPROC)", $(QSIZE), 0, "$(OBSROI)", 0, 0, 0)
-dbLoadRecords("NDProcess.template","P=$(PREFIX),R=:$(SLOWPROC)-,PORT=$(SLOWPROC),ADDR=0,TIMEOUT=1,NDARRAY_PORT=$(OBSROI)")
+NDProcessConfigure("$(SLOWPROC)", $(QSIZE), 0, "$(SLOWROI)", 0, 0, 0)
+dbLoadRecords("NDProcess.template","P=$(PREFIX),R=:$(SLOWPROC)-,PORT=$(SLOWPROC),ADDR=0,TIMEOUT=1,NDARRAY_PORT=$(SLOWROI)")
 
 ## Slow image initialization and loading records
 NDStdArraysConfigure("$(SLOWIMG)", $(QSIZE), 0, "$(SLOWPROC)", 0, 0)
 dbLoadRecords("NDStdArrays.template","P=$(PREFIX),R=:$(SLOWIMG)-,PORT=$(SLOWIMG),ADDR=0,TIMEOUT=1,TYPE=Int32,FTVL=LONG,NELEMENTS=509232,NDARRAY_PORT=$(SLOWPROC),NDARRAY_ADDR=0")
-
 
 
 ###### Custom Databases

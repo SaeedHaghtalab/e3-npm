@@ -1,0 +1,36 @@
+#0  0:0  PREOP  +  EK1100 EtherCAT-Koppler (2A E-Bus)
+#1  0:1  PREOP  +  EL9410 E-Bus Netzteilklemme (Diagnose)
+#2  0:2  PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
+#3  0:3  PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
+
+
+epicsEnvSet("ECMC_EC_MASTER_ID"          "0")
+
+#Choose master
+EthercatMCConfigController "$(ECMC_MOTOR_PORT)", "Cfg.EcSetMaster($(ECMC_EC_MASTER_ID))"
+
+#Configure EK1100 coupler terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "0")
+< ../hardware/ecmcEK1100-EtherCatCoupler$(ECMC_GEN_EC_RECORDS)
+
+#Configure L9410-powerSupplyEBus terminal
+#epicsEnvSet("ECMC_EC_SLAVE_NUM",              "1")
+#< ../hardware/ecmcEL9410-powerSupplyEBus$(ECMC_GEN_EC_RECORDS)
+
+
+#Configure EL7037 stepper drive terminal, motor 1
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "1")
+< ../hardware/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
+
+#Configure motor for EL7037
+< ../hardware/ecmcEL7037-Motor-Phytron-ZSS_32.200.1.2
+
+#Configure EL7037 stepper drive terminal, motor 2
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "2")
+< ../hardware/ecmcEL7037-StepperDrive$(ECMC_GEN_EC_RECORDS)
+
+#Configure motor for EL7037
+< ../hardware/ecmcEL7037-Motor-Phytron-ZSS_32.200.1.2
+
+#Apply hardware configuration
+EthercatMCConfigController "$(ECMC_MOTOR_PORT)", "Cfg.EcApplyConfig(1)"

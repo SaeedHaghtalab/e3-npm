@@ -1,18 +1,9 @@
 #User settable environmental variables
-#epicsEnvSet("SECSUB",      "LEBT-010")
-epicsEnvSet("SECSUB",      "LEBT-020")
 epicsEnvSet("VCAM",        "$(VCAM=VCAM)")
 epicsEnvSet("HCAM",        "$(HCAM=HCAM)")
-epicsEnvSet("VPREF",       "$(VPREF=$(SECSUB):PBI-NPM-002)")
+
 epicsEnvSet("HPREF",       "$(HPREF=$(SECSUB):PBI-NPM-001)")
-
-#epicsEnvSet("VCAMID",      "$(VCAMID=180855)")
-#epicsEnvSet("HCAMID",      "$(HCAMID=180854)")
-
-#epicsEnvSet("VCAMIP",      "$(VCAMIP=192.6.96.96)")
-#epicsEnvSet("HCAMIP",      "$(HCAMIP=192.6.95.95)")
-epicsEnvSet("VCAMIP",      "$(VCAMIP=192.5.96.96)")
-epicsEnvSet("HCAMIP",      "$(HCAMIP=192.5.95.95)")
+epicsEnvSet("VPREF",       "$(VPREF=$(SECSUB):PBI-NPM-002)")
 
 # User settable environmental variables that most likely won't be necessary to change
 epicsEnvSet("QSIZE",          "$(QSIZE=20)")
@@ -36,12 +27,10 @@ epicsEnvSet("BSZ_PREC",       "2")
 epicsEnvSet("SIGMA_PREC",     "1")
 epicsEnvSet("BCKGRND_PREC",   "1")
 
-
 ## Statistics Plugin
 epicsEnvSet("NCHANS",    "2048")
 epicsEnvSet("HISTSIZE",  "256")
 
 ## Fits Plugin
 epicsEnvSet("NUM_PEAKS", "1")
-
 

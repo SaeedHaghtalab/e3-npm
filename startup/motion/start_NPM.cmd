@@ -1,6 +1,16 @@
 ##############################################################################
 ############# LEBT Motion Control crate 
 #
+
+# second version: Control of 4 actuators(LEBT NPM)
+#
+# ecmc version update to v5.3.0
+#
+#  Date: 2019-01-30
+#
+##############################################################################
+
+
 # First version: Control of 4 actuators(LEBT NPM)
 #
 # e3 has been tested over Debian GNU/Linux 9.4
@@ -16,26 +26,20 @@
 #
 ##############################################################################
 
-require ecmc,5.0.1
-require ecmctraining,0906da5
-require EthercatMC,2.1.0
-require stream, 2.7.14p
-require iocStats,ae5d083
+############################################################
+############# Init
 
 
-#require ecmc,4.3.0
-#require ecmctraining,3.0.0
-#require axis,10.1.5
-
-epicsEnvSet("TOP",     "$(E3_CMD_TOP)/../..")
+epicsEnvSet("TOP",          "$(E3_CMD_TOP)/../..")
 epicsEnvSet("General_TOP",  "$(TOP)/startup/motion/general")
-epicsEnvSet("HW_TOP", "$(TOP)/startup/motion/hardware")
-epicsEnvSet("Motion_TOP", "$(TOP)/startup/motion/motion")
-epicsEnvSet("ST_TOP", "$(TOP)/startup/motion/")
-epicsEnvSet("DB_TOP", "$(TOP)/db")
+epicsEnvSet("HW_TOP",       "$(TOP)/startup/motion/hardware")
+epicsEnvSet("Motion_TOP",   "$(TOP)/startup/motion/motion")
+epicsEnvSet("ST_TOP",       "$(TOP)/startup/motion/")
+epicsEnvSet("DB_TOP",       "$(TOP)/db")
 
-
+< $(General_TOP)/require_E3
 < $(General_TOP)/init
+
 
 ############################################################
 ############# ASYN Configuration:
@@ -59,10 +63,10 @@ EthercatMCCreateController(${ECMC_MOTOR_PORT}, ${ECMC_ASYN_PORT}, "32", "200", "
 ############################################################
 ############# Misc settings:
 # Disable function call trace printouts
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.SetEnableFuncCallDiag(0)"
+ecmcConfigOrDie "Cfg.SetEnableFuncCallDiag(0)"
 
 # Disable on change printouts from objects (enable for easy logging)
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.SetTraceMaskBit(15,0)"
+ecmcConfigOrDie "Cfg.SetTraceMaskBit(15,0)"
 
 # Choose to generate EPICS-records for EtherCAT-entries 
 # (For records use ECMC_GEN_EC_RECORDS="-records" otherwise ECMC_GEN_EC_RECORDS="") 
@@ -83,22 +87,22 @@ epicsEnvSet("ECMC_ASYN_SKIP_CYCLES",       "9")
 ##############################################################################
 ############# Write outputs in order to power switches (see elec. drawings):
 
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,0,1)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,1,1)"
-#EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,2,1)"
-#EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,3,1)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,4,1)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,5,1)"
-#EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,6,1)"
-#EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,7,1)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,8,1)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,9,1)"
-#EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,10,1)"
-#EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,11,1)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,12,1)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,13,1)"
-#EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,14,1)"
-#EthercatMCConfigController ${ECMC_MOTOR_PORT}, "WriteEcEntry(3,15,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_1,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_2,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_3,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_4,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_5,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_6,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_7,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_8,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_9,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_10,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_11,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_12,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_13,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_14,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_15,1)"
+ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_16,1)"
 
 
 ##############################################################################
@@ -123,6 +127,9 @@ epicsEnvSet("STREAM_PROTOCOL_PATH", "$(TOP)/startup/motion/protocol")
 
 # Custom settings for LEBT NPM2 vertical camera actuator
 
+
+epicsEnvSet("ECMC_PREFIX",        "LEBT-020:")
+
 < $(ST_TOP)/NPMA_003
 
 # Apply configurations to ECMC
@@ -138,12 +145,13 @@ epicsEnvSet("STREAM_PROTOCOL_PATH", "$(TOP)/startup/motion/protocol")
 ##############################################################################
 ############# Configure diagnostics:
 
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.EcSetDiagnostics(1)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.EcEnablePrintouts(0)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.EcSetDomainFailedCyclesLimit(100)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.SetDiagAxisIndex(1)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.SetDiagAxisFreq(2)"
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.SetDiagAxisEnable(0)"
+ecmcConfigOrDie "Cfg.EcSetDiagnostics(1)"
+ecmcConfigOrDie "Cfg.EcEnablePrintouts(0)"
+ecmcConfigOrDie "Cfg.EcSetDomainFailedCyclesLimit(100)"
+ecmcConfigOrDie "Cfg.SetDiagAxisIndex(1)"
+ecmcConfigOrDie "Cfg.SetDiagAxisFreq(2)"
+ecmcConfigOrDie "Cfg.SetDiagAxisEnable(0)"
+
 
 ##############################################################################
 ############# Load general controller level records:
@@ -158,6 +166,5 @@ dbLoadRecords("$(DB_TOP)/npmMotAlias.template")
 ##############################################################################
 ############# Go to runtime:
 
-EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.SetAppMode(1)"
-
+ecmcConfigOrDie "Cfg.SetAppMode(1)"
 

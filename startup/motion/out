@@ -1,0 +1,709 @@
+#
+# Start at "2019-W12-Mar22-1508-29-CET"
+#
+# Version information:
+# European Spallation Source ERIC : iocsh.bash (v0.3.6-103972e.PID-14653)
+#
+# --->--> snip -->--> 
+# Please Use Version and other environment variables
+# in order to report or debug this shell
+#
+# HOSTDISPLAY=""
+# WINDOWID=""
+# PWD="/home/iocuser/e3-npm/startup/motion"
+# USER="iocuser"
+# LOGNAME="iocuser"
+# EPICS_HOST_ARCH="linux-x86_64"
+# EPICS_BASE="/epics/base-3.15.5"
+# E3_REQUIRE_NAME="require"
+# E3_REQUIRE_VERSION="3.0.5"
+# E3_REQUIRE_LOCATION="/epics/base-3.15.5/require/3.0.5"
+# E3_REQUIRE_BIN="/epics/base-3.15.5/require/3.0.5/bin"
+# E3_REQUIRE_DB="/epics/base-3.15.5/require/3.0.5/db"
+# E3_REQUIRE_DBD="/epics/base-3.15.5/require/3.0.5/dbd"
+# E3_REQUIRE_INC="/epics/base-3.15.5/require/3.0.5/include"
+# E3_REQUIRE_LIB="/epics/base-3.15.5/require/3.0.5/lib"
+# E3_SITEAPPS_PATH="/epics/base-3.15.5/require/3.0.5/siteApps"
+# E3_SITELIBS_PATH="/epics/base-3.15.5/require/3.0.5/siteLibs"
+# E3_SITEMODS_PATH="/epics/base-3.15.5/require/3.0.5/siteMods"
+# EPICS_DRIVER_PATH="/epics/base-3.15.5/require/3.0.5/siteMods:/epics/base-3.15.5/require/3.0.5/siteApps"
+# EPICS_CA_AUTO_ADDR_LIST=""
+# EPICS_CA_ADDR_LIST=""
+# PATH="/epics/base-3.15.5/require/3.0.5/bin:/epics/base-3.15.5/bin/linux-x86_64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/iocuser/.local/bin:/home/iocuser/bin"
+# LD_LIBRARY_PATH="/epics/base-3.15.5/lib/linux-x86_64:/epics/base-3.15.5/require/3.0.5/lib/linux-x86_64:/epics/base-3.15.5/require/3.0.5/siteLibs/linux-x86_64"
+# --->--> snip -->--> 
+#
+# Set REQUIRE_IOC for its internal PVs
+epicsEnvSet REQUIRE_IOC "REQMOD-103972E:NPM-IPC-14673"
+#
+# Set E3_IOCSH_TOP for the absolute path where iocsh.bash is executed.
+epicsEnvSet E3_IOCSH_TOP "/home/iocuser/e3-npm/startup/motion"
+#
+# 
+# Load require module, which has the version 3.0.5
+# 
+dlload /epics/base-3.15.5/require/3.0.5/lib/linux-x86_64/librequire.so
+dbLoadDatabase /epics/base-3.15.5/require/3.0.5/dbd/require.dbd
+require_registerRecordDeviceDriver
+Loading module info records for require
+# 
+# Set E3_CMD_TOP for the absolute path where start_NPM.cmd exists
+epicsEnvSet E3_CMD_TOP "/home/iocuser/e3-npm/startup/motion"
+#
+iocshLoad 'start_NPM.cmd',''
+##############################################################################
+############# LEBT Motion Control crate 
+#
+# second version: Control of 4 actuators(LEBT NPM)
+#
+# ecmc version update to v5.3.0
+#
+#  Date: 2019-01-30
+#
+##############################################################################
+# First version: Control of 4 actuators(LEBT NPM)
+#
+# e3 has been tested over Debian GNU/Linux 9.4
+#
+# Configuration details:
+# - Close loop stepper (EL7037)
+# - 2 Limit switches
+# - Scaled as a linear system 
+# - Homing sequemce 1: One of the limit switches as reference position
+#
+#
+#  Date: 2018-05-17
+#
+##############################################################################
+############################################################
+############# Init
+epicsEnvSet("TOP",          "/home/iocuser/e3-npm/startup/motion/../..")
+epicsEnvSet("General_TOP",  "/home/iocuser/e3-npm/startup/motion/../../startup/motion/general")
+epicsEnvSet("HW_TOP",       "/home/iocuser/e3-npm/startup/motion/../../startup/motion/hardware")
+epicsEnvSet("Motion_TOP",   "/home/iocuser/e3-npm/startup/motion/../../startup/motion/motion")
+epicsEnvSet("ST_TOP",       "/home/iocuser/e3-npm/startup/motion/../../startup/motion/")
+epicsEnvSet("DB_TOP",       "/home/iocuser/e3-npm/startup/motion/../../db")
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion/general/require_E3
+#Lists required modules and versions for MCAG crates
+require ecmc,5.3.0
+Module ecmc version 5.3.0 found in /epics/base-3.15.5/require/3.0.5/siteMods/ecmc/5.3.0/
+Module ecmc depends on asyn 4.33.0
+Module asyn version 4.33.0 found in /epics/base-3.15.5/require/3.0.5/siteMods/asyn/4.33.0/
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/asyn/4.33.0/lib/linux-x86_64/libasyn.so
+Loaded asyn version 4.33.0
+Loading dbd file /epics/base-3.15.5/require/3.0.5/siteMods/asyn/4.33.0/dbd/asyn.dbd
+Calling function asyn_registerRecordDeviceDriver
+Loading module info records for asyn
+Module ecmc depends on exprtk 1.2.0
+Module exprtk version 1.2.0 found in /epics/base-3.15.5/require/3.0.5/siteMods/exprtk/1.2.0/
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/exprtk/1.2.0/lib/linux-x86_64/libexprtk.so
+Loaded exprtk version 1.2.0
+exprtk has no dbd file
+Loading module info records for exprtk
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/ecmc/5.3.0/lib/linux-x86_64/libecmc.so
+Loaded ecmc version 5.3.0
+Loading dbd file /epics/base-3.15.5/require/3.0.5/siteMods/ecmc/5.3.0/dbd/ecmc.dbd
+Calling function ecmc_registerRecordDeviceDriver
+Loading module info records for ecmc
+require ecmctraining,4.2.0
+Module ecmctraining version 4.2.0 found in /epics/base-3.15.5/require/3.0.5/siteMods/ecmctraining/4.2.0/
+Module ecmctraining has no library
+Loading module info records for ecmctraining
+require EthercatMC 2.1.0
+Module EthercatMC version 2.1.0 found in /epics/base-3.15.5/require/3.0.5/siteMods/EthercatMC/2.1.0/
+Module EthercatMC depends on asyn 4.33.0
+Module asyn version 4.33.0 already loaded
+Module EthercatMC depends on motor 6.9.5
+Module motor version 6.9.5 found in /epics/base-3.15.5/require/3.0.5/siteMods/motor/6.9.5/
+Module motor depends on asyn 4.33.0
+Module asyn version 4.33.0 already loaded
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/motor/6.9.5/lib/linux-x86_64/libmotor.so
+Loaded motor version 6.9.5
+Loading dbd file /epics/base-3.15.5/require/3.0.5/siteMods/motor/6.9.5/dbd/motor.dbd
+Calling function motor_registerRecordDeviceDriver
+Loading module info records for motor
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/EthercatMC/2.1.0/lib/linux-x86_64/libEthercatMC.so
+Loaded EthercatMC version 2.1.0
+Loading dbd file /epics/base-3.15.5/require/3.0.5/siteMods/EthercatMC/2.1.0/dbd/EthercatMC.dbd
+Calling function EthercatMC_registerRecordDeviceDriver
+Loading module info records for EthercatMC
+require stream 2.8.8
+Module stream version 2.8.8 found in /epics/base-3.15.5/require/3.0.5/siteMods/stream/2.8.8/
+Module stream depends on asyn 4.33.0
+Module asyn version 4.33.0 already loaded
+Module stream depends on calc 3.7.1
+Module calc version 3.7.1 found in /epics/base-3.15.5/require/3.0.5/siteMods/calc/3.7.1/
+Module calc depends on sequencer 2.2.6
+Module sequencer version 2.2.6 found in /epics/base-3.15.5/require/3.0.5/siteMods/sequencer/2.2.6/
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/sequencer/2.2.6/lib/linux-x86_64/libsequencer.so
+Loaded sequencer version 2.2.6
+sequencer has no dbd file
+Loading module info records for sequencer
+Module calc depends on sscan 1339922
+Module sscan version 1339922 found in /epics/base-3.15.5/require/3.0.5/siteMods/sscan/1339922/
+Module sscan depends on sequencer 2.2.6
+Module sequencer version 2.2.6 already loaded
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/sscan/1339922/lib/linux-x86_64/libsscan.so
+Loaded sscan version 1339922
+Loading dbd file /epics/base-3.15.5/require/3.0.5/siteMods/sscan/1339922/dbd/sscan.dbd
+Calling function sscan_registerRecordDeviceDriver
+Loading module info records for sscan
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/calc/3.7.1/lib/linux-x86_64/libcalc.so
+Loaded calc version 3.7.1
+Loading dbd file /epics/base-3.15.5/require/3.0.5/siteMods/calc/3.7.1/dbd/calc.dbd
+Calling function calc_registerRecordDeviceDriver
+Loading module info records for calc
+Module stream depends on pcre 8.41.0
+Module pcre version 8.41.0 found in /epics/base-3.15.5/require/3.0.5/siteMods/pcre/8.41.0/
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/pcre/8.41.0/lib/linux-x86_64/libpcre.so
+Loaded pcre version 8.41.0
+pcre has no dbd file
+Loading module info records for pcre
+Loading library /epics/base-3.15.5/require/3.0.5/siteMods/stream/2.8.8/lib/linux-x86_64/libstream.so
+Loaded stream version 2.8.8
+Loading dbd file /epics/base-3.15.5/require/3.0.5/siteMods/stream/2.8.8/dbd/stream.dbd
+Calling function stream_registerRecordDeviceDriver
+Loading module info records for stream
+< /home/iocuser/e3-npm/startup/motion/../../startup/moCan't open ../general/initAxis: No such file or directory
+2019/03/22 15:08:29.362 [MC_CPU1,-1,0] [../ecmcApp/src/main/ecmcMainThread.cpp:324] [_main_,0x1d2b450,0] 
+ESS Open Source EtherCAT Motion Control Unit Initializes......
+2019/03/22 15:08:29.362 [MC_CPU1,-1,0] [../ecmcApp/src/main/ecmcMainThread.cpp:325] [_main_,0x1d2b450,0] 
+Mode: Configuration
+2019/03/22 15:08:29.362 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcAsynPortDriver.cpp:1027] [_main_,0x1d2b450,0] OK
+2019/03/22 15:08:29.362 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcAsynPortDriver.cpp:1027] [_main_,0x1d2b450,0] OK
+tion/general/init
+# Environment variables:
+#   "ECMC_ASYN_PORT":	      Asyn port name
+#   "ECMC_EC_MASTER_ID":      EtherCAT master index
+#   "ECMC_EC_SLAVE_NUM":      EtherCAT slave bus position index
+#   "ECMC_EC_CHANNEL_ID"      Index of input
+#   "ECMC_ASYN_SKIP_CYCLES":  Update rate (number of realtime loops to skip before update)
+#   "ECMC_PINI":              Process at Initialization
+#   "ECMC_DESC":              Description
+#   "ECMC_DTYP":              Data type
+#   "ECMC_SCAN":              Scan field
+#   "ECMC_DRVINFO":           DrvInfo
+#   "ECMC_ZNAM":              String for zero value
+#   "ECMC_ONAM":              String for one value
+#   "ECMC_ZSV":               Alarm severity for zero value
+#   "ECMC_OSV":               Alarm severity for one value
+#   "ECMC_FLNK":              Forward link field
+#   "ECMC_RECORD_NAME":       Record name
+#   "ECMC_ASYN_TIMEOUT":      Asyn timeout
+#   "ECMC_ASYN_ADDR":         Asyn Address
+epicsEnvSet("STREAM_PROTOCOL_PATH", /epics/base-3.15.5/require/3.0.5/siteMods/ecmctraining/4.2.0/db
+epicsEnvSet("ECMC_ASYN_TIMEOUT",       "1")                      # Asyn timeout
+epicsEnvSet("ECMC_ASYN_ADDR",          "0")                      # Asyn Address
+epicsEnvSet("ECMC_MOTOR_PORT",         "NOT SET")
+epicsEnvSet("ECMC_ASYN_PORT",          "NOT SET")
+epicsEnvSet("ECMC_PREFIX",             "NOT SET")
+epicsEnvSet("ECMC_GEN_EC_RECORDS",     "NOT SET")
+epicsEnvSet("ECMC_GEN_AX_RECORDS",     "NOT SET")
+epicsEnvSet("ECMC_ASYN_SKIP_CYCLES",   "0")
+epicsEnvSet("ECMC_EC_AXIS_HEALTH",     "NOT SET")
+# Init all axis related variables
+< ../general/initAxis
+# Additional parameters when motor Records are loaded
+epicsEnvSet("ECMC_EGU",           "mm")
+epicsEnvSet("ECMC_PREC",          "3")
+epicsEnvSet("ECMCAXISFIELDINIT",  "")                            # Extra field init to motor record
+epicsEnvSet("ECMC_AXISCONFIG",    "")                            # Extra parameters to driver
+############################################################
+############# ASYN Configuration:
+epicsEnvSet("ECMC_MOTOR_PORT",    "MCU1")
+epicsEnvSet("ECMC_ASYN_PORT",     "MC_CPU1")
+epicsEnvSet("ECMC_PREFIX",        "LEBT-010:")
+ecmcAsynPortDriverConfigure(MC_CPU1,1000,0,0)
+asynOctetSetOutputEos(MC_CPU1, -1, ";\n")
+asynOctetSetInputEos(MC_CPU1, -1, ";\n")
+asynSetTraceMask(MC_CPU1, -1, 0x41)
+asynSetTraceIOMask(MC_CPU1, -1, 6)
+asynSetTraceInfoMask(MC_CPU1, -1, 15)
+EthercatMCCreateController(MCU1, MC_CPU1, "32", "200", "1000", "")
+############################################################
+############# Misc settings:
+# Disable function call trace printouts
+ecmcConfigOrDie "Cfg.SetEnableFuncCallDiag(0)"
+# Disable on change printouts from objects (enable for easy logging)
+ecmcConfigOrDie "Cfg.SetTraceMaskBit(15,0)"
+# Choose to generate EPICS-records for EtherCAT-entries 
+# (For records use ECMC_GEN_EC_RECORDS="-records" otherwise ECMC_GEN_EC_RECORDS="") 
+epicsEnvSet("ECMC_GEN_EC_RECORDS",          "-records")
+# Choose to generate EPICS-records for ax-entries (PosAct, SetPos,..)
+# (For records use ECMC_GEN_AX_RECORDS="-records" otherwise ECMC_GEN_AX_RECORDS="") 
+epicsEnvSet("ECMC_GEN_AX_RECORDS",          "-records")
+# Update records in 100Hz (skip 9 cycles, based on 1000Hz sample rate)
+epicsEnvSet("ECMC_ASYN_SKIP_CYCLES",       "9")
+############################################################
+############# Configure hardware:
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion/hardware/ecmcLEBT_NPM
+############################################################
+############# LEBT:
+# 0  0:0   PREOP  +  EK1100 EtherCAT Coupler (2A E-Bus)
+# 1  0:1   PREOP  +  EL1808 8K. Dig. Eingang 24V, 3ms
+# 2  0:2   PREOP  +  EL1808 8K. Dig. Eingang 24V, 3ms
+# 3  0:3   PREOP  +  EL2819 16K. Dig. Ausgang 24V, 0,5A, Diagnose
+# 4  0:4   PREOP  +  EL5101 1K. Inc. Encoder 5V
+# 5  0:5   PREOP  +  EL5101 1K. Inc. Encoder 5V
+# 6  0:6   PREOP  +  EL5101 1K. Inc. Encoder 5V
+# 7  0:7   PREOP  +  EL5101 1K. Inc. Encoder 5V
+# 8  0:8   PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
+# 9  0:9   PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24VCan't open ../hardware/ecmcEK1100-EtherCatCoupler-records: No such file or directory
+Can't open ../hardware/ecmcEL1808-digitalInput-records: No such file or directory
+Can't open ../hardware/ecmcEL1808-digitalInput-records: No such file or directory
+Can't open ../hardware/ecmcEL2819-digitalOutput-records: No such file or directory
+Can't open ../hardware/ecmcEL5101-IncEncoder-records: No such file or directory
+Can't open ../hardware/ecmcEL5101-IncEncoder-records: No such file or directory
+Can't open ../hardware/ecmcEL5101-IncEncoder-records: No such file or directory
+Can't open ../hardware/ecmcEL5101-IncEncoder-records: No such file or directory
+Can't open ../hardware/ecmcEL7037-StepperDrive-records: No such file or directory
+Can't open ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B: No such file or directory
+Can't open ../hardware/ecmcEL7037-StepperDrive-records: No such file or directory
+Can't open ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B: No such file or directory
+Can't open ../hardware/ecmcEL7037-StepperDrive-records: No such file or directory
+Can't open ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B: No such file or directory
+Can't open ../hardware/ecmcEL7037-StepperDrive-records: No such file or directory
+Can't open ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B: No such file or directory
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_1,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_2,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_3,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_4,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_5,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_6,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_7,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_8,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_9,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_10,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_11,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_12,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_13,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_14,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_15,1)")
+macLib: macro ECMC_EC_SLAVE_NUM_DIG_OUT is undefined (expanding string ecmcConfigOrDie "Cfg.WriteEcEntryIDString(${ECMC_EC_SLAVE_NUM_DIG_OUT},OUPIN_16,1)")
+NPMA_001 line 5: Unbalanced quote.
+, 1.5A)
+#10  0:10  PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
+#11  0:11  PREOP  +  EL7037 1K. Schrittmotor-Endstufe (24V, 1.5A)
+epicsEnvSet("ECMC_EC_MASTER_ID"          "0")
+#Choose master
+EthercatMCConfigController MCU1, "Cfg.EcSetMaster(0)"
+OK
+#Configure EK1100 coupler terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "0")
+< ../hardware/ecmcEK1100-EtherCatCoupler-records
+# Configure EL1808 digital input terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "1")
+< ../hardware/ecmcEL1808-digitalInput-records
+# Configure EL1808 digital input terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "2")
+< ../hardware/ecmcEL1808-digitalInput-records
+# Configure EL2819 digital output terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "3")
+< ../hardware/ecmcEL2819-digitalOutput-records
+# Configure EL5101 incremental encoder terminal, LEBT NPM1 vertical camera actuator
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "4")
+< ../hardware/ecmcEL5101-IncEncoder-records
+# Configure EL5101 incremental encoder terminal, LEBT NPM1 horizontal camera actuator
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "5")
+< ../hardware/ecmcEL5101-IncEncoder-records
+# Configure EL5101 incremental encoder terminal, LEBT NPM2 vertical camera actuator
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "6")
+< ../hardware/ecmcEL5101-IncEncoder-records
+# Configure EL5101 incremental encoder terminal, LEBT NPM2 horizontal camera actuator
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "7")
+< ../hardware/ecmcEL5101-IncEncoder-records
+# Configure EL7037 stepper drive terminal, LEBT NPM1 vertical camera actuator
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "8")
+< ../hardware/ecmcEL7037-StepperDrive-records
+#Configure motor for EL7037
+< ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B
+# Configure EL7037 stepper drive terminal, LEBT NPM1 horizontal camera actuator
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "9")
+< ../hardware/ecmcEL7037-StepperDrive-records
+#Configure motor for EL7037
+< ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B
+# Configure EL7037 stepper drive terminal, LEBT NPM2 vertical camera actuator
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "10")
+< ../hardware/ecmcEL7037-StepperDrive-records
+#Configure motor for EL7037
+< ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B
+# Configure EL7037 stepper drive terminal, LEBT NPM2 horizontal camera actuator
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "11")
+< ../hardware/ecmcEL7037-StepperDrive-records
+#Configure motor for EL7037
+< ../hardware/ecmcEL7037-Motor-Nanotec-2818M1006-B
+# Apply hardware configuration
+EthercatMCConfigController MCU1, "Cfg.EcApplyConfig(1)"
+OK
+##############################################################################
+############# Write outputs in order to power switches (see elec. drawings):
+##############################################################################
+############# Configuration of doppler:
+epicsEnvSet("STREAM_PROTOCOL_PATH", "/home/iocuser/e3-npm/startup/motion/../../startup/motion/protocol")
+# Custom settings for LEBT NPM1 vertical camera actuator
+#< $(ST_TOP)/NPMA_001_openloop
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion//NPMA_001
+ 
+#General
+epicsEnvSet("ECMC_MOTOR_NAME",            "PBI-NPM-001:Mtr")
+epicsEnvSet("ECMC_R",                     "PBI-NPM-001:Mtr-")
+epicsEnvSet("ECMC_AXIS_NO",               "1)
+epicsEnvSet("ECMC_DESC",                  "LEBT NPM1 Horizontal Lens Motor")
+epicsEnvSet("ECMC_EGU",                   "mm")                        # Motor Record Unit
+epicsEnvSet("ECMC_PREC",                  "2")                         # Motor Record Precision
+epicsEnvSet("ECMC_AXISCONFIG",            "")                          # Extra parameters to driver
+epicsEnvSet("ECMC_EC_AXIS_HEALTH",        "")                          # Entry for axis health output (example: ec0.s1.OUPIN_1.0)
+#Encoder
+epicsEnvSet("ECMC_ENC_SCALE_NUM"          "6.724")			# Numerator of encoder scaling 360 deg/turn)
+epicsEnvSet("ECMC_ENC_SCALE_DENOM"        "8000")			# Number of encoder counts to achieve the scale numerator.micro steps (2000x4)	
+epicsEnvSet("ECMC_ENC_BITS"               "16")				# Resolution of encoder in EtherCAt process image
+# Type: 0=Incremental, 1=Absolute
+epicsEnvSet("ECMC_ENC_TYPE"               "0")				# Type: 0=Incremental, 1=Absolute
+epicsEnvSet("ECMC_ENC_ABS_BITS",          "0")                        # Absolute bit count (for absolute encoders) always least significant part of ECMC_ENC$
+epicsEnvSet("ECMC_ENC_ABS_OFFSET"         "0")                        # Encoder offset in eng units (for absolute encoders)
+epicsEnvSet("ECMC_EC_ENC_ACTPOS",         "ec0.s4.POSITION")           # Ethercat entry for actual position input (encoder)
+#Drive
+epicsEnvSet("ECMC_DRV_TYPE"               "0")                          # Stepper: 0. DS402: 1 (DS402 = servos and advanced stepper drives)
+epicsEnvSet("ECMC_DRV_SCALE_NUM"          "-67.24")			# Fastest speed in engineering units (3600 deg/s)
+epicsEnvSet("ECMC_DRV_SCALE_DENOM"        "32768.0")			# I/O range for ECMC_EC_ALIAS_DRV_VELO_SET
+epicsEnvSet("ECMC_EC_DRV_CONTROL",        "ec0.s9.STM_CONTROL.0")      # Ethercat entry for control word or bit output
+epicsEnvSet("ECMC_EC_DRV_STATUS",         "ec0.s9.STM_STATUS.1")       # Ethercat entry for status word or bit input
+epicsEnvSet("ECMC_EC_DRV_VELOCITY",	  "ec0.s9.VELOCITY_SETPOINT")  # Ethercat entry for velocity setpoint output
+epicsEnvSet("ECMC_EC_DRV_REDUCE_TORQUE",  "ec0.s9.STM_CONTROL.2")      # Ethercat entry for reduce torque output
+epicsEnvSet("ECMC_EC_DRV_BRAKE",          "")                          # Ethercat entry for brake output
+epicsEnvSet("ECMC_DRV_BRAKE_OPEN_DLY_TIME",    "0")                    # Brake timing parameter in cycles (default 1kHz)
+epicsEnvSet("ECMC_DRV_BRAKE_CLOSE_AHEAD_TIME", "0")                    # Brake timing parameter in cycles (default 1kHz)
+#Trajectory
+epicsEnvSet("ECMC_VELO",                  "0.1")			# Velocity in engineering units for positioning 
+epicsEnvSet("ECMC_JOG_VEL",               "0.1")			# Velocity in engineering units for jogging same as ECMC_VELO
+#JAR defaults to VELO/ACCL
+epicsEnvSet("ECMC_JAR",                   "0.0")			# Jogging acceleration in engineering units. If cero ECMC_ACC will be used
+epicsEnvSet("ECMC_ACCL",                  "0.1")				# Positioning acceleration in second reach ECMC_VELO 0.1 s
+epicsEnvSet("ECMC_EMERG_DECEL",           "0.1")              # Emergency deceleration
+epicsEnvSet("ECMC_MRES",                  "0.001")			# Motor resolution in engineering unit. Should be set to 0.001
+#Homing
+epicsEnvSet("ECMC_HOME_PROC",             "1")		# Homing procedur
+epicsEnvSet("ECMC_HOME_POS",              "0.0")		# Position to set at homming
+epicsEnvSet("ECMC_HOME_VEL_TO",           "5")		# Velocity setpoint, for the first part of the homing sequence when searching for limit switches5
+epicsEnvSet("ECMC_HOME_VEL_FRM",          "4")		# Velocity setpoint, for the first part of the homing sequence when searching for homing sensor
+epicsEnvSet("ECMC_HOME_ACC",              "21")		# Acceleration
+epicsEnvSet("ECMC_HOME_DEC",              "100")		# Deceleration
+#Controller
+epicsEnvSet("ECMC_CNTRL_KP",              "15.0")			# Position control loop proportional gain
+epicsEnvSet("ECMC_CNTRL_KI",              "0.02")			# Position control loop integral gain
+epicsEnvSet("ECMC_CNTRL_KD",              "0.0")			# Position control loop differentia gain
+epicsEnvSet("ECMC_CNTRL_KFF",             "1.0")			# Velocity feed forward gain
+#Monitoring
+#  softlimits (disable with 0,0)
+epicsEnvSet("ECMC_SOFT_LOW_LIM",          "0")		# Soft low limit position
+epicsEnvSet("ECMC_SOFT_HIGH_LIM",         "0")		# Soft high limit
+epicsEnvSet("ECMC_DXLM_ENABLE",           "1")
+# position lag; 
+# If the difference between the actual position and the trajectory position setpoint is larger than ECMC_MON_LAG_MON_TOL for a period longer than ECM_MON_LAG_MON_TIME the motion will be stoped
+epicsEnvSet("ECMC_MON_LAG_MON_TOL",       "0.5")			# Position lag tolerance.
+epicsEnvSet("ECMC_MON_LAG_MON_TIME",      "5")				# Position lag monitoring filter time (ms)
+epicsEnvSet("ECMC_MON_LAG_MON_ENA",       "1")				# Enable position lagCan't open ../motion/ecmc_axis: No such file or directory
+macLib: macro ECMC_AXIS_NO is undefined (expanding string ecmcAsynPortDriverAddParameter($(ECMC_ASYN_PORT),"ax$(ECMC_AXIS_NO).default","asynFloat64",$(ECMC_ASYN_SKIP_CYCLES)))
+macLib: macro ECMC_AXIS_NO is undefined (expanding string dbLoadRecords("ecmcDefaultAsynParamsAxis.db","P=$(ECMC_PREFIX),AXIS_NAME=$(ECMC_MOTOR_NAME),AXIS_NO=$(ECMC_AXIS_NO),PORT=$(ECMC_ASYN_PORT),ADDR=0,TIMEOUT=1"))
+Can't open ../motion/ecmc_axis_diag: No such file or directory
+ monitoring
+# at target; 
+# If the difference between the actual position and the target setpoint is within than ECMC_MON_AT_TARGET_TOL for a period longer than ECMC_AT_TARGET_MON_TIME the axis is considered to have reached target.
+epicsEnvSet("ECMC_MON_AT_TARGET_TOL",     "0.05")			# At target tolerance.
+epicsEnvSet("ECMC_MON_AT_TARGET_TIME",     "5")				# At target monitoring filter time
+epicsEnvSet("ECMC_MON_AT_TARGET_ENA",     "1")				# Enable at target monitoring
+# velocity
+# If actual or setpoint velocity is higher than ECMC_MON_VELO_MAX for a period longer than ECM_MON_VELO_MAX_TRAJ_TIME the motion will be stopped or if longer than ECMC_MON_VELO_MAX_DRV_TIME the enable command to the drive will go down (amplifier disable)
+epicsEnvSet("ECMC_MON_VELO_MAX",          "1")			# Maximun allowed speed of axis
+epicsEnvSet("ECMC_MON_VELO_MAX_TRAJ_TIME","10")			# Max velocity filter time. Initiates a controller ramp down of velocity to stop (ms)
+epicsEnvSet("ECMC_MON_VELO_MAX_DRV_TIME", "20")			# Max velocity filter time. Disables amplifier. Normally ECMC_MON_VELO_MAX_DRV_TIME > ECMC_MON_VELO_MAX_TRAJ_TIME (ms)
+epicsEnvSet("ECMC_MON_VELO_MAX_ENA",      "1")				# Enable maximun velocity monitoring
+# Switches
+epicsEnvSet("ECMC_EC_MON_LOWLIM",         "ec0.s1.INPIN_2.0")           #  Ethercat entry for low limit switch input
+epicsEnvSet("ECMC_EC_MON_HIGHLIM",        "ec0.s1.INPIN_1.0")           #  Ethercat entry for high limit switch inpuit
+epicsEnvSet("ECMC_EC_MON_HOME_SWITCH",    "ec0.s-1.ONE.0")           #  Ethercat entry for home switch input
+epicsEnvSet("ECMC_EC_MON_EXT_INTERLOCK",  "ec0.s-1.ONE.0")              #  Ethercat entry for external interlock input
+# Apply configurations to ECMC
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion/motion/ecmc_axis-records
+< ../motion/ecmc_axis
+# Load diagnostic array record (includes most relevant axis data)
+< ../motion/ecmc_axis_diag
+# Custom settings for LEBT NPM1 horizontal camera actuator
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion//NPMA_002
+ 
+#General
+epicsEnvSet("ECMC_MOTOR_NAME",            "PBI-NPM-002:Mtr")
+epicsEnvSet("ECMC_R",                     "PBI-NPM-002:Mtr-")
+epicsEnvSet("ECMC_AXIS_NO",               "2")
+epicsEnvSet("ECMC_DESC",                  "LEBT NPM1 Vertical Lens Motor")
+epicsEnvSet("ECMC_EGU",                   "mm")                        # Motor Record Unit
+epicsEnvSet("ECMC_PREC",                  "2")                         # Motor Record Precision
+epicsEnvSet("ECMC_AXISCONFIG",            "")                          # Extra parameters to driver
+epicsEnvSet("ECMC_EC_AXIS_HEALTH",        "")                          # Entry for axis health output (example: ec0.s1.OUPIN_1.0)
+#Encoder
+epicsEnvSet("ECMC_ENC_SCALE_NUM"          "6.724")			# Numerator of encoder scaling 360 deg/turn)
+epicsEnvSet("ECMC_ENC_SCALE_DENOM"        "8000")			# Number of encoder counts to achieve the scale numerator.micro steps (2000x4)	
+epicsEnvSet("ECMC_ENC_BITS"               "16")				# Resolution of encoder in EtherCAt process image
+# Type: 0=Incremental, 1=Absolute
+epicsEnvSet("ECMC_ENC_TYPE"               "0")				# Type: 0=Incremental, 1=Absolute
+epicsEnvSet("ECMC_ENC_ABS_BITS",          "0")                        # Absolute bit count (for absolute encoders) always least significant part of ECMC_ENC$
+epicsEnvSet("ECMC_ENC_ABS_OFFSET"         "0")                        # Encoder offset in eng units (for absolute encoders)
+epicsEnvSet("ECMC_EC_ENC_ACTPOS",         "ec0.s5.POSITION")           # Ethercat entry for actual position input (encoder)
+#Drive
+epicsEnvSet("ECMC_DRV_TYPE"               "0")                          # Stepper: 0. DS402: 1 (DS402 = servos and advanced stepper drives)
+epicsEnvSet("ECMC_DRV_SCALE_NUM"          "-67.24")			# Fastest speed in engineering units (3600 deg/s)
+epicsEnvSet("ECMC_DRV_SCALE_DENOM"        "32768.0")			# I/O range for ECMC_EC_ALIAS_DRV_VELO_SET
+epicsEnvSet("ECMC_EC_DRV_CONTROL",        "ec0.s10.STM_CONTROL.0")      # Ethercat entry for control word or bit output
+epicsEnvSet("ECMC_EC_DRV_STATUS",         "ec0.s10.STM_STATUS.1")       # Ethercat entry for status word or bit input
+epicsEnvSet("ECMC_EC_DRV_VELOCITY",	  "ec0.s10.VELOCITY_SETPOINT")  # Ethercat entry for velocity setpoint output
+epicsEnvSet("ECMC_EC_DRV_REDUCE_TORQUE",  "ec0.s10.STM_CONTROL.2")      # Ethercat entry for reduce torque output
+epicsEnvSet("ECMC_EC_DRV_BRAKE",          "")                          # Ethercat entry for brake output
+epicsEnvSet("ECMC_DRV_BRAKE_OPEN_DLY_TIME",    "0")                    # Brake timing parameter in cycles (default 1kHz)
+epicsEnvSet("ECMC_DRV_BRAKE_CLOSE_AHEAD_TIME", "0")                    # Brake timing parameter in cycles (default 1kHz)
+#Trajectory
+epicsEnvSet("ECMC_VELO",                  "0.1")			# Velocity in engineering units for positioning 
+epicsEnvSet("ECMC_JOG_VEL",               "0.1")			# Velocity in engineering units for jogging same as ECMC_VELO
+#JAR defaults to VELO/ACCL
+epicsEnvSet("ECMC_JAR",                   "0.0")			# Jogging acceleration in engineering units. If cero ECMC_ACC will be used
+epicsEnvSet("ECMC_ACCL",                  "0.1")				# Positioning acceleration in second reach ECMC_VELO 0.1 s
+epicsEnvSet("ECMC_EMERG_DECEL",           "0.1")              # Emergency deceleration
+epicsEnvSet("ECMC_MRES",                  "0.001")			# Motor resolution in engineering unit. Should be set to 0.001
+#Homing
+epicsEnvSet("ECMC_HOME_PROC",             "1")		# Homing procedur
+epicsEnvSet("ECMC_HOME_POS",              "0.0")		# Position to set at homming
+epicsEnvSet("ECMC_HOME_VEL_TO",           "5")		# Velocity setpoint, for the first part of the homing sequence when searching for limit switches5
+epicsEnvSet("ECMC_HOME_VEL_FRM",          "4")		# Velocity setpoint, for the first part of the homing sequence when searching for homing sensor
+epicsEnvSet("ECMC_HOME_ACC",              "21")		# Acceleration
+epicsEnvSet("ECMC_HOME_DEC",              "100")		# Deceleration
+#Controller
+epicsEnvSet("ECMC_CNTRL_KP",              "15.0")			# Position control loop proportional gain
+epicsEnvSet("ECMC_CNTRL_KI",              "0.02")			# Position control loop integral gain
+epicsEnvSet("ECMC_CNTRL_KD",              "0.0")			# Position control loop differentia gain
+epicsEnvSet("ECMC_CNTRL_KFF",             "1.0")			# Velocity feed forward gain
+#Monitoring
+#  softlimits (disable with 0,0)
+epicsEnvSet("ECMC_SOFT_LOW_LIM",          "0")		# Soft low limit position
+epicsEnvSet("ECMC_SOFT_HIGH_LIM",         "0")		# Soft high limit
+epicsEnvSet("ECMC_DXLM_ENABLE",           "1")
+# position lag; 
+# If the difference between the actual position and the trajectory position setpoint is larger than ECMC_MON_LAG_MON_TOL for a period longer than ECM_MON_LAG_MON_TIME the motion will be stoped
+epicsEnvSet("ECMC_MON_LAG_MON_TOL",       "0.5")			# Position lag tolerance.
+epicsEnvSet("ECMC_MON_LAG_MON_TIME",      "5")				# Position lag monitoring filter time (ms)
+epicsEnvSet("ECMC_MON_LAG_MON_ENA",       "1")				# Enable position lag monitoring
+# at target; 
+# If the difference between the actual position and the target setpoint is within than ECMC_MON_AT_TARGET_TOL for a period longer than ECMC_AT_TARGET_MON_TIME the axis is considered to have reached target.
+epicsEnvSet("ECMC_MON_AT_TARGET_TOL",     "0.05")			# At target tolerance.
+epicsEnvSet("ECMC_MON_AT_TARGET_TIME",     "5")				# At target monitoring filter time
+epicsEnvSet("ECMC_MON_AT_TARGET_ENA",     "1")				# Enable at target monitoring
+# velocity
+# If actual or setpoint velocity is higher than ECMC_MON_VELO_MAX for a period longer than ECM_MON_VELO_MAX_TRAJ_TIME the motion will be stopped or if longer than ECMC_MON_VELO_MAX_DRV_TIME the enable command to the drive will go down (amplifier disable)
+epicsEnvSet("ECMC_MON_VELO_MAX",          "1")			# Maximun allowed speed of axis
+epicsEnvSet("ECMC_MON_VELO_MAX_TRAJ_TIME","10")			# Max velocity filter time. Initiates a controller ramp down of velocity to stop (ms)
+epicsEnvSet("ECMC_MON_VELO_MAX_DRV_TIME", "20")			# Max velocity filter time. Disables amplifier. Normally ECMC_MON_VELO_MAX_DRV_TIME > ECMC_MON_VELO_MAX_TRAJ_TIME (ms)
+epicsEnvCan't open ../motion/ecmc_axis: No such file or directory
+2019/03/22 15:08:29.564 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcCom.cpp:186] [_main_,0x1d2b450,0] ERROR: Axis object NULL
+2019/03/22 15:08:29.564 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcAsynPortDriver.cpp:908] [_main_,0x1d2b450,0] ecmcAsynPortDriverAddParameter: ERROR: Add parameter ax2.default failed (0x20004).
+Can't open ../motion/ecmc_axis_diag: No such file or directory
+Set("ECMC_MON_VELO_MAX_ENA",      "1")				# Enable maximun velocity monitoring
+# Switches
+epicsEnvSet("ECMC_EC_MON_LOWLIM",         "ec0.s1.INPIN_6.0")           #  Ethercat entry for low limit switch input
+epicsEnvSet("ECMC_EC_MON_HIGHLIM",        "ec0.s1.INPIN_5.0")           #  Ethercat entry for high limit switch inpuit
+epicsEnvSet("ECMC_EC_MON_HOME_SWITCH",    "ec0.s-1.ONE.0")           #  Ethercat entry for home switch input
+epicsEnvSet("ECMC_EC_MON_EXT_INTERLOCK",  "ec0.s-1.ONE.0")              #  Ethercat entry for external interlock input
+# Apply configurations to ECMC
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion/motion/ecmc_axis-records
+< ../motion/ecmc_axis
+ecmcAsynPortDriverAddParameter(MC_CPU1,"ax2.default","asynFloat64",9)
+dbLoadRecords("ecmcDefaultAsynParamsAxis.db","P=LEBT-010:,AXIS_NAME=PBI-NPM-002:Mtr,AXIS_NO=2,PORT=MC_CPU1,ADDR=0,TIMEOUT=1")
+# Load diagnostic array record (includes most relevant axis data)
+< ../motion/ecmc_axis_diag
+# Custom settings for LEBT NPM2 vertical camera actuator
+epicsEnvSet("ECMC_PREFIX",        "LEBT-020:")
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion//NPMA_003
+  
+#General
+epicsEnvSet("ECMC_MOTOR_NAME",            "PBI-NPM-001:Mtr")
+epicsEnvSet("ECMC_R",                     "PBI-NPM-001:Mtr-")
+epicsEnvSet("ECMC_AXIS_NO",               "3")
+epicsEnvSet("ECMC_DESC",                  "LEBT NPM2 Horizontal Lens Motor")
+epicsEnvSet("ECMC_EGU",                   "mm")                        # Motor Record Unit
+epicsEnvSet("ECMC_PREC",                  "2")                         # Motor Record Precision
+epicsEnvSet("ECMC_AXISCONFIG",            "")                          # Extra parameters to driver
+epicsEnvSet("ECMC_EC_AXIS_HEALTH",        "")                          # Entry for axis health output (example: ec0.s1.OUPIN_1.0)
+#Encoder
+epicsEnvSet("ECMC_ENC_SCALE_NUM"          "6.724")			# Numerator of encoder scaling 360 deg/turn)
+epicsEnvSet("ECMC_ENC_SCALE_DENOM"        "8000")			# Number of encoder counts to achieve the scale numerator.micro steps (2000x4)	
+epicsEnvSet("ECMC_ENC_BITS"               "16")				# Resolution of encoder in EtherCAt process image
+# Type: 0=Incremental, 1=Absolute
+epicsEnvSet("ECMC_ENC_TYPE"               "0")				# Type: 0=Incremental, 1=Absolute
+epicsEnvSet("ECMC_ENC_ABS_BITS",          "0")                        # Absolute bit count (for absolute encoders) always least significant part of ECMC_ENC$
+epicsEnvSet("ECMC_ENC_ABS_OFFSET"         "0")                        # Encoder offset in eng units (for absolute encoders)
+epicsEnvSet("ECMC_EC_ENC_ACTPOS",         "ec0.s6.POSITION")           # Ethercat entry for actual position input (encoder)
+#Drive
+epicsEnvSet("ECMC_DRV_TYPE"               "0")                          # Stepper: 0. DS402: 1 (DS402 = servos and advanced stepper drives)
+epicsEnvSet("ECMC_DRV_SCALE_NUM"          "-67.24")			# Fastest speed in engineering units (3600 deg/s)
+epicsEnvSet("ECMC_DRV_SCALE_DENOM"        "32768.0")			# I/O range for ECMC_EC_ALIAS_DRV_VELO_SET
+epicsEnvSet("ECMC_EC_DRV_CONTROL",        "ec0.s11.STM_CONTROL.0")      # Ethercat entry for control word or bit output
+epicsEnvSet("ECMC_EC_DRV_STATUS",         "ec0.s11.STM_STATUS.1")       # Ethercat entry for status word or bit input
+epicsEnvSet("ECMC_EC_DRV_VELOCITY",	  "ec0.s11.VELOCITY_SETPOINT")  # Ethercat entry for velocity setpoint output
+epicsEnvSet("ECMC_EC_DRV_REDUCE_TORQUE",  "ec0.s11.STM_CONTROL.2")      # Ethercat entry for reduce torque output
+epicsEnvSet("ECMC_EC_DRV_BRAKE",          "")                          # Ethercat entry for brake output
+epicsEnvSet("ECMC_DRV_BRAKE_OPEN_DLY_TIME",    "0")                    # Brake timing parameter in cycles (default 1kHz)
+epicsEnvSet("ECMC_DRV_BRAKE_CLOSE_AHEAD_TIME", "0")                    # Brake timing parameter in cycles (default 1kHz)
+#Trajectory
+epicsEnvSet("ECMC_VELO",                  "0.1")			# Velocity in engineering units for positioning 
+epicsEnvSet("ECMC_JOG_VEL",               "0.1")			# Velocity in engineering units for jogging same as ECMC_VELO
+#JAR defaults toCan't open ../motion/ecmc_axis: No such file or directory
+2019/03/22 15:08:29.565 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcCom.cpp:186] [_main_,0x1d2b450,0] ERROR: Axis object NULL
+2019/03/22 15:08:29.565 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcAsynPortDriver.cpp:908] [_main_,0x1d2b450,0] ecmcAsynPortDriverAddParameter: ERROR: Add parameter ax3.default failed (0x20004).
+ VELO/ACCL
+epicsEnvSet("ECMC_JAR",                   "0.0")			# Jogging acceleration in engineering units. If cero ECMC_ACC will be used
+epicsEnvSet("ECMC_ACCL",                  "0.1")				# Positioning acceleration in second reach ECMC_VELO 0.1 s
+epicsEnvSet("ECMC_EMERG_DECEL",           "0.1")              # Emergency deceleration
+epicsEnvSet("ECMC_MRES",                  "0.001")			# Motor resolution in engineering unit. Should be set to 0.001
+#Homing
+epicsEnvSet("ECMC_HOME_PROC",             "1")		# Homing procedur
+epicsEnvSet("ECMC_HOME_POS",              "0.0")		# Position to set at homming
+epicsEnvSet("ECMC_HOME_VEL_TO",           "5")		# Velocity setpoint, for the first part of the homing sequence when searching for limit switches5
+epicsEnvSet("ECMC_HOME_VEL_FRM",          "4")		# Velocity setpoint, for the first part of the homing sequence when searching for homing sensor
+epicsEnvSet("ECMC_HOME_ACC",              "21")		# Acceleration
+epicsEnvSet("ECMC_HOME_DEC",              "100")		# Deceleration
+#Controller
+epicsEnvSet("ECMC_CNTRL_KP",              "15.0")			# Position control loop proportional gain
+epicsEnvSet("ECMC_CNTRL_KI",              "0.02")			# Position control loop integral gain
+epicsEnvSet("ECMC_CNTRL_KD",              "0.0")			# Position control loop differentia gain
+epicsEnvSet("ECMC_CNTRL_KFF",             "1.0")			# Velocity feed forward gain
+#Monitoring
+#  softlimits (disable with 0,0)
+epicsEnvSet("ECMC_SOFT_LOW_LIM",          "0")		# Soft low limit position
+epicsEnvSet("ECMC_SOFT_HIGH_LIM",         "0")		# Soft high limit
+epicsEnvSet("ECMC_DXLM_ENABLE",           "1")
+# position lag; 
+# If the difference between the actual position and the trajectory position setpoint is larger than ECMC_MON_LAG_MON_TOL for a period longer than ECM_MON_LAG_MON_TIME the motion will be stoped
+epicsEnvSet("ECMC_MON_LAG_MON_TOL",       "0.5")			# Position lag tolerance.
+epicsEnvSet("ECMC_MON_LAG_MON_TIME",      "5")				# Position lag monitoring filter time (ms)
+epicsEnvSet("ECMC_MON_LAG_MON_ENA",       "1")				# Enable position lag monitoring
+# at target; 
+# If the difference between the actual position and the target setpoint is within than ECMC_MON_AT_TARGET_TOL for a period longer than ECMC_AT_TARGET_MON_TIME the axis is considered to have reached target.
+epicsEnvSet("ECMC_MON_AT_TARGET_TOL",     "0.05")			# At target tolerance.
+epicsEnvSet("ECMC_MON_AT_TARGET_TIME",     "5")				# At target monitoring filter time
+epicsEnvSet("ECMC_MON_AT_TARGET_ENA",     "1")				# Enable at target monitoring
+# velocity
+# If actual or setpoint velocity is higher than ECMC_MON_VELO_MAX for a period longer than ECM_MON_VELO_MAX_TRAJ_TIME the motion will be stopped or if longer than ECMC_MON_VELO_MAX_DRV_TIME the enable command to the drive will go down (amplifier disable)
+epicsEnvSet("ECMC_MON_VELO_MAX",          "1")			# Maximun allowed speed of axis
+epicsEnvSet("ECMC_MON_VELO_MAX_TRAJ_TIME","10")			# Max velocity filter time. Initiates a controller ramp down of velocity to stop (ms)
+epicsEnvSet("ECMC_MON_VELO_MAX_DRV_TIME", "20")			# Max velocity filter time. Disables amplifier. Normally ECMC_MON_VELO_MAX_DRV_TIME > ECMC_MON_VELO_MAX_TRAJ_TIME (ms)
+epicsEnvSet("ECMC_MON_VELO_MAX_ENA",      "1")				# Enable maximun velocity monitoring
+# Switches
+epicsEnvSet("ECMC_EC_MON_LOWLIM",         "ec0.s2.INPIN_2.0")           #  Ethercat entry for low limit switch input
+epicsEnvSet("ECMC_EC_MON_HIGHLIM",        "ec0.s2.INPIN_1.0")           #  Ethercat entry for high limit switch inpuit
+epicsEnvSet("ECMC_EC_MON_HOME_SWITCH",    "ec0.s-1.ONE.0")           #  Ethercat entry for home switch input
+epicsEnvSet("ECMC_EC_MON_EXT_INTERLOCK",  "ec0.s-1.ONE.0")              #  Ethercat entry for external interlock input
+# Apply configurations to ECMC
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion/motion/ecmc_axis-records
+< ../motion/ecmc_axis
+ecmcAsynPortDriverAddParameter(MC_CPU1,"ax3.default","asynFloat64",9)
+dbLoadRecords("ecmcDefaultAsynParamsAxis.db","P=LEBT-020:,AXIS_NAME=PBI-NPM-001:Mtr,AXIS_NO=3,PORT=MC_CPU1,ADDR=0,TIMEOUT=1")
+# Can't open ../motion/ecmc_axis_diag: No such file or directory
+Load diagnostic array record (includes most relevant axis data)
+< ../motion/ecmc_axis_diag
+# Custom settings for LEBT NPM1 horizontal camera actuator
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion//NPMA_004
+  
+#General
+epicsEnvSet("ECMC_MOTOR_NAME",            "PBI-NPM-002:Mtr")
+epicsEnvSet("ECMC_R",                     "PBI-NPM-002:Mtr-")
+epicsEnvSet("ECMC_AXIS_NO",               "4")
+epicsEnvSet("ECMC_DESC",                  "LEBT NPM2 Vertical Lens Motor")
+epicsEnvSet("ECMC_EGU",                   "mm")                        # Motor Record Unit
+epicsEnvSet("ECMC_PREC",                  "2")                         # Motor Record Precision
+epicsEnvSet("ECMC_AXISCONFIG",            "")                          # Extra parameters to driver
+epicsEnvSet("ECMC_EC_AXIS_HEALTH",        "")                          # Entry for axis health output (example: ec0.s1.OUPIN_1.0)
+#Encoder
+epicsEnvSet("ECMC_ENC_SCALE_NUM"          "6.724")			# Numerator of encoder scaling 360 deg/turn)
+epicsEnvSet("ECMC_ENC_SCALE_DENOM"        "8000")			# Number of encoder counts to achieve the scale numerator.micro steps (2000x4)	
+epicsEnvSet("ECMC_ENC_BITS"               "16")				# Resolution of encoder in EtherCAt process image
+# Type: 0=Incremental, 1=Absolute
+epicsEnvSet("ECMC_ENC_TYPE"               "0")				# Type: 0=Incremental, 1=Absolute
+epicsEnvSet("ECMC_ENC_ABS_BITS",          "0")                        # Absolute bit count (for absolute encoders) always least significant part of ECMC_ENC$
+epicsEnvSet("ECMC_ENC_ABS_OFFSET"         "0")                        # Encoder offset in eng units (for absolute encoders)
+epicsEnvSet("ECMC_EC_ENC_ACTPOS",         "ec0.s7.POSITION")           # Ethercat entry for actual position input (encoder)
+#Drive
+epicsEnvSet("ECMC_DRV_TYPE"               "0")                          # Stepper: 0. DS402: 1 (DS402 = servos and advanced stepper drives)
+epicsEnvSet("ECMC_DRV_SCALE_NUM"          "-67.24")			# Fastest speed in engineering units (3600 deg/s)
+epicsEnvSet("ECMC_DRV_SCALE_DENOM"        "32768.0")			# I/O range for ECMC_EC_ALIAS_DRV_VELO_SET
+epicsEnvSet("ECMC_EC_DRV_CONTROL",        "ec0.s12.STM_CONTROL.0")      # Ethercat entry for control word or bit output
+epicsEnvSet("ECMC_EC_DRV_STATUS",         "ec0.s12.STM_STATUS.1")       # Ethercat entry for status word or bit input
+epicsEnvSet("ECMC_EC_DRV_VELOCITY",	  "ec0.s12.VELOCITY_SETPOINT")  # Ethercat entry for velocity setpoint output
+epicsEnvSet("ECMC_EC_DRV_REDUCE_TORQUE",  "ec0.s12.STM_CONTROL.2")      # Ethercat entry for reduce torque output
+epicsEnvSet("ECMC_EC_DRV_BRAKE",          "")                          # Ethercat entry for brake output
+epicsEnvSet("ECMC_DRV_BRAKE_OPEN_DLY_TIME",    "0")                    # Brake timing parameter in cycles (default 1kHz)
+epicsEnvSet("ECMC_DRV_BRAKE_CLOSE_AHEAD_TIME", "0")                    # Brake timing parameter in cycles (default 1kHz)
+#Trajectory
+epicsEnvSet("ECMC_VELO",                  "0.1")			# Velocity in engineering units for positioning 
+epicsEnvSet("ECMC_JOG_VEL",               "0.1")			# Velocity in engineering units for jogging same as ECMC_VELO
+#JAR defaults to VELO/ACCL
+epicsEnvSet("ECMC_JAR",                   "0.0")			# Jogging acceleration in engineering units. If cero ECMC_ACC will be used
+epicsEnvSet("ECMC_ACCL",                  "0.1")				# Positioning acceleration in second reach ECMC_VELO 0.1 s
+epicsEnvSet("ECMC_EMERG_DECEL",           "0.1")              # Emergency deceleration
+epicsEnvSet("ECMC_MRES",                  "0.001")			# Motor resolution in engineering unit. Should be set to 0.001
+#Homing
+epicsEnvSet("ECMC_HOME_PROC",             "1")		# Homing procedur
+epicsEnvSet("ECMC_HOME_POS",              "0.0")		# Position to set at homming
+epicsEnvSet("ECMC_HOME_VEL_TO",           "5")		# Velocity setpoint, for the first part of the homing sequence when searching for limit switches5
+epicsEnvSet("ECMC_HOME_VEL_FRM",          "4")		# Velocity setpoint, for the first part of the homing sequence when searching for homing sensor
+epicsEnvSet("ECMC_HOME_ACC",              Can't open ../motion/ecmc_axis: No such file or directory
+2019/03/22 15:08:29.566 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcCom.cpp:186] [_main_,0x1d2b450,0] ERROR: Axis object NULL
+2019/03/22 15:08:29.566 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcAsynPortDriver.cpp:908] [_main_,0x1d2b450,0] ecmcAsynPortDriverAddParameter: ERROR: Add parameter ax4.default failed (0x20004).
+Can't open ../motion/ecmc_axis_diag: No such file or directory
+2019/03/22 15:08:29.566 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcAsynPortDriver.cpp:1027] [_main_,0x1d2b450,0] OK
+2019/03/22 15:08:29.566 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcAsynPortDriver.cpp:1027] [_main_,0x1d2b450,0] OK
+2019/03/22 15:08:29.566 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcAsynPortDriver.cpp:1027] [_main_,0x1d2b450,0] OK
+2019/03/22 15:08:29.566 [MC_CPU1,-1,0] [../ecmcApp/src/motion/ecmcMotion.cpp:2623] [_main_,0x1d2b450,0] ERROR: Axis object NULL
+2019/03/22 15:08:29.566 [MC_CPU1,-1,0] [../ecmcApp/src/com/ecmcAsynPortDriver.cpp:1021] [_main_,0x1d2b450,0] ECMC returned error: ERROR_MAIN_AXIS_OBJECT_NULL (0x20004)
+"21")		# Acceleration
+epicsEnvSet("ECMC_HOME_DEC",              "100")		# Deceleration
+#Controller
+epicsEnvSet("ECMC_CNTRL_KP",              "15.0")			# Position control loop proportional gain
+epicsEnvSet("ECMC_CNTRL_KI",              "0.02")			# Position control loop integral gain
+epicsEnvSet("ECMC_CNTRL_KD",              "0.0")			# Position control loop differentia gain
+epicsEnvSet("ECMC_CNTRL_KFF",             "1.0")			# Velocity feed forward gain
+#Monitoring
+#  softlimits (disable with 0,0)
+epicsEnvSet("ECMC_SOFT_LOW_LIM",          "0")		# Soft low limit position
+epicsEnvSet("ECMC_SOFT_HIGH_LIM",         "0")		# Soft high limit
+epicsEnvSet("ECMC_DXLM_ENABLE",           "1")
+# position lag; 
+# If the difference between the actual position and the trajectory position setpoint is larger than ECMC_MON_LAG_MON_TOL for a period longer than ECM_MON_LAG_MON_TIME the motion will be stoped
+epicsEnvSet("ECMC_MON_LAG_MON_TOL",       "0.5")			# Position lag tolerance.
+epicsEnvSet("ECMC_MON_LAG_MON_TIME",      "5")				# Position lag monitoring filter time (ms)
+epicsEnvSet("ECMC_MON_LAG_MON_ENA",       "1")				# Enable position lag monitoring
+# at target; 
+# If the difference between the actual position and the target setpoint is within than ECMC_MON_AT_TARGET_TOL for a period longer than ECMC_AT_TARGET_MON_TIME the axis is considered to have reached target.
+epicsEnvSet("ECMC_MON_AT_TARGET_TOL",     "0.05")			# At target tolerance.
+epicsEnvSet("ECMC_MON_AT_TARGET_TIME",     "5")				# At target monitoring filter time
+epicsEnvSet("ECMC_MON_AT_TARGET_ENA",     "1")				# Enable at target monitoring
+# velocity
+# If actual or setpoint velocity is higher than ECMC_MON_VELO_MAX for a period longer than ECM_MON_VELO_MAX_TRAJ_TIME the motion will be stopped or if longer than ECMC_MON_VELO_MAX_DRV_TIME the enable command to the drive will go down (amplifier disable)
+epicsEnvSet("ECMC_MON_VELO_MAX",          "1")			# Maximun allowed speed of axis
+epicsEnvSet("ECMC_MON_VELO_MAX_TRAJ_TIME","10")			# Max velocity filter time. Initiates a controller ramp down of velocity to stop (ms)
+epicsEnvSet("ECMC_MON_VELO_MAX_DRV_TIME", "20")			# Max velocity filter time. Disables amplifier. Normally ECMC_MON_VELO_MAX_DRV_TIME > ECMC_MON_VELO_MAX_TRAJ_TIME (ms)
+epicsEnvSet("ECMC_MON_VELO_MAX_ENA",      "1")				# Enable maximun velocity monitoring
+# Switches
+epicsEnvSet("ECMC_EC_MON_LOWLIM",         "ec0.s2.INPIN_6.0")           #  Ethercat entry for low limit switch input
+epicsEnvSet("ECMC_EC_MON_HIGHLIM",        "ec0.s2.INPIN_5.0")           #  Ethercat entry for high limit switch inpuit
+epicsEnvSet("ECMC_EC_MON_HOME_SWITCH",    "ec0.s-1.ONE.0")           #  Ethercat entry for home switch input
+epicsEnvSet("ECMC_EC_MON_EXT_INTERLOCK",  "ec0.s-1.ONE.0")              #  Ethercat entry for external interlock input
+# Apply configurations to ECMC
+< /home/iocuser/e3-npm/startup/motion/../../startup/motion/motion/ecmc_axis-records
+< ../motion/ecmc_axis
+ecmcAsynPortDriverAddParameter(MC_CPU1,"ax4.default","asynFloat64",9)
+dbLoadRecords("ecmcDefaultAsynParamsAxis.db","P=LEBT-020:,AXIS_NAME=PBI-NPM-002:Mtr,AXIS_NO=4,PORT=MC_CPU1,ADDR=0,TIMEOUT=1")
+# Load diagnostic array record (includes most relevant axis data)
+< ../motion/ecmc_axis_diag
+##############################################################################
+############# Configure diagnostics:
+ecmcConfigOrDie "Cfg.EcSetDiagnostics(1)"
+ecmcConfigOrDie "Cfg.EcEnablePrintouts(0)"
+ecmcConfigOrDie "Cfg.EcSetDomainFailedCyclesLimit(100)"
+ecmcConfigOrDie "Cfg.SetDiagAxisIndex(1)"

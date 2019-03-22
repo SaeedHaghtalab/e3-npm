@@ -9,5 +9,5 @@
 ############################################################
 
 < $(HW_TOP)/ecmcEK1100-EtherCatCoupler
-< $(Motion_TOP)/slave
+< $(General_TOP)/slave
 

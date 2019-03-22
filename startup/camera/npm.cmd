@@ -8,6 +8,11 @@ epicsEnvSet("TOP",     "$(E3_CMD_TOP)/../..")
 epicsEnvSet("DB_TOP",  "$(TOP)/db")
 epicsEnvSet("ST_TOP",  "$(TOP)/startup/camera")
 
+afterInit("epicsThreadSleep 5")
+
+
+< $(ST_TOP)/npm-01_env.cmd
+
 < $(ST_TOP)/envset
 
 < $(ST_TOP)/npmEVR.cmd

@@ -45,7 +45,7 @@
     <enabled>true</enabled>
     <fc>false</fc>
     <font>
-      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="192" green="192" blue="192" />
@@ -101,7 +101,7 @@
       </scale_options>
       <scripts />
       <show_scrollbar>false</show_scrollbar>
-      <text>$(ORIENTATION) Stats</text>
+      <text>$(secsub) $(ORIENTATION) Stats</text>
       <tooltip></tooltip>
       <transparent>true</transparent>
       <vertical_alignment>1</vertical_alignment>
@@ -126,7 +126,7 @@
       <enabled>true</enabled>
       <fc>false</fc>
       <font>
-        <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
+        <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
       </font>
       <foreground_color>
         <color red="192" green="192" blue="192" />
@@ -257,11 +257,11 @@
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_28</name>
-        <precision>4</precision>
+        <precision>5</precision>
         <precision_from_pv>false</precision_from_pv>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMSTATS-CentroidY_RBV</pv_name>
         <pv_value />
@@ -309,11 +309,11 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_36</name>
-        <precision>4</precision>
+        <precision>5</precision>
         <precision_from_pv>false</precision_from_pv>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMSTATS-SigmaXY_RBV</pv_name>
         <pv_value />
@@ -459,7 +459,7 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_28</name>
@@ -738,11 +738,11 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_28</name>
-        <precision>4</precision>
+        <precision>5</precision>
         <precision_from_pv>false</precision_from_pv>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMSTATS-CentroidX_RBV</pv_name>
         <pv_value />
@@ -831,11 +831,11 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_1</name>
-        <precision>4</precision>
+        <precision>5</precision>
         <precision_from_pv>false</precision_from_pv>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMSTATS-SigmaX_RBV</pv_name>
         <pv_value />
@@ -883,11 +883,11 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_28</name>
-        <precision>4</precision>
+        <precision>5</precision>
         <precision_from_pv>false</precision_from_pv>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMSTATS-SigmaY_RBV</pv_name>
         <pv_value />
@@ -935,11 +935,11 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_28</name>
-        <precision>4</precision>
+        <precision>5</precision>
         <precision_from_pv>false</precision_from_pv>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMSTATS-SkewY_RBV</pv_name>
         <pv_value />
@@ -1028,11 +1028,11 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_1</name>
-        <precision>4</precision>
+        <precision>5</precision>
         <precision_from_pv>false</precision_from_pv>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMSTATS-SkewX_RBV</pv_name>
         <pv_value />
@@ -1121,11 +1121,11 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_2</name>
-        <precision>4</precision>
+        <precision>5</precision>
         <precision_from_pv>false</precision_from_pv>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMSTATS-KurtosisX_RBV</pv_name>
         <pv_value />
@@ -1173,11 +1173,11 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
-        <format_type>2</format_type>
+        <format_type>0</format_type>
         <height>24</height>
         <horizontal_alignment>1</horizontal_alignment>
         <name>Text Update Template_3</name>
-        <precision>4</precision>
+        <precision>5</precision>
         <precision_from_pv>false</precision_from_pv>
         <pv_name>$(secsub):$(disdevid):$(ORIENT)CAMSTATS-KurtosisY_RBV</pv_name>
         <pv_value />

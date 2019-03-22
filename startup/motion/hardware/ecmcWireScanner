@@ -1,0 +1,53 @@
+#0  0:0  PREOP  +  EK1100 EtherCAT Coupler (2A E-Bus)
+#1  0:1  PREOP  +  EL1808 8K. Dig. Eingang 24V, 3ms
+#2  0:2  PREOP  +  EL2808 8K. Dig. Ausgang 24V, 0.5A
+#3  0:3  INIT   E  EL7201 1K. MDP742 Servo-Motor-Endstufe (50V, 4A)
+#4  0:4  PREOP  +  EL7047 1K. Schrittmotor-Endstufe (50V, 5A)
+#5  0:5  PREOP  +  EL9505 Netzteilklemme 5V
+#6  0:6  PREOP  +  EL1252-0050 2K. Fast Dig. Eingang 5V, 1�s, DC Latch
+
+
+epicsEnvSet("ECMC_EC_MASTER_ID"          "0")
+
+#Choose master
+EthercatMCConfigController "$(ECMC_MOTOR_PORT)", "Cfg.EcSetMaster($(ECMC_EC_MASTER_ID))"
+
+#Configure EK1100 coupler terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "0")
+< ../hardware/ecmcEK1100-EtherCatCoupler$(ECMC_GEN_EC_RECORDS)
+
+# Configure EL1808 digital input terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "1")
+< ../hardware/ecmcEL1808-digitalInput$(ECMC_GEN_EC_RECORDS)
+
+# Configure EL2808 digital output terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "2")
+< ../hardware/ecmcEL2808-digitalOutput$(ECMC_GEN_EC_RECORDS)
+
+# Save the slave number for later
+epicsEnvSet("ECMC_EC_SLAVE_NUM_DIG_OUT",      "${ECMC_EC_SLAVE_NUM}")
+
+# Configure EL7201 resolver terminal,
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "3")
+< ../hardware/ecmcEL7201-ServoDrive$(ECMC_GEN_EC_RECORDS)
+
+# Configure EL7047 1K. Schrittmotor-Endstufe (50V, 5A) stepper drive terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "4")
+< ../hardware/ecmcEL7047-StepperDrive$(ECMC_GEN_EC_RECORDS)
+
+#Configure motor for EL7047
+< ../hardware/ecmcEL7047-Motor-Mclennan-23HSX206
+
+#Max full step freq = 8000Hz (setting is 3)
+EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.EcAddSdo(${ECMC_EC_SLAVE_NUM},0x8012,0x5,3,1)"
+
+# Configure EL9505 Power supply terminal 5V
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "5")
+< ../hardware/ecmcEL9505-powerSupply5V$(ECMC_GEN_EC_RECORDS)
+
+# Configure EL1252 digital input terminal
+epicsEnvSet("ECMC_EC_SLAVE_NUM",              "6")
+< ../hardware/ecmcEL1252-digitalInput$(ECMC_GEN_EC_RECORDS)
+
+# Apply hardware configuration
+EthercatMCConfigController ${ECMC_MOTOR_PORT}, "Cfg.EcApplyConfig(1)"
