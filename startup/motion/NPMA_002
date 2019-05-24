@@ -32,8 +32,8 @@ epicsEnvSet("ECMC_DRV_BRAKE_OPEN_DLY_TIME",    "0")                    # Brake t
 epicsEnvSet("ECMC_DRV_BRAKE_CLOSE_AHEAD_TIME", "0")                    # Brake timing parameter in cycles (default 1kHz)
 
 #Trajectory
-epicsEnvSet("ECMC_VELO",                  "0.1")			# Velocity in engineering units for positioning 
-epicsEnvSet("ECMC_JOG_VEL",               "0.1")			# Velocity in engineering units for jogging same as ECMC_VELO
+epicsEnvSet("ECMC_VELO",                  "0.1868")			# Velocity in engineering units for positioning 
+epicsEnvSet("ECMC_JOG_VEL",               "0.1868")			# Velocity in engineering units for jogging same as ECMC_VELO
 #JAR defaults to VELO/ACCL
 epicsEnvSet("ECMC_JAR",                   "0.0")			# Jogging acceleration in engineering units. If cero ECMC_ACC will be used
 epicsEnvSet("ECMC_ACCL",                  "0.1")				# Positioning acceleration in second reach ECMC_VELO 0.1 s
@@ -43,14 +43,14 @@ epicsEnvSet("ECMC_MRES",                  "0.001")			# Motor resolution in engin
 #Homing
 epicsEnvSet("ECMC_HOME_PROC",             "1")		# Homing procedur
 epicsEnvSet("ECMC_HOME_POS",              "0.0")		# Position to set at homming
-epicsEnvSet("ECMC_HOME_VEL_TO",           "0.1")		# Velocity setpoint, for the first part of the homing sequence when searching for limit switches5
-epicsEnvSet("ECMC_HOME_VEL_FRM",          "0.1")		# Velocity setpoint, for the first part of the homing sequence when searching for homing sensor
+epicsEnvSet("ECMC_HOME_VEL_TO",           "0.1868")		# Velocity setpoint, for the first part of the homing sequence when searching for limit switches5
+epicsEnvSet("ECMC_HOME_VEL_FRM",          "0.1868")		# Velocity setpoint, for the first part of the homing sequence when searching for homing sensor
 epicsEnvSet("ECMC_HOME_ACC",              "3")		# Acceleration
 epicsEnvSet("ECMC_HOME_DEC",              "15")		# Deceleration
 
 #Controller
-epicsEnvSet("ECMC_CNTRL_KP",              "1.0")			# Position control loop proportional gain
-epicsEnvSet("ECMC_CNTRL_KI",              "0.0")			# Position control loop integral gain
+epicsEnvSet("ECMC_CNTRL_KP",              "8.0")			# Position control loop proportional gain
+epicsEnvSet("ECMC_CNTRL_KI",              "0.02")			# Position control loop integral gain
 epicsEnvSet("ECMC_CNTRL_KD",              "0.0")			# Position control loop differentia gain
 epicsEnvSet("ECMC_CNTRL_KFF",             "1.0")			# Velocity feed forward gain
 
@@ -58,7 +58,7 @@ epicsEnvSet("ECMC_CNTRL_KFF",             "1.0")			# Velocity feed forward gain
 #  softlimits (disable with 0,0)
 epicsEnvSet("ECMC_SOFT_LOW_LIM",          "0")		# Soft low limit position
 epicsEnvSet("ECMC_SOFT_HIGH_LIM",         "0")		# Soft high limit
-epicsEnvSet("ECMC_DXLM_ENABLE",           "1")
+epicsEnvSet("ECMC_DXLM_ENABLE",           "0")
 
 # position lag; 
 # If the difference between the actual position and the trajectory position setpoint is larger than ECMC_MON_LAG_MON_TOL for a period longer than ECM_MON_LAG_MON_TIME the motion will be stoped

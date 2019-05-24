@@ -50,7 +50,7 @@ epicsEnvSet("ECMC_HOME_DEC",              "15")		# Deceleration
 
 #Controller
 epicsEnvSet("ECMC_CNTRL_KP",              "8.0")			# Position control loop proportional gain
-epicsEnvSet("ECMC_CNTRL_KI",              "0.002")			# Position control loop integral gain
+epicsEnvSet("ECMC_CNTRL_KI",              "0.02")			# Position control loop integral gain
 epicsEnvSet("ECMC_CNTRL_KD",              "0.0")			# Position control loop differentia gain
 epicsEnvSet("ECMC_CNTRL_KFF",             "1.0")			# Velocity feed forward gain
 
@@ -58,7 +58,7 @@ epicsEnvSet("ECMC_CNTRL_KFF",             "1.0")			# Velocity feed forward gain
 #  softlimits (disable with 0,0)
 epicsEnvSet("ECMC_SOFT_LOW_LIM",          "0")		# Soft low limit position
 epicsEnvSet("ECMC_SOFT_HIGH_LIM",         "0")		# Soft high limit
-epicsEnvSet("ECMC_DXLM_ENABLE",           "1")
+epicsEnvSet("ECMC_DXLM_ENABLE",           "0")
 
 # position lag; 
 # If the difference between the actual position and the trajectory position setpoint is larger than ECMC_MON_LAG_MON_TOL for a period longer than ECM_MON_LAG_MON_TIME the motion will be stoped
