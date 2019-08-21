@@ -1,0 +1,30 @@
+require ADProsilica,2.5.0
+require admisc,2.0.0
+require busy,1.7.0
+require sequencer,2.2.6
+require calc,3.7.1
+
+afterInit("epicsThreadSleep 5")
+
+< $(npm_DIR)/envset.iocsh
+
+##############################################################################
+### Vertical Camera
+
+epicsEnvSet("PREFIX",           "$(VPREF)")
+epicsEnvSet("CAM",              "$(VCAM)")
+epicsEnvSet("CAMIP",            "$(VCAMIP)")
+epicsEnvSet("OFFLENS_VAL",      "5.45")
+epicsEnvSet("DIM",              "0")
+$(DISABLE_VER=) < $(npm_DIR)/npmAD.iocsh
+
+
+##############################################################################
+### Horizontal Camera
+
+epicsEnvSet("PREFIX",           "$(HPREF)")
+epicsEnvSet("CAM",              "$(HCAM)")
+epicsEnvSet("CAMIP",            "$(HCAMIP)")
+epicsEnvSet("OFFLENS_VAL",      "5.50")
+epicsEnvSet("DIM",              "1")
+$(DISABLE_HOR=) < $(npm_DIR)/npmAD.iocsh

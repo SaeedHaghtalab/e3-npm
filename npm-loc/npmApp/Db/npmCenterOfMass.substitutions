@@ -1,0 +1,17 @@
+file npmRollingBuffer.template
+{
+    pattern { PARAM,  PARAM_PV,                EGU,   PREC}
+            { "COM",  "$(PREFIX):$(CAM)-COM",  "mm",  "$(COM_PREC)"}
+}
+
+file npmRollingBuffer.template
+{
+    pattern { PARAM,  PARAM_PV,    EGU,       PREC}
+            { "MU",   "$(MU_PV)",  "pixels",  "$(MU_PREC)"}
+}
+
+file npmCenterOfMass.template
+{
+    pattern { FLNK1,                          FLNK2}
+            { "$(PREFIX):$(CAM)-COM-BUFFER",  "$(PREFIX):$(CAM)-MU-BUFFER"}
+}

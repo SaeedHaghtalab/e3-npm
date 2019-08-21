@@ -1,7 +1,0 @@
-/var/log/procServ/npm/*.log {
-su npmuser npmuser
-size 10M
-rotate 5
-copytruncate
-notifempty
-}

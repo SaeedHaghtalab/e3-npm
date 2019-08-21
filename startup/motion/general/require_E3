@@ -1,5 +1,0 @@
-#Lists required modules and versions for MCAG crates
-require ecmc,5.3.0
-require ecmctraining,4.2.0
-require EthercatMC 2.1.0
-require stream 2.8.8

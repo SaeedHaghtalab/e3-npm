@@ -1,0 +1,17 @@
+file npmRollingBuffer.template
+{
+	pattern { PARAM,  PARAM_PV,                EGU,   PREC}
+			{ "BSZ",  "$(PREFIX):$(CAM)-BSZ",  "mm",  "$(BSZ_PREC)"}
+}
+
+file npmRollingBuffer.template
+{
+	pattern { PARAM,    PARAM_PV,       EGU,       PREC}
+			{ "SIGMA",  "$(SIGMA_PV)",  "pixels",  "$(SIGMA_PREC)"}
+}
+
+file npmBeamSize.template
+{
+	pattern { FLNK1,                          FLNK2}
+			{ "$(PREFIX):$(CAM)-BSZ-BUFFER",  "$(PREFIX):$(CAM)-SIGMA-BUFFER"}
+}
