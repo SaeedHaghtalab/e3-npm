@@ -1,8 +1,9 @@
-require ADProsilica,2.5.0
-require admisc,2.0.0
-require busy,1.7.0
-require sequencer,2.2.6
-require calc,3.7.1
+### Put requires in cmd scripts
+#require ADProsilica
+#require admisc
+#require busy
+#require sequencer
+#require calc
 
 afterInit("epicsThreadSleep 5")
 
